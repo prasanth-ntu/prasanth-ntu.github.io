@@ -29,7 +29,7 @@ ul {
  * HTML Link Colors
  */
 a:link {
-    color: orange; 
+    color: red; 
     background-color: transparent; 
     text-decoration: none;
 }
@@ -49,7 +49,7 @@ a:hover {
 /*
 * Image Center
 */
-img {
+.img_center {
     display: block;
     margin-left: auto;
     margin-right: auto;
