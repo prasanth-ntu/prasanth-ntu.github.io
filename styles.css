@@ -71,6 +71,29 @@ p.error {
     color: red;
 }
 
+ul.navigation_menu {
+	  list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+}
 
+li.navigation_menu {
+    float: left;
+}
+
+li.navigation_menu a {
+    display: block;
+    color: white;
+    text-align: center;
+		font-size:18px;
+    padding: 16px;
+    text-decoration: none;
+}
+
+li.navigation_menu a:hover {
+    background-color: #111111;
+}
 
 
