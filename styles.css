@@ -1,11 +1,76 @@
+//External CSS - define the style for many HTML pages;
+
+
 body {
     background-color: white;
 }
+
 h1 {
     color:rgb(90, 90, 90);
 		text-align:center;
-		font-family:Georgia;
+		font-family:"Georgia", Times New Roman;
 }
+
 p {
     color: black;
+		font-family: "Georgia", Times New Roman;
+		//defines a margin/space outside the border;
+		margin: 12px;
+		line-height: 1.5;
 }
+
+ul {
+		font-family: "Georgia", Times New Roman;
+		line-height: 1.5;
+}
+
+
+/*
+ * HTML Link Colors
+ */
+a:link {
+    color: orange; 
+    background-color: transparent; 
+    text-decoration: none;
+}
+
+a:visited {
+    color: red;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+/*
+* Image Center
+*/
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// -- The id Attribute --
+//To define a specific style for one special element, add an id attribute to the element
+// <p id="p01">I am different</p>
+//then define a style for the element with the specific id
+#p01 {
+    color: blue;
+}
+
+// -- The class Attribute --
+//To define a style for a special type of elements, add a `class` attribute to the element:
+// <p class="error">I am different</p>
+//then define a style for the elements with the specific class:
+p.error {
+    color: red;
+}
+
+
+
+
