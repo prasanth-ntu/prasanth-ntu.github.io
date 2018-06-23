@@ -1,10 +1,10 @@
-//External CSS - define the style for many HTML pages;
+//External CSS - define the style for many HTML pages
 
 
 body {
 
     background-color: white;
-		width:100%;
+		width:70%;
 }
 
 h1 {
@@ -109,8 +109,5 @@ li.navigation_menu a:hover {
 		text-decoration: underline;
 		//text-decoration-color: red;
 }
-
-
-
 
 
