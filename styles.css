@@ -2,7 +2,9 @@
 
 
 body {
+
     background-color: white;
+		width:100%;
 }
 
 h1 {
@@ -16,12 +18,21 @@ p {
 		font-family: "Georgia", Times New Roman;
 		//defines a margin/space outside the border;
 		margin: 12px;
+		padding-left:10%;
+		padding-right:10%;
 		line-height: 1.5;
 }
 
 ul {
+	  padding-left: 13%;
+		padding-right: 10%;
 		font-family: "Georgia", Times New Roman;
 		line-height: 1.5;
+}
+	
+hr {
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 
@@ -74,9 +85,9 @@ p.error {
 ul.navigation_menu {
 	  list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding-left: 10%;
     overflow: hidden;
-    background-color: #333333;
+    background-color: white; //#333333;
 }
 
 li.navigation_menu {
@@ -84,8 +95,9 @@ li.navigation_menu {
 }
 
 li.navigation_menu a {
+	  font-weight: bold;
     display: block;
-    color: white;
+    color: black;
     text-align: center;
 		font-size:18px;
     padding: 16px;
@@ -93,7 +105,12 @@ li.navigation_menu a {
 }
 
 li.navigation_menu a:hover {
-    background-color: #111111;
+		background-color: Lightgray;
+		text-decoration: underline;
+		//text-decoration-color: red;
 }
+
+
+
 
 
