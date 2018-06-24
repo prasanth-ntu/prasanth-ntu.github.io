@@ -1,4 +1,13 @@
 https://rawgit.com/gujiuxiang/PaperNotes/master/post/Convolutional_Neural_Networks/20180322_deep_learning_python.md.html
-
+-------------------
 
 https://prasanth-ntu.github.io/
+
+----------------
+
+
+https://stackoverflow.com/questions/39604271/conda-environments-not-showing-up-in-jupyter-notebook
+
+$ source activate myenv-
+$ python -m ipykernel install --user --name myenv --display-name "Python (myenv)"
+----------------
