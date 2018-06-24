@@ -172,4 +172,21 @@ li.navigation_menu a:hover {
     background-color: #555;
     color: white;
 }
+
+
+
+
+
+/* Code block style */
+pre {
+	margin-left: 10%;
+	margin-right: 10%; 
+	border-style: groove; 
+	border-left: 6px solid red;
+	padding-left:10px
+}
+code {
+	border-style: groove; 
+	border-left: 6px solid red;
+}
 		
