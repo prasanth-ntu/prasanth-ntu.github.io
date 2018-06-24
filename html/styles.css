@@ -157,6 +157,11 @@ li.navigation_menu a:hover {
     background-color: #f1f1f1; 
     text-decoration: none;
 }
+.menu a:visited {
+    color: black; 
+    background-color: #f1f1f1; 
+    text-decoration: none;
+}
 
 .menu li:hover:not(.active){
     background-color: #555;
