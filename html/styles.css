@@ -125,6 +125,7 @@ li.navigation_menu a:hover {
 .column {
     float: right;
     padding: 15px;
+		padding-right:10%;
 }
 .clearfix::after {
     content: "";
