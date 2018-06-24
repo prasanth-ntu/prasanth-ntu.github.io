@@ -165,6 +165,12 @@ li.navigation_menu a:hover {
     text-decoration: none;
 }
 
+.menu a:hover {
+    background-color: #555;
+    color: white;
+    text-decoration: none;
+}
+
 .menu li:hover:not(.active){
     background-color: #555;
     color: white;
