@@ -119,7 +119,9 @@ li.navigation_menu a:hover {
 .header, .footer {
     background-color: grey;
     color: white;
-    padding: 15px;
+		padding-top: 15px;
+		padding-bottom: 15 px;
+    /*padding: 15px;*/
 }
 .column {
     float: right;
