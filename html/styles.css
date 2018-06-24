@@ -144,7 +144,7 @@ li.navigation_menu a:hover {
 }
 .menu li {
     padding: 8px;
-    margin-bottom: 8px;
+    margin-right: 10%;
     background-color: #33b5e5;
     color: #ffffff;
 }
