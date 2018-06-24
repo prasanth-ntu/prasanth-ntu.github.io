@@ -10,7 +10,7 @@ h1 {
 
 h2 {
 		margin-left:10%;
-		
+		margin-bottom:0;
 }
 
 p {
@@ -21,6 +21,9 @@ p {
 		padding-left:10%;
 		padding-right:10%;
 		line-height: 1.5;
+}
+p.normal {
+		margin-left: 0px;
 }
 
 ul {
