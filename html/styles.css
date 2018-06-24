@@ -182,11 +182,15 @@ a.but {
     display: inline-block;
     padding: 8px 16px;
 }
+a.but:link {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
 
 a.but:hover {
-    color: red;
-    background-color: transparent;
-    text-decoration: underline;
+    background-color: #ddd;
+    color: black;
 }
  
 .previous {
