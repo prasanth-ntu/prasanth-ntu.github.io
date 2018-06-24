@@ -111,7 +111,7 @@ li.navigation_menu a:hover {
 		/*text-decoration-color: red;*/
 }
 
-.navigation_menu_active {
+.active {
     background-color: gray;
 }
 
