@@ -44,28 +44,52 @@
 		<h2> Installation details </h2>
 		<hr>
 		
+		
+		<!--------------- STEP 1 -------------->
 		<p class="normal" style=" font-weight: bold;">Step 1: Install Anaconda (Python 3.6 version) </p>
 		<p class="normal"> Download Link 
 		- <a href="https://www.anaconda.com/download/">https://www.anaconda.com/download/</a> </p>
+		
+		<!--------------- STEP 2 -------------->
 		<p class="normal"  style="font-weight: bold;">Step 2: Verify the conda installation
 		</p>
 		<p class="normal">		Open Anaconda Command Prompt
 			<ul>
-				<li> For Windows,<code class="style"> Start > Anaconda3 > Anaconda Prompt </code></li>
-				<li> For Mac & Linux, open <code class="style"> Terminal </code>window </li>
+				<li> For Windows, <code class="style"> Start > Anaconda3 > Anaconda Prompt </code></li>
+				<li> For Mac & Linux, open <code class="style"> Terminal</code> window </li>
 			</ul>
 		</p>
 		<p class="normal">To Verify the installation, type</p>
 			<pre style="margin-left: 10%;margin-right: 10%; border-style: groove; border-left: 6px solid red; padding-left:10px">
 conda --version</pre>
-
 		<img src="https://prasanth-ntu.github.io/html/images/conda version.PNG" 
 		alt="Conda version" style="margin-left:10%; width:80%">
-	
+		
+		<p class="normal">To update conda, type</p>
+			<pre style="margin-left: 10%;margin-right: 10%; border-style: groove; border-left: 6px solid red; padding-left:10px">
+conda update conda</pre>
+		<p class="normal">TIP: It's recommend that you always keep conda updated to the latest version.</p>
+		
+		<!--------------- STEP 3 -------------->
+		<p class="normal"  style="font-weight: bold;">Step 3: Create a vitual environment
+		</p>
+		<p class="normal">
+		Conda allows you to to create separate environments containing files, packages and their dependencies that will not interact with other environments.<br>
+		When you begin using conda, you already have a default environment named  <code class="style">base</code>. You don’t want to put programs into your base environment, though. Create separate environments to keep your programs isolated from each other.
+		</p>
+		<p class="normal">To find the list of current environments, type</p>
+			<pre style="margin-left: 10%;margin-right: 10%; border-style: groove; border-left: 6px solid red; padding-left:10px">
+conda info --envs</pre>
+		<img src="https://prasanth-ntu.github.io/html/images/list of env 1.png" 
+		alt="Conda environemnt list" style="margin-left:10%; width:80%">
+		
+		
+		
 		<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=default"></script>
 		<style>
 			.prettyprint ol.linenums > li { list-style-type: decimal; }
 		</style>
+
 
 		<pre class="prettyprint linenums" style="margin-left: 10%;margin-right:10%">
 		<code>/*
