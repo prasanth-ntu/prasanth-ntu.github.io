@@ -1,6 +1,3 @@
-//External CSS - define the style for many HTML pages
-
-
 body {
     background-color: red;
 }
@@ -126,10 +123,11 @@ li.navigation_menu a:hover {
     display: table;
 }
 .menu {
-    width: 15%;
+    width: 20%;
 }
 .content {
-    width: 75%;
+    width: 70%;
+		float: left;
 }
 .menu ul {
     list-style-type: none;
