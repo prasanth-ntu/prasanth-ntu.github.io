@@ -117,7 +117,7 @@ li.navigation_menu a:hover {
     box-sizing: border-box;
 }
 .header, .footer {
-    background-color: grey;
+    background-color: white;
     color: white;
 		padding-top: 15px;
 		padding-bottom: 15 px;
@@ -145,6 +145,7 @@ li.navigation_menu a:hover {
 .menu li {
     padding: 8px;
     margin-right: 50%;
+		margin-bottom: 10px;
     background-color: #33b5e5;
     color: #ffffff;
 }
