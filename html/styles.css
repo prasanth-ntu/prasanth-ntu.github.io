@@ -140,7 +140,7 @@ li.navigation_menu a:hover {
     margin-right: 50%;
 		margin-bottom: 10px;
     background-color: #f1f1f1;
-    color: #ffffff;
+    color: black;
 }
 
 .menu li:hover:not(.active){
