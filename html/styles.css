@@ -4,7 +4,6 @@
 body {
 
     background-color: white;
-		width:70%;
 }
 
 h1 {
@@ -87,7 +86,9 @@ ul.navigation_menu {
     margin: 0;
     padding-left: 10%;
     overflow: hidden;
-    background-color: white; //#333333;
+    background-color: white; /*#333333;*/
+	  position: fixed;
+		top: 0;
 }
 
 li.navigation_menu {
