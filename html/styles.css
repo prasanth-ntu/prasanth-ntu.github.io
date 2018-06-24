@@ -178,15 +178,15 @@ li.navigation_menu a:hover {
 
 
 /* Code block style */
-pre {
+pre.style {
 	margin-left: 10%;
 	margin-right: 10%; 
 	border-style: groove; 
 	border-left: 6px solid red;
 	padding-left:10px
 }
-code {
+code.style {
 	border-style: groove; 
-	border-left: 6px solid red;
+	border-left: None;
 }
 		
