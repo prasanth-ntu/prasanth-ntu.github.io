@@ -108,7 +108,10 @@ li.navigation_menu a {
 li.navigation_menu a:hover {
 		background-color: Lightgray;
 		text-decoration: underline;
-		//text-decoration-color: red;
+		/*text-decoration-color: red;*/
 }
 
+.navigation_menu_active {
+    background-color: gray;
+}
 
