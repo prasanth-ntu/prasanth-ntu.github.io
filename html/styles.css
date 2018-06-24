@@ -143,9 +143,19 @@ li.navigation_menu a:hover {
     color: black;
 }
 
+.menu a:link {
+    color: black; 
+    background-color: #f1f1f1; 
+    text-decoration: none;
+}
+
 .menu li:hover:not(.active){
     background-color: #555;
     color: white;
 }
 
-			
+.menu a(.active){
+    background-color: #555;
+    color: white;
+}
+		
