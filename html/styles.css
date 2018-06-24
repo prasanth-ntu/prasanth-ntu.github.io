@@ -139,11 +139,13 @@ li.navigation_menu a:hover {
     padding: 8px;
     margin-right: 50%;
 		margin-bottom: 10px;
-    background-color: #33b5e5;
+    background-color: #f1f1f1;
     color: #ffffff;
 }
-.menu li:hover {
-    background-color: #0099cc;
+
+.menu li:hover:not(.active){
+    background-color: #555;
+    color: white;
 }
 
 			
