@@ -2,7 +2,6 @@
 
 
 body {
-
     background-color: white;
 }
 
@@ -118,14 +117,13 @@ li.navigation_menu a:hover {
     box-sizing: border-box;
 }
 .header, .footer {
-    background-color: white;
+    background-color: grey;
     color: white;
     padding: 15px;
 }
 .column {
     float: right;
     padding: 15px;
-		padding-right:10%;
 }
 .clearfix::after {
     content: "";
