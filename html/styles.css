@@ -191,6 +191,7 @@ a.but:link {
 a.but:hover {
     background-color: #ddd;
     color: black;
+		text-decoration: underline;
 }
  
 .previous {
