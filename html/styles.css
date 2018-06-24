@@ -112,10 +112,6 @@ li.navigation_menu a:hover {
 
 
 
-
-* {
-    box-sizing: border-box;
-}
 .header, .footer {
 		padding-top: 15px;
 		padding-bottom: 15 px;
