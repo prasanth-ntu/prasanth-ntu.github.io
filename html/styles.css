@@ -86,7 +86,7 @@ p.error {
 }
 
 
-
+/* Top navigation menu*/
 ul.navigation_menu {
 	  list-style-type: none;
     margin: 0;
@@ -119,7 +119,7 @@ li.navigation_menu a:hover {
 }
 
 
-
+/* Side navigation menu*/
 .header, .footer {
 		padding-top: 15px;
 		padding-bottom: 15 px;
