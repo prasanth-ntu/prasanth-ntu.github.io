@@ -11783,7 +11783,7 @@ div#notebook {
 <script>
 $( document ).ready(function(){
 
-            var cfg = {"base_numbering": "0", "nav_menu": {}, "number_sections": true, "sideBar": true, "skip_h1_title": false, "title_cell": "Table of Contents", "title_sidebar": "Contents", "toc_cell": false, "toc_position": {}, "toc_section_display": true, "toc_window_display": true};
+            var cfg = {"base_numbering": "0", "nav_menu": {}, "number_sections": true, "sideBar": true, "skip_h1_title": false, "title_cell": "Table of Contents", "title_sidebar": "Contents", "toc_cell": false, "toc_position": {"height": "calc(100% - 180px)", "left": "10px", "top": "150px", "width": "341px"}, "toc_section_display": true, "toc_window_display": true};
 
             // fire the main function with these parameters
             require(['nbextensions/toc2/toc2'], function (toc2) {
@@ -11800,16 +11800,11 @@ $( document ).ready(function(){
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>We have to learn some basic programming concepts before doing anything in Maching Learning or Data Science or any Projects</p>
+<p><em>For full screen view &amp; to download, visit </em></p>
+<ul>
+<li><code>HTML</code>: &lt;a href ="<a href="https://prasanth-ntu.github.io/html/ML-Course/Python-Refresher/Python-Refresher-Notes.html">https://prasanth-ntu.github.io/html/ML-Course/Python-Refresher/Python-Refresher-Notes.html</a>" target="_blank"&gt;Click here&lt;/a&gt;</li>
+<li><code>GITHUB</code>: &lt;a href ="<a href="https://github.com/prasanth-ntu/prasanth-ntu.github.io/blob/master/html/ML-Course/Python-Refresher/Python-Refresher-Notes.ipynb">https://github.com/prasanth-ntu/prasanth-ntu.github.io/blob/master/html/ML-Course/Python-Refresher/Python-Refresher-Notes.ipynb</a>" target="_blank"&gt;Click here&lt;/a&gt;</li>
+</ul>
 
 </div>
 </div>
@@ -11819,6 +11814,41 @@ $( document ).ready(function(){
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><font size=4>__Topics Covered__</font></p>
+<p>1 <a href="#Python Basics">Python Basics</a> <br>
+2 <a href="#Flow Control">Flow Control</a> <br>
+3 <a href="#Functions">Functions</a> <br>
+4 <a href="#Lists">Lists</a> <br></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We have to learn some basic programming concepts before doing anything in Maching Learning or Data Science or any Projects.</p>
+<p>This notebook is created on the presumption that you have some basic grounding on programming world, with some idea on <code>variables &amp; data types, arrays, flow conditions - if | else | elif | while | for | break | continue, importing libraries &amp; functions, Functions - creating functions | passing arguments | returning values</code>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a id="Python Basics"></a></p>
 <h1 id="Python-Basics">Python Basics<a class="anchor-link" href="#Python-Basics">&#182;</a></h1>
 </div>
 </div>
@@ -12734,7 +12764,8 @@ After performing the addition, the <code>int</code> value is converted back to <
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Flow-control">Flow control<a class="anchor-link" href="#Flow-control">&#182;</a></h1>
+<p><a id="Flow Control"></a></p>
+<h1 id="Flow-Control">Flow Control<a class="anchor-link" href="#Flow-Control">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -12905,7 +12936,16 @@ After performing the addition, the <code>int</code> value is converted back to <
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="if">if<a class="anchor-link" href="#if">&#182;</a></h3>
+<h3 id="if,else,elif"><code>if,else,elif</code><a class="anchor-link" href="#if,else,elif">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="if"><code>if</code><a class="anchor-link" href="#if">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -12915,8 +12955,10 @@ After performing the addition, the <code>int</code> value is converted back to <
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>When <code>if</code> condition evalues to <code>True</code>, the block of statement indented inside will get executed</li>
+<li>When <code>if</code> condition evalues to <code>True</code>, the block of statement indented inside will get executed. </li>
+<li>The block can be indented (pushed in) by <em><code>Tab</code></em>. The block can be deindented by <em><code>Shift+Tab</code></em></li>
 </ul>
+<p><em>Note: There should be atleast one line of indented code after <code>if</code> condition</em></p>
 
 </div>
 </div>
@@ -12928,7 +12970,7 @@ After performing the addition, the <code>int</code> value is converted back to <
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="k">if</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>                       <span class="c1"># age &lt; 10 evaluates to True      </span>
-    <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;age is less than 10&#39;</span><span class="p">)</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;age is less than 10&#39;</span><span class="p">)</span>  <span class="c1"># if True, this code will get executed</span>
 </pre></div>
 
 </div>
@@ -12972,7 +13014,7 @@ After performing the addition, the <code>int</code> value is converted back to <
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="if-else">if else<a class="anchor-link" href="#if-else">&#182;</a></h3>
+<h4 id="else"><code>else</code><a class="anchor-link" href="#else">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -13027,7 +13069,7 @@ After performing the addition, the <code>int</code> value is converted back to <
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="if-elif-else"><code>if elif else</code><a class="anchor-link" href="#if-elif-else">&#182;</a></h3>
+<h4 id="elif"><code>elif</code><a class="anchor-link" href="#elif">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -13085,7 +13127,7 @@ After performing the addition, the <code>int</code> value is converted back to <
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We can have multiple <code>elif</code> statements after an <code>if</code> statement. In the entire combo, <code>if-elseif-else</code> combo, only one of the condition will be exeucted.</p>
+<p>We can have multiple <code>elif</code> statements after an <code>if</code> statement. In the entire combo, <code>if-elseif-else</code> combo, only one of the condition will be exeucted. The order of execution is from top to bottom.</p>
 
 </div>
 </div>
@@ -13132,7 +13174,7 @@ After performing the addition, the <code>int</code> value is converted back to <
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="nested-if">nested <code>if</code><a class="anchor-link" href="#nested-if">&#182;</a></h3>
+<h4 id="nested-if">nested <code>if</code><a class="anchor-link" href="#nested-if">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -13160,7 +13202,6 @@ After performing the addition, the <code>int</code> value is converted back to <
         <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Access denied. Wrong password&#39;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
      <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Access denied. Wrong username&#39;</span><span class="p">)</span>
-        
 </pre></div>
 
 </div>
@@ -13231,6 +13272,1011 @@ Access granted
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Loops">Loops<a class="anchor-link" href="#Loops">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="while-loop"><code>while</code> loop<a class="anchor-link" href="#while-loop">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><code>while</code> loop keeps on running as long as the condition evaluates to <code>True</code></li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Loop start&#39;</span><span class="p">)</span>
+<span class="k">while</span> <span class="n">i</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>            <span class="c1"># while loop evaluates to true as long as i&gt;0</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span>         <span class="c1"># everytime, the loop runs, value of `i` decreases by 1</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Loop end&#39;</span><span class="p">)</span>    <span class="c1"># This line of code is outside the loop. Will run only when the while loop ends</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Loop start
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+Loop end
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>What happens if you run <strong><code>while False:</code></strong> and <strong><code>while True:</code></strong>?</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="for-loop">for loop<a class="anchor-link" href="#for-loop">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><code>for</code> loop runs for a fixed number of iterations.</li>
+<li>Here, the <code>range(10)</code> returns a list of numbers from 0 to 9.</li>
+<li>Everytime, the <code>for</code> loop runs, the iterator variable <code>i</code> takes the next available value from the list.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Beside using <code>range()</code> function in <code>for</code> loop, we can use many other data types.</li>
+<li>Here, I have used <code>list</code> type containing list of 4 names and used <code>for</code> loop to read through all names in list, one at a time .</li>
+</ul>
+<p><em>Note: We will see more about list data types later.</em></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Batman&#39;</span><span class="p">,</span> <span class="s1">&#39;Superman&#39;</span><span class="p">,</span> <span class="s1">&#39;Ironman&#39;</span><span class="p">,</span> <span class="s1">&#39;Thanos&#39;</span><span class="p">]:</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Batman
+Superman
+Ironman
+Thanos
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>We can also loop through each element in a <code>string</code> data type</li>
+</ul>
+<p><em>Note: We will see more about string data types later.</em></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="s1">&#39;Bruce Wayne&#39;</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="n">letter</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>B
+r
+u
+c
+e
+ 
+W
+a
+y
+n
+e
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="break"><code>break</code><a class="anchor-link" href="#break">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>break</code> is used to exit the loop (<code>while</code> or <code>for</code>) the program is currently evaluating prematurely based on certain conditions.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Loop start&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="s1">&#39;Bruce Wayne&#39;</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="n">letter</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">letter</span> <span class="o">==</span> <span class="s1">&#39;e&#39;</span><span class="p">:</span>
+        <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Break the loop&#39;</span><span class="p">)</span>
+        <span class="k">break</span>                     <span class="c1"># this command breaks the for loop (takes the program outside the loop)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Loop end&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Loop start
+B
+r
+u
+c
+e
+Break the loop
+Loop end
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="continue"><code>continue</code><a class="anchor-link" href="#continue">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><code>continue</code> is used to skip the execution of code inside the loop (<code>for</code> or <code>while</code>) and move on to next iteration on certain conditions.</li>
+</ul>
+<p>The program below skips printing the vowel letters and prints the rest of the consonants.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Loop start&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="s1">&#39;Bruce Wayne&#39;</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">letter</span> <span class="o">==</span> <span class="s1">&#39;a&#39;</span> <span class="ow">or</span> <span class="n">letter</span> <span class="o">==</span><span class="s1">&#39;e&#39;</span> <span class="ow">or</span> <span class="n">letter</span> <span class="o">==</span><span class="s1">&#39;i&#39;</span> <span class="ow">or</span> <span class="n">letter</span> <span class="o">==</span><span class="s1">&#39;o&#39;</span> <span class="ow">or</span> <span class="n">letter</span> <span class="o">==</span><span class="s1">&#39;u&#39;</span><span class="p">:</span>
+        <span class="k">continue</span>      <span class="c1"># this command skips lines inside the for loop below this line and starts the next iteration</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="n">letter</span><span class="p">)</span>
+               
+<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Loop end&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Loop start
+B
+r
+c
+ 
+W
+y
+n
+Loop end
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="in"><code>in</code><a class="anchor-link" href="#in">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>The <code>in</code> operator can be used to check whether a value is inside another and it evaluates to <code>bool</code> (<code>True</code>,<code>False</code>)</li>
+</ul>
+<p><em>Note: We will see more about <code>in</code>, <code>str</code> &amp; <code>list</code> data types later.</em></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s1">&#39;a&#39;</span> <span class="ow">in</span> <span class="s1">&#39;James&#39;</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[14]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s1">&#39;b&#39;</span> <span class="ow">in</span> <span class="s1">&#39;James&#39;</span><span class="p">,</span> <span class="s1">&#39;Ja&#39;</span> <span class="ow">in</span> <span class="s1">&#39;James&#39;</span><span class="p">,</span> <span class="s1">&#39;James&#39;</span> <span class="ow">in</span> <span class="s1">&#39;James&#39;</span><span class="p">,</span> <span class="s1">&#39;JameS&#39;</span> <span class="ow">in</span> <span class="s1">&#39;James&#39;</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[20]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(False, True, True, False)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Loop start&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="s1">&#39;Bruce Wayne&#39;</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">letter</span> <span class="ow">in</span> <span class="s1">&#39;aeiou&#39;</span><span class="p">:</span>          
+        <span class="k">continue</span>      <span class="c1"># this command skips lines inside the for loop below this line and starts the next iteration</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="n">letter</span><span class="p">)</span>
+               
+<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Loop end&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Loop start
+B
+r
+c
+ 
+W
+y
+n
+Loop end
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a id="Functions"></a></p>
+<h1 id="Functions">Functions<a class="anchor-link" href="#Functions">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="import"><code>import</code><a class="anchor-link" href="#import">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>built-in functions</strong></p>
+<ul>
+<li>Till now, we have used a basic set of functions like <code>print(), inpu()t, len(), str(), int(), float()</code>.</li>
+</ul>
+<p><strong>standard library</strong></p>
+<ul>
+<li>Set of modules that conatins related group of functions embedded together.</li>
+<li>e.g.<ul>
+<li><code>math</code> module contains mathematic related functions.</li>
+<li><code>random</code> module containsrandom number related functions.       </li>
+</ul>
+</li>
+</ul>
+<blockquote><p>Functions are often used as <em>"Black Boxes"</em>. Often, all we need to know is its inputs (parameter values), outputs and its generic function. We don't have to burden to understand each and every function and the code inside it.</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong><code>random</code></strong> library</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>                <span class="c1"># Before using a function in standard library, we have to use import _______</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span> <span class="c1"># Randomly generates an integer from 1 to 10</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>5
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>  <span class="c1"># Randomly generates an integer from 1 to 10</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong><code>math</code></strong> library</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[30]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1.4142135623730951</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">math</span><span class="o">.</span><span class="n">pi</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[31]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>3.141592653589793</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Function---def">Function - <code>def</code><a class="anchor-link" href="#Function---def">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>A <code>function</code> is like mini program inside a program.</li>
+<li>The idea behind function is to avoid duplicating code.</li>
+<li>Deduplicaiton makes our code shorter, easier to read and update.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="fn---without-arguments-and-return">fn - without <code>arguments</code> and <code>return</code><a class="anchor-link" href="#fn---without-arguments-and-return">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># create a function named &#39;welcome&#39;. It neither take any input and nor returns any output</span>
+<span class="k">def</span> <span class="nf">welcome</span><span class="p">():</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;hi&#39;</span><span class="p">)</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;mi casa es tu casa&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># invoking/ calling a function</span>
+<span class="n">welcome</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>hi
+mi casa es tu casa
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">welcome</span><span class="p">()</span>
+<span class="n">welcome</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>hi
+mi casa es tu casa
+hi
+mi casa es tu casa
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="fn---with-arguments">fn - with <code>arguments</code><a class="anchor-link" href="#fn---with-arguments">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Hello &#39;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s1">&#39;!&#39;</span><span class="p">)</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Bienvenido a casa&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">hello</span><span class="p">(</span><span class="s1">&#39;Scare Crow&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Hello Scare Crow!
+Bienvenido a casa
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="fn---with-return">fn - with <code>return</code><a class="anchor-link" href="#fn---with-return">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>e.g.<ul>
+<li><code>len()</code> - returns the lenght of the argument passed inside</li>
+<li><code>len('Python')</code> &gt;&gt;&gt; 5</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">lan</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">lan</span> <span class="o">==</span> <span class="s1">&#39;english&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;Welcome&#39;</span>
+    <span class="k">elif</span> <span class="n">lan</span> <span class="o">==</span> <span class="s1">&#39;spanish&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;Bienvenido&#39;</span>
+    <span class="k">elif</span> <span class="n">lan</span> <span class="o">==</span> <span class="s1">&#39;french&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;Bonjour&#39;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;Welcome&#39;</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">greet</span><span class="p">(</span><span class="s1">&#39;english&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[56]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;Welcome&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">greet</span><span class="p">(</span><span class="s1">&#39;french&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[59]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;Bonjour&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Local-and-Global-scope">Local and Global scope<a class="anchor-link" href="#Local-and-Global-scope">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><p><em>Local scope</em> - Variables inside the function exist in local scope</p>
+<ul>
+<li>Created whenever a function is called</li>
+<li>Variables created inside a function eist within local scope and they cannot be used outside the function</li>
+<li>When the function returns/ ends, the scope is closed/ destroyed along with the variables inside it</li>
+<li>The next time we call the function, the local scope is created again and they wont remember the previous values </li>
+</ul>
+</li>
+<li><p><em>Global scope</em> - Variables that are assigned outside all functions exist in global scope</p>
+<ul>
+<li>Created when our program begins</li>
+<li>When program ends, the global scope is destroyed</li>
+</ul>
+</li>
+</ul>
+<p>A variable must be either in local or global scope, cannot be both.</p>
+<p><em>Note: We will see more about <code>Local and Global scope</code> later.</em></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a id="Lists"></a></p>
+<h1 id="Lists"><code>Lists</code><a class="anchor-link" href="#Lists">&#182;</a></h1>
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
