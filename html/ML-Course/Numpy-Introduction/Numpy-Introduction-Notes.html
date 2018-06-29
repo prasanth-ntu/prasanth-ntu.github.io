@@ -11726,7 +11726,9 @@ body {
 div#notebook {
   overflow: visible;
   border-top: none;
-}@media print {
+}
+
+@media print {
   div.cell {
     display: block;
     page-break-inside: avoid;
@@ -11747,7 +11749,7 @@ div#notebook {
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -11781,17 +11783,7 @@ div#notebook {
 <script>
 $( document ).ready(function(){
 
-            var cfg={'threshold':3,     // depth of toc (number of levels)
-             'number_sections': true,  // sections numbering
-             'toc_cell': false,          // useless here
-             'toc_window_display': true, // display the toc window
-             "toc_section_display": "block", // display toc contents in the window
-             'markTocItemOnScroll': false, 
-             'sideBar':true,             // sidebar or floating window
-             'navigate_menu':false,       // navigation menu (only in liveNotebook -- do not change)
-              title_cell: 'Table of Contents',
-              title_sidebar: 'Contents',
-            }
+            var cfg = {"base_numbering": 1, "nav_menu": {"height": "369px", "width": "364px"}, "number_sections": true, "sideBar": true, "skip_h1_title": false, "title_cell": "Table of Contents", "title_sidebar": "Contents", "toc_cell": false, "toc_position": {"height": "761px", "left": "1576px", "right": "20px", "top": "114px", "width": "319px"}, "toc_section_display": true, "toc_window_display": true};
 
             // fire the main function with these parameters
             require(['nbextensions/toc2/toc2'], function (toc2) {
@@ -11803,25 +11795,60 @@ $( document ).ready(function(){
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><em>For full screen view &amp; to download, visit </em></p>
 <ul>
-<li><code>HTML</code>: <a href="https://nbviewer.jupyter.org/github/prasanth-ntu/prasanth-ntu.github.io/blob/master/html/ML-Course/Numpy-Introduction/Numpy-Introduction-Notes.html" target="_blank">Click here</a></li>
+<li><code>HTML</code> : <a href="https://prasanth-ntu.github.io/html/ML-Course/Numpy-Introduction/Numpy-Introduction-Notes.html" target="_blank">Click here</a></li>
 <li><code>GITHUB</code> : <a href="https://github.com/prasanth-ntu/prasanth-ntu.github.io/blob/master/html/ML-Course/Numpy-Introduction/Numpy-Introduction-Notes.ipynb" target="_blank">Click here</a></li>
-<li><code>NBVIWER</code>: <a href="https://nbviewer.jupyter.org/github/prasanth-ntu/prasanth-ntu.github.io/blob/master/html/ML-Course/Numpy-Introduction/Numpy-Introduction-Notes.ipynb" target="_blank">Click here</a></li>
 </ul>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="NUMPY-intro-from-UCSB">NUMPY intro from UCSB<a class="anchor-link" href="#NUMPY-intro-from-UCSB">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p style="font-size:125%"><b>Topics Covered</b></p><ol>
+<li><a href="#Creating an Array from List">Creating an Array from List</a> <br></li>
+<li><a href="#Access, Slicing &amp; Manipulating Array">Access, Slicing &amp; Manipulating Array</a> <br></li>
+<li><a href="#Multidimensional Array">Multidimensional Array</a> <br></li>
+<li><a href="#Slicing 2D array">Slicing 2D array</a> <br></li>
+<li><a href="#shape, size &amp; len">shape, size &amp; len</a> <br></li>
+<li><a href="#dtype">dtype</a> <br></li>
+<li><a href="#Using in statement">Using in statement</a> <br></li>
+<li><a href="#reshape">reshape</a> <br></li>
+<li><a href="#copy">copy</a> <br></li>
+<li><a href="#Creating a list from array">Creating a list from array</a> <br></li>
+<li><a href="#transpose">transpose</a> <br></li>
+<li><a href="#flatten">flatten</a> <br></li>
+<li><a href="#concatenate">concatenate</a> <br></li>
+<li><a href="#newaxis">newaxis</a> <br></li>
+<li><a href="#Other ways to create arrays">Other ways to create arrays</a> <br></li>
+<li><p><a href="#Array Math">Array Math</a> <br></p>
+</li>
+<li><p><a href="#Common math functions">Common math functions</a> <br></p>
+</li>
+<li><a href="#floor, ceil &amp; rint">floor, ceil &amp; rint</a> <br></li>
+<li><a href="#Array iteration">Array iteration</a> <br></li>
+<li><a href="#Basic Array operations">Basic Array operations</a> <br></li>
+<li><a href="#where">where</a> <br></li>
+</ol>
+
 </div>
 </div>
 </div>
@@ -11859,10 +11886,12 @@ $( document ).ready(function(){
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><a id="Creating an Array from List"></a></p>
 <h2 id="np.array(L)---Creating-an-Array-from-List"><code>np.array(L)</code> - Creating an Array from List<a class="anchor-link" href="#np.array(L)---Creating-an-Array-from-List">&#182;</a></h2>
 </div>
 </div>
@@ -11892,9 +11921,7 @@ $( document ).ready(function(){
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[1 2 3 4 5]
@@ -11925,9 +11952,7 @@ $( document ).ready(function(){
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[ 1.  2.  3.  4.  5.]
@@ -11939,10 +11964,12 @@ $( document ).ready(function(){
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><a id="Access, Slicing & Manipulating Array"></a></p>
 <h2 id="Access,-Slicing-&amp;-Manipulating-Array">Access, Slicing &amp; Manipulating Array<a class="anchor-link" href="#Access,-Slicing-&amp;-Manipulating-Array">&#182;</a></h2>
 </div>
 </div>
@@ -11973,9 +12000,7 @@ $( document ).ready(function(){
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[1 2]
@@ -11989,10 +12014,12 @@ $( document ).ready(function(){
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><a id="Multidimensional Array"></a></p>
 <h2 id="Multidimensional-Array">Multidimensional Array<a class="anchor-link" href="#Multidimensional-Array">&#182;</a></h2>
 </div>
 </div>
@@ -12021,9 +12048,7 @@ $( document ).ready(function(){
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[[1 2 3]
@@ -12039,10 +12064,12 @@ $( document ).ready(function(){
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><a id="Slicing 2D array"></a></p>
 <h2 id="Slicing-2D-array">Slicing 2D array<a class="anchor-link" href="#Slicing-2D-array">&#182;</a></h2>
 </div>
 </div>
@@ -12071,9 +12098,7 @@ $( document ).ready(function(){
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[[1 2 3]
@@ -12089,10 +12114,12 @@ $( document ).ready(function(){
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><a id="shape, size & len"></a></p>
 <h2 id="shape,-size-&amp;-len"><code>shape</code>, <code>size</code> &amp; <code>len</code><a class="anchor-link" href="#shape,-size-&amp;-len">&#182;</a></h2>
 </div>
 </div>
@@ -12121,9 +12148,7 @@ $( document ).ready(function(){
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Array = [[1 2 3]
@@ -12139,10 +12164,12 @@ Length = 2
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><a id="dtype"></a></p>
 <h2 id="dtype"><code>dtype</code><a class="anchor-link" href="#dtype">&#182;</a></h2><ul>
 <li>Tells the type of value stored in array</li>
 </ul>
@@ -12171,9 +12198,7 @@ Length = 2
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>data type of &#39;a&#39; = int64
@@ -12186,10 +12211,12 @@ data type of &#39;b&#39; = float64
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><a id="Using in statement"></a></p>
 <h2 id="Using-in-statement">Using <code>in</code> statement<a class="anchor-link" href="#Using-in-statement">&#182;</a></h2>
 </div>
 </div>
@@ -12219,9 +12246,7 @@ data type of &#39;b&#39; = float64
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Array = [[1 2 3]
@@ -12235,9 +12260,7 @@ False
 </div>
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>/home/prasanth/deeplearning/lib/python3.5/site-packages/ipykernel_launcher.py:9: DeprecationWarning: elementwise == comparison failed; this will raise an error in the future.
@@ -12250,10 +12273,12 @@ False
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><a id="reshape"></a></p>
 <h2 id="reshape(nRows,-nCols)"><code>reshape(nRows, nCols)</code><a class="anchor-link" href="#reshape(nRows,-nCols)">&#182;</a></h2><ul>
 <li>Array can be reshaped using reshape function( ), using tuples that specify new dimension. </li>
 <li>Reshape funciton creates new array &amp; doesn’t modify the original array</li>
@@ -12290,9 +12315,7 @@ False
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>a = [0 1 2 3 4 5 6 7 8 9]
@@ -12350,9 +12373,7 @@ New Shape =  (10, 1)
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>b shape: (10, 1)
@@ -12365,10 +12386,12 @@ c shape: (1, 10)
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><a id="copy"></a></p>
 <h2 id="copy()"><code>copy()</code><a class="anchor-link" href="#copy()">&#182;</a></h2><ul>
 <li>Creates a new, seperate copy of array in memory</li>
 </ul>
@@ -12411,9 +12434,7 @@ c shape: (1, 10)
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>a = [0 2 3] id = 140560724466064
@@ -12434,10 +12455,12 @@ c = [1 2 3] id = 140560724465824
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><a id="Creating a list from array"></a></p>
 <h2 id="tolist()---Creating-a-List-from-Array"><code>tolist()</code> - Creating a List from Array<a class="anchor-link" href="#tolist()---Creating-a-List-from-Array">&#182;</a></h2>
 </div>
 </div>
@@ -12469,9 +12492,7 @@ c = [1 2 3] id = 140560724465824
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>array = [1 2 3] &lt;class &#39;numpy.ndarray&#39;&gt;
@@ -12489,10 +12510,12 @@ List = [[1, 2, 3], [4, 5, 6]] &lt;class &#39;list&#39;&gt;
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><a id="transpose"></a></p>
 <h2 id="transpose()"><code>transpose()</code><a class="anchor-link" href="#transpose()">&#182;</a></h2><ul>
 <li>Doesn't modify the original function</li>
 </ul>
@@ -12533,9 +12556,7 @@ List = [[1, 2, 3], [4, 5, 6]] &lt;class &#39;list&#39;&gt;
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Oringinal:
@@ -12563,10 +12584,12 @@ Shape of transposed = (3,)
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><a id="flatten"></a></p>
 <h2 id="flatten()"><code>flatten()</code><a class="anchor-link" href="#flatten()">&#182;</a></h2><ul>
 <li>Flattens a multi dimensional array into 1D array</li>
 </ul>
@@ -12595,9 +12618,7 @@ Shape of transposed = (3,)
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Flattened array = [1 2 3 4 5 6]
@@ -12610,10 +12631,12 @@ Shape = (6,)
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><a id="concatenate"></a></p>
 <h2 id="concatenate(a,b,...,-axis-=-0)"><code>concatenate(a,b,..., axis = 0)</code><a class="anchor-link" href="#concatenate(a,b,...,-axis-=-0)">&#182;</a></h2><ul>
 <li>Joins multiple arrays together along existing axis (by default, it concatenates along first dimension =&gt; rows)</li>
 <li>The input array should be given in a Tuple</li>
@@ -12651,9 +12674,7 @@ Shape = (6,)
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Concatenated array: [1 2 3 4 5 6 7 8 9]
@@ -12674,10 +12695,12 @@ Concatenation along cols
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><a id="newaxis"></a></p>
 <h2 id="newaxis"><code>newaxis</code><a class="anchor-link" href="#newaxis">&#182;</a></h2><ul>
 <li>Used to increase the dimensionality of an array</li>
 </ul>
@@ -12715,9 +12738,7 @@ Concatenation along cols
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>a = [1 2 3]
@@ -12741,15 +12762,18 @@ c shape = (1, 3)
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><a id="Other ways to create arrays"></a></p>
 <h2 id="Other-ways-to-create-arrays">Other ways to create arrays<a class="anchor-link" href="#Other-ways-to-create-arrays">&#182;</a></h2>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12791,9 +12815,7 @@ c shape = (1, 3)
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Integer array:  [0 1 2 3 4]
@@ -12817,7 +12839,8 @@ Shape of array:  (101,)
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12884,9 +12907,7 @@ used with caution.</li>
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Zeros 1D array = [0. 0. 0.]
@@ -12920,7 +12941,8 @@ Shape of empty array: (0, 4)
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12964,9 +12986,7 @@ Shape of empty array: (0, 4)
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>zero like array =
@@ -12988,7 +13008,8 @@ one like array =
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13022,9 +13043,7 @@ one like array =
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Before filling:  [1. 2. 3.]
@@ -13038,7 +13057,8 @@ After filling with 1: [1. 1. 1.]
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13076,9 +13096,7 @@ After filling with 1: [1. 1. 1.]
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>3x3 matrix:
@@ -13100,10 +13118,12 @@ After filling with 1: [1. 1. 1.]
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><a id="Array Math"></a></p>
 <h2 id="Array-Math">Array Math<a class="anchor-link" href="#Array-Math">&#182;</a></h2>
 </div>
 </div>
@@ -13137,9 +13157,7 @@ After filling with 1: [1. 1. 1.]
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Sum = [5 7 9]
@@ -13179,9 +13197,7 @@ Mul =
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_text output_error">
 <pre>
@@ -13200,7 +13216,8 @@ Mul =
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13233,9 +13250,7 @@ Mul =
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Array after broadcast: 
@@ -13250,7 +13265,8 @@ Mul =
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13288,9 +13304,7 @@ Mul =
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[[0. 0.]
@@ -13311,10 +13325,12 @@ array b is converted from 2, to 2x1
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><a id="Common math functions"></a></p>
 <h2 id="Common-Math-functions">Common Math functions<a class="anchor-link" href="#Common-Math-functions">&#182;</a></h2><ul>
 <li>sin</li>
 <li>cos</li>
@@ -13382,14 +13398,12 @@ array b is converted from 2, to 2x1
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
 
 
 
-
 <div class="output_png output_subarea ">
-<img src="Numpy-Introduction-Notes_files/Numpy-Introduction-Notes_52_0.png"
+<img src="output_53_0.png"
 >
 </div>
 
@@ -13399,10 +13413,12 @@ array b is converted from 2, to 2x1
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><a id="floor, ceil & rint"></a></p>
 <h2 id="floor,-ceil-&amp;-rint"><code>floor</code>, <code>ceil</code> &amp; <code>rint</code><a class="anchor-link" href="#floor,-ceil-&amp;-rint">&#182;</a></h2><ul>
 <li><code>floor</code> - give lower integer</li>
 <li><code>ceil</code> - give upper integer</li>
@@ -13432,9 +13448,7 @@ array b is converted from 2, to 2x1
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>floor = [1. 1. 1.]
@@ -13448,10 +13462,12 @@ rint = [1. 2. 2.]
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><a id="Array iteration"></a></p>
 <h2 id="Array-iteration">Array iteration<a class="anchor-link" href="#Array-iteration">&#182;</a></h2><ul>
 <li>Similar to list iteration</li>
 <li>For multidimensional array, iteration proceeds over the first axis (row) &amp; each loop returns one row of elements </li>
@@ -13483,9 +13499,7 @@ rint = [1. 2. 2.]
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Iterating over a list:
@@ -13524,9 +13538,7 @@ Data type of an element : &lt;class &#39;int&#39;&gt;
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Iterating over an array:
@@ -13565,9 +13577,7 @@ Data type of an element : &lt;class &#39;numpy.int64&#39;&gt;
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Iterating over a 2D array:
@@ -13605,9 +13615,7 @@ Data type of an element : &lt;class &#39;numpy.ndarray&#39;&gt;
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Iterating over a list of lists:
@@ -13647,9 +13655,7 @@ Data type of an element : &lt;class &#39;list&#39;&gt;
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Multiple assigment using tuples:
@@ -13669,15 +13675,18 @@ Multiple assigment using lists:
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><a id="Basic Array operations"></a></p>
 <h2 id="Basic-Array-operations">Basic Array operations<a class="anchor-link" href="#Basic-Array-operations">&#182;</a></h2>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13708,9 +13717,7 @@ Multiple assigment using lists:
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Array =  [2 4 3]
@@ -13725,7 +13732,8 @@ Prod = 24
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13767,9 +13775,7 @@ Prod = 24
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>1D Array =  [2 4 3]
@@ -13818,9 +13824,7 @@ Standard Deviation = 1.707825127659933
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
@@ -13843,7 +13847,8 @@ Standard Deviation = [0.81649658 0.81649658]
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13886,9 +13891,7 @@ Standard Deviation = [0.81649658 0.81649658]
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>2D Array = 
@@ -13912,7 +13915,8 @@ index of min along axis 1 = [0 0]
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13968,9 +13972,7 @@ index of min along axis 1 = [0 0]
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre><span class="ansi-magenta-intense-fg">1D Array</span>
@@ -14005,7 +14007,8 @@ After sorting along axis 0=
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14055,9 +14058,7 @@ After sorting along axis 0=
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre><span class="ansi-magenta-intense-fg">1D Array</span>
@@ -14077,9 +14078,7 @@ Before sorting =
 </div>
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_text output_error">
 <pre>
@@ -14117,9 +14116,7 @@ Before sorting =
 
 
 <div class="output_area">
-
 <div class="prompt output_prompt">Out[51]:</div>
-
 
 
 
@@ -14133,7 +14130,8 @@ Before sorting =
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14188,9 +14186,7 @@ than 1 become 1.</li>
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Before clipping =
@@ -14209,10 +14205,12 @@ After clipping in different way =
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><a id="where"></a></p>
 <h2 id="where">where<a class="anchor-link" href="#where">&#182;</a></h2>
 </div>
 </div>
@@ -14241,9 +14239,7 @@ After clipping in different way =
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>(array([0, 1, 1]), array([0, 0, 2])) &lt;class &#39;tuple&#39;&gt;
@@ -14262,7 +14258,8 @@ Index Locataions of the matched item:
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14287,9 +14284,7 @@ Index Locataions of the matched item:
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Help on function clip in module numpy.core.fromnumeric:
@@ -14350,6 +14345,19 @@ clip(a, a_min, a_max, out=None)
 </div>
 </div>
 
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
 </div>
 </div>
 
