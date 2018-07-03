@@ -2,312 +2,284 @@
 <!-- The HTML document itself begins with <html> and ends with </html> -->
 <html lang="en-US">
 
-	<!--The <head> element contains meta information about the document 
-			Meta data is not displayed
+<head>
+	-- <link rel="stylesheet" id="font-awesome-css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" type="text/css" media="screen">
+
+
+	<style>
+		.back-to-top {
+			background: none;
+			margin: 0;
+			position: fixed;
+			bottom: 0;
+			right: 0;
+			width: 30px;
+			height: 30px;
+			z-index: 100;
+			display: none;
+			text-decoration: none;
+			color: #ffffff;
+			background-color: #ff9000;
+			padding-bottom:10px;
+		}
+		
+		.back-to-top i {
+			font-size: 60px;
+		}
+ 
+</style>
+
+	</head>
+
+<body>
+	<!-- https://getflywheel.com/layout/add-sticky-back-top-button-website/ -->
+	<!-- https://codepen.io/yying6/pen/yGhHu --
+	
+	
+	
+	>
+	<!-- <a href="#" class="back-to-top" style="display: inline;">
+		<i class="fa fa-arrow-circle-up"></i>
+	</a> 
 	-->
 	
-	
-	<head>
-	  <meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- The <title> element specifies a title for the document -->
-		<title >ML Coursera</title>
-		<!-- To use an external style sheet, add a link to it in the <head> section of the HTML page -->
-		<link rel="stylesheet" href="https://prasanth-ntu.github.io/html/styles.css">
-		<link rel="icon" href="https://prasanth-ntu.github.io/html/images/avid learner.jpeg">
-		
-	</head>
-	
-	<body>
-		<div class="header">
-		<ul class="navigation_menu">
-			<li class="navigation_menu"><a href="https://prasanth-ntu.github.io/">About</a></li>
-			<li class="navigation_menu"><a href="https://prasanth-ntu.github.io/html/ML-Coursera-1.html" style="background-color: gray;">ML Coursera</a></li>
-			<li class="navigation_menu"><a href="temp2.html">Automate with Python</a></li>
-			<li class="navigation_menu"><a href="#about">Others</a></li>
-		</ul>
-		</div>
-		
-		<br><br><br>
-		
-		<div class="clearfix">
-			<div class="column menu">
-				<ul>
-					<li><a href="https://prasanth-ntu.github.io/html/ML-Coursera-1.html">Machine Learning using Python - Introduction</a></li>
-					<li><a href="https://prasanth-ntu.github.io/html/ML-Coursera-2.html">Anaconda</a></li>
-					<li style="background-color: #4CAF50; color: white;">Jupyter Notebook</li>
-					<li><a href="https://prasanth-ntu.github.io/html/ML-Coursera-4.html">Python Refresher</a></li>
-					<li><a href="https://prasanth-ntu.github.io/html/ML-Coursera-5.html">Numpy introduction</a></li>
-				</ul>
-			</div>
-	
-		<div class="column content">
+	<a class="back-to-top" style="display: inline;font-size:50px;" href="#"><b>^</b></a>
+			
+	<script>
+		jQuery(document).ready(function() {
+		var offset = 250;
+		var duration = 300;
+		jQuery(window).scroll(function() { 
+		if (jQuery(this).scrollTop() > offset) {
+		jQuery(‘.back-to-top’).fadeIn(duration);
+		} else {
+		jQuery(‘.back-to-top’).fadeOut(duration);
+		}
+		});
+		jQuery(‘.back-to-top’).click(function(event) {
+		event.preventDefault();
+		jQuery(‘html, body’).animate({scrollTop: 0}, duration); 
+		return false;
+		})
+		});
+	</script>
 		
 		
-		<h1> Jupyter Notebook </h1>
-		<h2> What is Jupyter Notebook ? </h2>
-		<hr>
-		<p class="normal">
-		The Jupyter Notebook is an open-source web application that allows  to create and share documents that contain 
-		<i>live code, equations, visualizations and narrative text</i>. 
-		Uses include:
-		
-		<ul>
-			<li>data cleaning and transformation</li>
-			<li>numerical simulation</li>
-			<li>statistical modeling</li>
-			<li>data visualization and packages</li>
-			<li>machine learning, deep learning</li>
-			<li>much more</li>
-		</ul></p>
-		<p class="normal">
-		It excels in a form of programming called <i>“literate programming”</i> that allows users to formulate and describe their thoughts with prose, supplemented by mathematical equations, as they prepare to write code blocks. This mindset is the opposite of how we usually think about code.
-		</p>
-		
-		
-		<h2> Jupyter Notebook Basics </h2>
-		<hr>
-		
-		<!--------------- Launch Jupyter Notebook -------------->
-		<p class="normal" style=" font-weight: bold;"> Launch Jupyter Notebook </p>
-		<p class="normal">Type <code class="style">jupyter-notebook</code> in the Anaconda prompt window.
-		The command will launch the jupyter-notebook in default web browser (as shown below). It has some cool features and we will be using it as our main development environment.
-		</p>
-		<img src="https://prasanth-ntu.github.io/html/images/step 4 3 jupyter notebook.png" 
-		alt="Launch Jupyter Notebook" style="margin-left:10%; width:80%">
-		
-		<!--------------- Open a new Jupyter Notebook -------------->
-		<p class="normal" style=" font-weight: bold;">  Open a new Jupyter Notebook </p>
-		<p class="normal">Click <code class="style">New > Python 3</code> to open a new jupyter notebook.
-	  If you have multiple notebook environments, choose the one in which you want the notebook to run. A newly opened jupyter notebook looks something like below. 
-		<br><br>You will immediately see the notebook name, a menu bar, a toolbar and an empty code cell.
-		</p>
-		<img src="https://prasanth-ntu.github.io/html/images/create a jupyter notebook.png" 
-		alt="Launch Jupyter Notebook" style="margin-left:10%; width:80%">
-		
-		<!---------------  Rename Jupyter Notebook Title-------------->
-		<p class="normal" style=" font-weight: bold;">  Rename Jupyter Notebook Title </p>
-		<p class="normal">Click <code class="style">File > Rename</code> to rename the notebook name/ title.
-		</p>
-		<img src="https://prasanth-ntu.github.io/html/images/rename notebook.PNG" 
-		alt="Rename Jupyter Notebook" style="margin-left:10%; width:50%">
-		<img src="https://prasanth-ntu.github.io/html/images/jupyter notebook basics.png" 
-		alt="Jupyter Notebook with new name" style="margin-left:10%; width:80%">
-		
-		<!---------------  Notebook Dashboard-------------->
-		<p class="normal" style=" font-weight: bold;">  Notebook Dashboard </p>
-		<p class="normal">Jupyter notebooks ends with an <code class="style">.ipynb</code> extension.
-		The notebooks that are currently running will be highlighted in green. 
-		The dashboard is mainly used to open notebooks and to manage them (e.g. shutdown, visualise).</p>
-		<img src="https://prasanth-ntu.github.io/html/images/localhost tree.png" 
-		alt="Files in Localhost tree" style="margin-left:10%; width:80%">
-		
-		<!---------------  Running our first Python code in a cell-------------->
-		<p class="normal" style=" font-weight: bold;">  Running our first Python code in a cell</p>
-		<p class="normal">We can create & run multiple cells inside the notebook.
-		To run the cell, select  <code class="style">Cell > Run Cells</code>. 
-		Keyboard shortcut is  <code class="style">Ctrl + Enter</code>.
-		You will see the output below the currently executed cell.
-		</p>
-		<img src="https://prasanth-ntu.github.io/html/images/jupyter notebook cells.png" 
-		alt="Files in Localhost tree" style="margin-left:10%; width:80%">
-		
-		<!--------------- Insert a new cell-------------->
-		<p class="normal" style=" font-weight: bold;"> Insert a new cell</p>
-		<p class="normal">To insert a new cell below, select <code class="style">Insert > Insert Cell Below</code>. 
-		Keyboard shortcut is  <code class="style">Esc > B</code>.
-		</p>
+<p>
 
-		<!--------------- Delete a cell-------------->
-		<p class="normal" style=" font-weight: bold;"> Delete a cell</p>
-		<p class="normal">To delete a cell, select <code class="style">Edit > Delete Cells</code>. 
-		Keyboard shortcut is  <code class="style">Esc > D > D</code>.
-		</p>
-		
-		<!--------------- Save the notebook-------------->
-		<p class="normal" style=" font-weight: bold;"> Save the notebook</p>
-		<p class="normal">To save the notenook, select <code class="style">File > Save & Checkpoint</code>. 
-		Keyboard shortcut is  <code class="style">Ctrl + S</code>.
-		</p>
-		
-		<!--------------- Close the notebook-------------->
-		<p class="normal" style=" font-weight: bold;"> Close the notebook</p>
-		<p class="normal">To close the notenook, select <code class="style">File > Close and Halt</code>. 
-		</p>
+This paragraph
+contains a lot of lines
+in the source code,
+but the browser 
+ignores it.
+</p>
+<p>
+This paragraph
+contains a lot of lines
+in the source code,
+but the browser 
+ignores it.
+</p><p>
+This paragraph
+contains a lot of lines
+in the source code,
+but the browser 
+ignores it.
+</p>
+<p>
+This paragraph
+contains a lot of lines
+in the source code,
+but the browser 
+ignores it.
+</p>
+<p>
+This paragraph
+contains a lot of lines
+in the source code,
+but the browser 
+ignores it.
+</p><p>
+This paragraph
+contains a lot of lines
+in the source code,
+but the browser 
+ignores it.
+</p><p>
+This paragraph
+contains a lot of lines
+in the source code,
+but the browser 
+ignores it.
+</p><p>
+This paragraph
+contains a lot of lines
+in the source code,
+but the browser 
+ignores it.
+</p><p>
+This paragraph
+contains a lot of lines
+in the source code,
+but the browser 
+ignores it.
+</p><p>
+This paragraph
+contains a lot of lines
+in the source code,
+but the browser 
+ignores it.
+</p><p>
+This paragraph
+contains a lot of lines
+in the source code,
+but the browser 
+ignores it.
+</p><p>
+This paragraph
+contains a lot of lines
+in the source code,
+but the browser 
+ignores it.
+</p><p>
+This paragraph
+contains a lot of lines
+in the source code,
+but the browser 
+ignores it.
+</p><p>
+This paragraph
+contains a lot of lines
+in the source code,
+but the browser 
+ignores it.
+</p>
+<p>
+This paragraph
+contains a lot of lines
+in the source code,
+but the browser 
+ignores it.
+</p>
 
-		
-	
-		<!--------------- STEP 2 -------------->
-		<p class="normal"  style="font-weight: bold;">Step 2: Verify the conda installation
-		</p>
-		<p class="normal">		Open Anaconda Command Prompt
-			<ul>
-				<li> For Windows, <code class="style"> Start > Anaconda3 > Anaconda Prompt </code></li>
-				<li> For Mac & Linux, open <code class="style"> Terminal</code> window </li>
-			</ul>
-		</p>
-		<p class="normal">To Verify the installation, type</p>
-			<pre style="margin-left: 10%;margin-right: 10%; border-style: groove; border-left: 6px solid red; padding-left:10px">
-conda --version</pre>
-		<img src="https://prasanth-ntu.github.io/html/images/conda version.PNG" 
-		alt="Conda version" style="margin-left:10%; width:80%">
-		
-		<p class="normal">To update conda, type</p>
-			<pre style="margin-left: 10%;margin-right: 10%; border-style: groove; border-left: 6px solid red; padding-left:10px">
-conda update conda</pre>
-		<p class="normal">TIP: It's recommend that you always keep conda updated to the latest version.</p>
-		
-		<!--------------- STEP 3 -------------->
-		<p class="normal"  style="font-weight: bold;">Step 3: Create a vitual environment (Optional)
-		</p>
-		<p class="normal">
-		Conda allows you to to create separate environments containing files, packages and their dependencies that will not interact with other environments.<br>
-		When you begin using conda, you already have a default environment named  <code class="style">base</code>. You don’t want to put programs into your base environment, though. Create separate environments to keep your programs isolated from each other.
-		</p>
-		<p class="normal">To find the list of current environments, type</p>
-			<pre style="margin-left: 10%;margin-right: 10%; border-style: groove; border-left: 6px solid red; padding-left:10px">
-conda info --envs</pre>
-		<img src="https://prasanth-ntu.github.io/html/images/list of env 1.png" 
-		alt="Conda environemnt list" style="margin-left:10%; width:35%">
-		
-		<p class="normal">To create an environment named <code class="style">ML</code>, type</p>
-		<pre style="margin-left: 10%;margin-right: 10%; border-style: groove; border-left: 6px solid red; padding-left:10px">
-conda create --name ML</pre>
-		<img src="https://prasanth-ntu.github.io/html/images/create env.png" 
-		alt="Create a seperate environment named ML" style="margin-left:10%; width:35%">
-		
-		<p class="normal">To activate the <code class="style">ML</code> environment, type</p>
-			<ul>
-				<li>  Windows: <code class="style"> activate ML </code></li>
-				<li> Mac & Linux: <code class="style"> source activate ML </code> </li>
-			</ul>
-		</p>
-		<img src="https://prasanth-ntu.github.io/html/images/activate env.png" 
-		alt="Create a seperate environment named ML" style="margin-left:10%; width:25%">
-		<p class="normal">The activated environment is also displayed in front of the prompt in <i>paranthesis or brackets</i> as show above.</p>
-		
-		<p class="normal">To deactivate the <code class="style">ML</code> environment, type</p>
-			<ul>
-				<li>  Windows: <code class="style"> deactivate </code></li>
-				<li> Mac & Linux: <code class="style"> source deactivate ML </code> </li>
-			</ul>
-		</p>
-		
-		
-		<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=default"></script>
-		<style>
-			.prettyprint ol.linenums > li { list-style-type: decimal; }
-		</style>
+<p>
+This paragraph
+contains a lot of lines
+in the source code,
+but the browser 
+ignores it.
+</p>
 
-		<!--------------- STEP 4 -------------->
-		<p class="normal"  style="font-weight: bold;">Step 4: Different programming IDEs
-		</p>
-		<p class="normal">
-			<ul>
-				<li> Command Prompt or Terminal
-				<li> Sypder
-				<li> Jupter Notebook
-				<li> other Notepads / text editors (doesn't come with Anaconda installation)
-			</ul>
-		</p>
-		
-		<!--------------- STEP 4.1 -------------->
-		<p class="normal"  style="font-weight: bold;">Step 4.1: Command Prompt or Terminal
-		</p>
-		
-		<p class="normal">Type <code class="style">python</code> in the command window. It will show the current version of python and a prompt 
-		<code class="style">>>></code>  where the python code goes</p>
-		<img src="https://prasanth-ntu.github.io/html/images/step 4 1 command prompt.PNG" 
-		alt="Start python in command window" style="margin-left:10%; width:55%">
-		
-		<!--------------- STEP 4.2 -------------->
-		<p class="normal"  style="font-weight: bold;">Step 4.2: Sypder
-		</p>
-		
-		<p class="normal">Type <code class="style">spyder</code> in the command window.
-		The command will launch the spyder IDE environment. It has some cool features such as <i>Ipython console</i> which you can explore on your own.
-		</p>
-		<img src="https://prasanth-ntu.github.io/html/images/step 4 2 spyder window.png" 
-		alt="Spyder IDE" style="margin-left:10%; width:55%">
-		
-		<!--------------- STEP 4.3 -------------->
-		<p class="normal"  style="font-weight: bold;">Step 4.3: Jupyter Notebook
-		</p>
-		
-		<p class="normal">Type <code class="style">jupyter-notebook</code> in the command window.
-		The command will launch the jupyter-notebook in default web browser. It has some cool features and we will be using it as our main development environment.
-		</p>
-		<img src="https://prasanth-ntu.github.io/html/images/step 4 3 jupyter notebook.png" 
-		alt="Spyder IDE" style="margin-left:10%; width:80%">
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+<p>
+This paragraph
+contains      a lot of spaces
+in the source     code,
+but the    browser 
+ignores it.
+</p>
 
-		<pre class="prettyprint linenums" style="margin-left: 10%;margin-right:10%">
-		<code>/*
-wrfw
-*/
-# testing
-for i in range(10):
-	j = i*i
-	print (i,j)
-print ('loop ended')
-print ('testing')
-a = 4wrfw
-*/
-# testing
-for i in range(10):
-	j = i*i
-	print (i,j)
-print ('loop ended')
-print ('testing')
-a = 4
-wrfw
-*/
-# testing
-for i in range(10):
-	j = i*i
-	print (i,j)
-print ('loop ended')
-print ('testing')
-a = 4wrfw
-*/
-# testing
-for i in range(10):
-	j = i*i
-	print (i,j)
-print ('loop ended')
-print ('testing')
-a = 4
-		</code></pre>	
-	</div>
-	</div>
-		<hr>
-		
-		
-		<p class="normal" style="text-align: center;">
-<a href="#" class="but" style="background-color: #f1f1f1;color: black;;">&laquo; Previous</a>
-<a href="#" class="but" style="background-color:#4CAF50;color: white;">Next &raquo;</a>
+<p>
+The number of lines in a paragraph depends on the size of the browser window. If you resize the browser window, the number of lines in this paragraph will change.
+</p>
 
-		</p>
-				
-		<div class="footer">
-			<p style="font-family:verdana; text-align: center; font-size:90%;">
-				<em>Education transformed my life and I want to transform others using education.<br>I firmly believe that “Knowledge grows when shared"<br>I am doing my best to share the knowledge.
-				</em>
-			</p>
-			<p style="text-align: center;"> I am active in <a href="https://www.quora.com/profile/Prasanth-Thangavel" target="_self">Quora</a>, <a href="https://github.com/prasanth-ntu">Github</a>
-			</p>
-			<p style="text-align: center;"><a href="#">Scroll to the top</a>
-			</p>
-		</div>
-	</body>
-	
+<p>
+This paragraph
+contains a lot of lines
+in the source code,
+but the browser 
+ignores it.
+</p>
+
+<p>
+This paragraph
+contains      a lot of spaces
+in the source     code,
+but the    browser 
+ignores it.
+</p>
+
+<p>
+The number of lines in a paragraph depends on the size of the browser window. If you resize the browser window, the number of lines in this paragraph will change.
+</p>
+
+<p>
+This paragraph
+contains a lot of lines
+in the source code,
+but the browser 
+ignores it.
+</p>
+
+<p>
+This paragraph
+contains      a lot of spaces
+in the source     code,
+but the    browser 
+ignores it.
+</p>
+
+<p>
+The number of lines in a paragraph depends on the size of the browser window. If you resize the browser window, the number of lines in this paragraph will change.
+</p>
+
+<p>
+This paragraph
+contains a lot of lines
+in the source code,
+but the browser 
+ignores it.
+</p>
+
+<p>
+This paragraph
+contains      a lot of spaces
+in the source     code,
+but the    browser 
+ignores it.
+</p>
+
+<p>
+The number of lines in a paragraph depends on the size of the browser window. If you resize the browser window, the number of lines in this paragraph will change.
+</p>
+<p>
+This paragraph
+contains a lot of lines
+in the source code,
+but the browser 
+ignores it.
+</p>
+
+<p>
+This paragraph
+contains      a lot of spaces
+in the source     code,
+but the    browser 
+ignores it.
+</p>
+
+<p>
+The number of lines in a paragraph depends on the size of the browser window. If you resize the browser window, the number of lines in this paragraph will change.
+</p>
+<p>
+This paragraph
+contains a lot of lines
+in the source code,
+but the browser 
+ignores it.
+</p>
+
+<p>
+This paragraph
+contains      a lot of spaces
+in the source     code,
+but the    browser 
+ignores it.
+</p>
+
+<p>
+The number of lines in a paragraph depends on the size of the browser window. If you resize the browser window, the number of lines in this paragraph will change.
+</p>
+</body>
+
 </html>
+
