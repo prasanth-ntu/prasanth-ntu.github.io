@@ -55,22 +55,36 @@
 		
 		<h1>Our First Machine Learning Project</h1>
 		<h2>What we will learn here</h2>
-		<br><hr><br>
-		<p class="normal">Let's go through a simple ML application and create our first project. Parallely, we will learn some new concepts and terms.</p>
-		<p class="normal">We will use <b>Iris Dataset</b> that contains 4 features/ measurement (<i><code style="font-size:14px;">petal length, petal width, sepal length, sepal width</code></i>) of 50 samples of 3 species of Iris flower
-		(<i><code style="font-size:14px;">Iris setosa, Iris Versicolor, Iris Virginica</code></i>). This is one of the best known data sets till date. For more details on the dataset, visit Visit <a href="http://archive.ics.uci.edu/ml/datasets/Iris" target="_blank">UCI Machine Learning Repository - IRIS dataset</a>.
+		<hr>
+		<p class="normal">Let's go through a simple ML application & create our first project. Parallely, we will learn some new concepts & terms.</p>
+		<p class="normal">We will use <b>Iris Dataset</b> that contains 4 features/ measurements (<i><code style="font-size:14px;">petal length, petal width, sepal length, sepal width</code></i>) of 50 samples of 3 species of Iris flower
+		(<i><code style="font-size:14px;">Iris setosa, Iris Versicolor, Iris Virginica</code></i>). This is one of the best known datasets till date. 
+		For more details on the dataset, visit <a href="http://archive.ics.uci.edu/ml/datasets/Iris" target="_blank">UCI Machine Learning Repository - IRIS dataset</a>.
 		</p>
+		<p class="normal">For reference, here are pictures of the three flowers species:	</p>			
+		<img  class="img_center" src="https://prasanth-ntu.github.io/html/ML-Course/Intro-to-ML-with-Python/images/iris-machinelearning.png" 
+		alt="3 species of IRIS flowers" title="3 species of IRIS flowers" style="max-width:50%" >
+		<p class="normal">Here is picture showing the 4 measurements made from each flower:</p>
+			<img src="https://prasanth-ntu.github.io/html/ML-Course/Intro-to-ML-with-Python/images/iris_flower_petal_sepal.jpeg"  class="img_center" 
+		alt="IRIS flower - petal and sepal measurements" title="IRIS flower - petal and sepal measurements" style="max-width:150px;">
+		<p class="normal">Based on these 4 measurements, we can be certain of which species each iris flower belongs to. 
+			For a while, we will become hobby botanists trying to classify the flowers into their own species.</p>
+			
+		<p class="normal"><b>Our goal</b> is to build a ML model that learns from the 4 mesurements/ features of the iris flowers whose species is known. 
+		Then, using the learned model, we will predict the species of a new iris flower.
 		
-		Just for reference, here are pictures of the three flowers species:
-		
-			<img src="https://prasanth-ntu.github.io/html/ML-Course/Intro-to-ML-with-Python/images/irismachinelearning.png" 
-		alt="3 species of IRIS flowers" title="3 species of IRIS flowers" style="margin-left:10%; max-width:60%">
-		
-					<img src="https://prasanth-ntu.github.io/html/ML-Course/Intro-to-ML-with-Python/images/iris_flower_petal_sepal" 
-		alt="IRIS flower - petal and sepal measurements" title="IRIS flower - petal and sepal measurements" style="margin-left:10%; max-width:60%">
-		
-		
-		
+		This type of problem is called as <code style="font-size:14px;color:blue"><b>Supervised Learning Multi-Class Classification problem</b></code>.
+		<ul style="margin-top:0px;	border-left: 6px solid blue;	margin-left: 10%;padding-left:20px;list-style: none;">
+		<li><code style="font-size:14px;">Supervised Learning</code> - We know the correct species (target class) for each iris flower (3 species).
+		<li><code style="font-size:14px;">Classification   &nbsp;&nbsp;&nbsp;&nbsp;</code> - We want to predict one of the several classes (the species of iris).</li>
+		<li><code style="font-size:14px;">Multi Class&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code> - There are 3 types of species we are dealing with, hence the name multi-class.</li>
+		<li><pre></pre></li>
+		<li><code style="font-size:14px;">Classes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code> - 
+			Possible outputs (different species of irises)</li>
+		<li><code style="font-size:14px;">label&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code> - 
+			For a particular flower, the species it belongs to it is called label.</li>
+
+		</ul>
 		<br><h2>First ML model - Notebook</h2>
 		<hr>
 				<iframe src="https://prasanth-ntu.github.io/html/ML-Course/Intro-to-ML-with-Python/First-ML-model.html" 
