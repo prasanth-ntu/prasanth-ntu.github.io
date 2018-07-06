@@ -11833,6 +11833,7 @@ $( document ).ready(function(){
 <li><a href="#Dictionaries">Dictionaries</a> <br></li>
 <li><a href="#Strings">Strings</a> <br></li>
 <li><a href="#Set">Set</a> <br></li>
+<li><a href="#Others">Others</a> <br></li>
 <li><a href="#Sample Projects">Sample Projects</a> <br></li>
 <li><a href="#Packages used">Packages used</a> <br></li>
 </ol>
@@ -17538,7 +17539,7 @@ hola bienvenido a mi casa &lt;class &#39;str&#39;&gt;
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We have already seen <code>bool</code>, <code>int</code>, <code>float</code>, <code>str</code>, <code>list</code>, <code>tuple</code>&amp; <code>dict</code> built-in data types. <code>Set</code> unlike <code>lists</code> or <code>tuples</code>,</p>
 <ul>
-<li>cannot have multiple occurrences of the same element </li>
+<li>cannot have multiple occurrences of the same element =&gt; highly useful to efficiently remove duplicate values</li>
 <li>stores unordered values</li>
 <li>contains only immutable values (like a <code>str</code> or <code>tuple</code>)</li>
 </ul>
@@ -18432,8 +18433,8 @@ After  : [1, 2, 3, 4, 5]
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
 <li>Works similar to checking in list and tuple<ul>
-<li><code>in &lt;=&gt;</code> element ∈ set `</li>
-<li><code>not in &lt;=&gt;</code> element ∉ set `</li>
+<li><code>in &lt;=&gt;</code> element <code>∈</code> set </li>
+<li><code>not in &lt;=&gt;</code> element <code>∉</code> set </li>
 </ul>
 </li>
 </ul>
@@ -18480,6 +18481,178 @@ After  : [1, 2, 3, 4, 5]
 <pre>(True, True)</pre>
 </div>
 
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Reading-and-Wrinting-Files">Reading and Wrinting Files<a class="anchor-link" href="#Reading-and-Wrinting-Files">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a id="Others"></a></p>
+<h1 id="Others">Others<a class="anchor-link" href="#Others">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="zip()"><code>zip()</code><a class="anchor-link" href="#zip()">&#182;</a></h2><ul>
+<li>Make an iterator that aggregates elements from each of the iterables.</li>
+<li>Returns an iterator of tuples, where the i-th tuple contains the i-th element from each of the argument sequences or iterables. The iterator stops when the shortest input iterable is exhausted. </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[101]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
+<span class="n">z</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]</span>
+<span class="n">zipped</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">zipped</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">zipped</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">zipped</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;zip object at 0x0000021D476AEB88&gt; &lt;class &#39;zip&#39;&gt;
+(1, 4, 7)
+(2, 5, 8)
+(3, 6, 9)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>unzip a list</strong></p>
+<p><code>zip()</code> in conjunction with the <code>*</code> operator can be used to unzip a list as shown below</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[107]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">zipped</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">)</span>
+<span class="n">l1</span><span class="p">,</span> <span class="n">l2</span><span class="p">,</span> <span class="n">l3</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">zipped</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">l1</span><span class="p">,</span> <span class="n">l2</span><span class="p">,</span> <span class="n">l3</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(1, 2, 3) (4, 5, 6) (7, 8, 9)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>If the length of the iterables are not equal, zip creates the list of tuples of length equal to the smallest iterable and truncates the extra elements.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[98]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Clark Kent&#39;</span><span class="p">,</span> <span class="s1">&#39;Bruce Wayne&#39;</span><span class="p">,</span> <span class="s1">&#39;Peter Parker&#39;</span><span class="p">,</span> <span class="s1">&#39;Tony Stark&#39;</span><span class="p">]</span>
+<span class="n">speical_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Super Man&#39;</span><span class="p">,</span> <span class="s1">&#39;Bat Man&#39;</span><span class="p">,</span> <span class="s1">&#39;Spider Man&#39;</span><span class="p">]</span>
+<span class="n">color</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Blue&#39;</span><span class="p">,</span> <span class="s1">&#39;Black&#39;</span><span class="p">]</span>                                         
+<span class="n">zipped</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="n">names</span><span class="p">,</span><span class="n">speical_names</span><span class="p">,</span><span class="n">color</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">zipped</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="n">i</span><span class="p">)</span>     <span class="c1"># As color is the shortest iterable, zip stops with 2 iterations</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(&#39;Clark Kent&#39;, &#39;Super Man&#39;, &#39;Blue&#39;)
+(&#39;Bruce Wayne&#39;, &#39;Bat Man&#39;, &#39;Black&#39;)
+</pre>
+</div>
 </div>
 
 </div>
@@ -19026,18 +19199,26 @@ Game over. Do you want to continue (y or n): n
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Acknowledgements">Acknowledgements<a class="anchor-link" href="#Acknowledgements">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Automate the Boring Stuff with Python - <a href="https://automatetheboringstuff.com/">https://automatetheboringstuff.com/</a></li>
+</ul>
 
 </div>
 </div>
-</div>
-
 </div>
     </div>
   </div>
