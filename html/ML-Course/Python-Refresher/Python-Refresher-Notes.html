@@ -11832,6 +11832,7 @@ $( document ).ready(function(){
 <li><a href="#Tuples">Tuples</a> <br></li>
 <li><a href="#Dictionaries">Dictionaries</a> <br></li>
 <li><a href="#Strings">Strings</a> <br></li>
+<li><a href="#Set">Set</a> <br></li>
 <li><a href="#Sample Projects">Sample Projects</a> <br></li>
 <li><a href="#Packages used">Packages used</a> <br></li>
 </ol>
@@ -15015,6 +15016,50 @@ rat
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>empty list</strong></p>
+<p>We can create empty list using <code>[]</code> notation or <code>list()</code> function.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># empty list</span>
+<span class="n">animals</span> <span class="o">=</span> <span class="p">[]</span>                            <span class="c1"># or try # list()</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Data type =&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">animals</span><span class="p">))</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;No of elements =&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">animals</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Data type = &lt;class &#39;list&#39;&gt;
+No of elements = 0
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="List-concatenation">List concatenation<a class="anchor-link" href="#List-concatenation">&#182;</a></h2>
 </div>
 </div>
@@ -15803,6 +15848,48 @@ True
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Tuples are faster than list</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[88]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">timeit</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;List execution time :&#39;</span><span class="p">,</span> <span class="n">timeit</span><span class="o">.</span><span class="n">timeit</span><span class="p">(</span><span class="s1">&#39;[1,2,3,1,7,1,2,3,1,7]&#39;</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="mi">100000</span><span class="p">))</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Tuple execution time:&#39;</span><span class="p">,</span><span class="n">timeit</span><span class="o">.</span><span class="n">timeit</span><span class="p">(</span><span class="s1">&#39;(1,2,3,1,7,1,2,3,1,7)&#39;</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="mi">100000</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>List execution time : 0.011051107368757584
+Tuple execution time: 0.0031230319397081985
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="for-loop-with-tuple"><code>for</code> loop with <code>tuple</code><a class="anchor-link" href="#for-loop-with-tuple">&#182;</a></h2>
 </div>
 </div>
@@ -15874,6 +15961,50 @@ rat
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>5
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>empty tuple</strong></p>
+<p>We can create an empty tuple using <code>()</code> notation or <code>tuple()</code> function.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># empty tuple</span>
+<span class="n">animals</span> <span class="o">=</span> <span class="p">()</span>                                 <span class="c1"># or try # tuple()</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Data type =&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">animals</span><span class="p">))</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;No of elements =&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">animals</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Data type = &lt;class &#39;tuple&#39;&gt;
+No of elements = 0
 </pre>
 </div>
 </div>
@@ -16016,7 +16147,7 @@ b = 1
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><a id="Dictionaries"></a></p>
-<h1 id="Dictionaries">Dictionaries<a class="anchor-link" href="#Dictionaries">&#182;</a></h1>
+<h1 id="Dictionaries"><code>Dictionaries</code><a class="anchor-link" href="#Dictionaries">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -16025,9 +16156,16 @@ b = 1
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We have already seen <code>bool</code>, <code>int</code>, <code>float</code>, <code>str</code>, <code>list</code>, <code>tuple</code> built-in data types. <code>dict</code> <span style="color:green;"><i>(dictionary) is my second favortie data type in Python, next to </i></span><code>list</code>.</p>
+<p>We have already seen <code>bool</code>, <code>int</code>, <code>float</code>, <code>list</code>, <code>tuple</code> built-in data types. <code>dict</code> <span style="color:green;"><i>(dictionary) is my second favortie data type in Python, next to </i></span><code>list</code>.</p>
 <ul>
 <li><code>dict</code> provides flexible way to access and organize data.</li>
+<li>dictionaries are identified with flower brackets <code>{</code> and <code>}</code> with <code>key:value</code> format inside, whereas <ul>
+<li>lists are identified by sqaure brackets <code>[</code> and <code>]</code> and <ul>
+<li>tuple is identified by <code>(</code> and <code>)</code> </li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
 </div>
@@ -16360,6 +16498,92 @@ ducks , quack
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="len()"><code>len()</code><a class="anchor-link" href="#len()">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">animal_sounds</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;cat&#39;</span><span class="p">:</span> <span class="s1">&#39;meow&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;dog&#39;</span><span class="p">:</span> <span class="s1">&#39;lol&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;cow&#39;</span><span class="p">:</span> <span class="s1">&#39;moo&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;ducks&#39;</span><span class="p">:</span> <span class="s1">&#39;quack&#39;</span>
+                <span class="p">}</span>
+<span class="nb">print</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">animal_sounds</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>4
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>empty dictionary</strong></p>
+<p>We can create empty dictionary using <code>{}</code> notation or <code>dict()</code> function.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">animal_sounds</span> <span class="o">=</span> <span class="p">{}</span>                        <span class="c1"># or try # dict()</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Data type =&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">animal_sounds</span><span class="p">))</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;No of elements =&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">animal_sounds</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Data type = &lt;class &#39;dict&#39;&gt;
+No of elements = 0
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="in-&amp;-not-in-operators"><code>in</code> &amp; <code>not</code> in operators<a class="anchor-link" href="#in-&amp;-not-in-operators">&#182;</a></h2>
 </div>
 </div>
@@ -16587,7 +16811,7 @@ ducks , quack
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><a id="Strings"></a></p>
-<h1 id="Strings">Strings<a class="anchor-link" href="#Strings">&#182;</a></h1>
+<h1 id="Strings"><code>Strings</code><a class="anchor-link" href="#Strings">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -16596,7 +16820,7 @@ ducks , quack
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We have already seen <code>bool</code>, <code>int</code>, <code>float</code>, <code>str</code>, <code>list</code>, <code>tuple</code>&amp; <code>dict</code> built-in data types. <code>str</code> <span style="color:green;"><i>(string) is my third favortie data type in Python, next to </i></span><code>list</code> &amp; <code>dict</code>.</p>
+<p>We have already seen <code>bool</code>, <code>int</code>, <code>float</code>, <code>list</code>, <code>tuple</code>&amp; <code>dict</code> built-in data types. <code>str</code> <span style="color:green;"><i>(string) is my third favortie data type in Python, next to </i></span><code>list</code> &amp; <code>dict</code>.</p>
 <p>Handling text such as <em>emails, documents, web scraping</em> is one of the most commong forms of data our program needs to handle. With Python, we can do lot of cool stuff with strings.</p>
 
 </div>
@@ -16719,6 +16943,7 @@ hola bienvenido a mi casa &lt;class &#39;str&#39;&gt;
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>emptry string</strong></p>
+<p>We can create empty string using <code>''</code> notation or <code>str()</code> function.</p>
 
 </div>
 </div>
@@ -16728,7 +16953,7 @@ hola bienvenido a mi casa &lt;class &#39;str&#39;&gt;
 <div class="prompt input_prompt">In&nbsp;[214]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">empty_string</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>          <span class="c1"># No characters inside empty string </span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">empty_string</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>          <span class="c1"># No characters inside empty string    # or try # str()</span>
 <span class="nb">print</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">empty_string</span><span class="p">))</span>
 </pre></div>
 
@@ -17288,6 +17513,971 @@ hola bienvenido a mi casa &lt;class &#39;str&#39;&gt;
 
 <div class="output_text output_subarea output_execute_result">
 <pre>False</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a id="Set"></a></p>
+<h1 id="Set"><code>Set</code><a class="anchor-link" href="#Set">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We have already seen <code>bool</code>, <code>int</code>, <code>float</code>, <code>str</code>, <code>list</code>, <code>tuple</code>&amp; <code>dict</code> built-in data types. <code>Set</code> unlike <code>lists</code> or <code>tuples</code>,</p>
+<ul>
+<li>cannot have multiple occurrences of the same element </li>
+<li>stores unordered values</li>
+<li>contains only immutable values (like a <code>str</code> or <code>tuple</code>)</li>
+</ul>
+<p>Set are identified with flower brackets <code>{</code> and <code>}</code> similar to dictionary. However, they are different from dictionary as <code>set</code> doesn't have key-value pair.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="set-data-type"><code>set</code> data type<a class="anchor-link" href="#set-data-type">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dataScientist</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="s1">&#39;R&#39;</span><span class="p">,</span> <span class="s1">&#39;SQL&#39;</span><span class="p">,</span> <span class="s1">&#39;Git&#39;</span><span class="p">,</span> <span class="s1">&#39;Tableau&#39;</span><span class="p">,</span> <span class="s1">&#39;SAS&#39;</span><span class="p">}</span>     
+<span class="nb">print</span> <span class="p">(</span><span class="n">dataScientist</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;SAS&#39;, &#39;Python&#39;, &#39;R&#39;, &#39;Tableau&#39;, &#39;Git&#39;, &#39;SQL&#39;}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p style="color:red"><i>Take note that unlike <code style="color:red">list</code> & <code style="color:red">tuple</code>, the <code style="color:red">set</code> values are not ordered. The order in which the set values are created and stored/ printed are different.</i></p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="len()"><code>len()</code><a class="anchor-link" href="#len()">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dataScientist</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="s1">&#39;R&#39;</span><span class="p">,</span> <span class="s1">&#39;SQL&#39;</span><span class="p">,</span> <span class="s1">&#39;Git&#39;</span><span class="p">,</span> <span class="s1">&#39;Tableau&#39;</span><span class="p">,</span> <span class="s1">&#39;SAS&#39;</span><span class="p">}</span>     
+<span class="nb">len</span><span class="p">(</span><span class="n">dataScientist</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[14]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>6</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Empty set</strong></p>
+<ul>
+<li>Unlike <code>list, dict, tuples</code>, there is no notation for an empty set. We have to explicitly write it as <code>set()</code></li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dataScientist_dict</span> <span class="o">=</span> <span class="p">{}</span>                         <span class="c1"># Creates an empty dictionary</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Data type =&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">dataScientist_dict</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;No of elements =&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">dataScientist_dict</span><span class="p">))</span>
+
+<span class="n">dataScientist_set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>                        <span class="c1"># Creates an empty set</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Data type =&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">dataScientist_set</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;No of elements =&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">dataScientist_set</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Data type = &lt;class &#39;dict&#39;&gt;
+No of elements = 0
+Data type = &lt;class &#39;set&#39;&gt;
+No of elements = 0
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="List-and-Sets">List and Sets<a class="anchor-link" href="#List-and-Sets">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Convert list to sets</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dataEngineer</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="s1">&#39;Java&#39;</span><span class="p">,</span> <span class="s1">&#39;Scala&#39;</span><span class="p">,</span> <span class="s1">&#39;Git&#39;</span><span class="p">,</span> <span class="s1">&#39;SQL&#39;</span><span class="p">,</span> <span class="s1">&#39;Hadoop&#39;</span><span class="p">])</span>  
+<span class="nb">print</span> <span class="p">(</span><span class="n">dataEngineer</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;Scala&#39;, &#39;Python&#39;, &#39;Hadoop&#39;, &#39;Java&#39;, &#39;Git&#39;, &#39;SQL&#39;}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Convert sets to list</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dataEngineer</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Scala&#39;</span><span class="p">,</span> <span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="s1">&#39;Hadoop&#39;</span><span class="p">,</span> <span class="s1">&#39;Java&#39;</span><span class="p">,</span> <span class="s1">&#39;Git&#39;</span><span class="p">,</span> <span class="s1">&#39;SQL&#39;</span><span class="p">}</span>
+
+<span class="n">dataEngineer_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">dataEngineer</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">dataEngineer_list</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;Scala&#39;, &#39;Python&#39;, &#39;Hadoop&#39;, &#39;Java&#39;, &#39;Git&#39;, &#39;SQL&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Convert sets to Ordered list</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dataEngineer</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Scala&#39;</span><span class="p">,</span> <span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="s1">&#39;Hadoop&#39;</span><span class="p">,</span> <span class="s1">&#39;Java&#39;</span><span class="p">,</span> <span class="s1">&#39;Git&#39;</span><span class="p">,</span> <span class="s1">&#39;SQL&#39;</span><span class="p">}</span>
+<span class="nb">print</span> <span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">dataEngineer</span><span class="p">))</span>           <span class="c1"># Sort in alphabetical order (A-Z)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;Git&#39;, &#39;Hadoop&#39;, &#39;Java&#39;, &#39;Python&#39;, &#39;SQL&#39;, &#39;Scala&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">sorted</span><span class="p">(</span><span class="n">dataEngineer</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>   <span class="c1"># Sort in reverse alphabetical order (Z-A)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[49]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;Scala&#39;, &#39;SQL&#39;, &#39;Python&#39;, &#39;Java&#39;, &#39;Hadoop&#39;, &#39;Git&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Remove duplicates from list</strong></p>
+<ul>
+<li>By converting the list to set data type, the duplicates will be automatically removed.</li>
+<li>Infact, removing duplicates this way is more time efficient than writing our own code to do it.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[55]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">num</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Before :&#39;</span><span class="p">,</span> <span class="n">num</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;After  :&#39;</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">num</span><span class="p">)))</span>     <span class="c1"># Convert the value to set and back to list again (duplicates are removed)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Before : [1, 1, 1, 1, 2, 2, 2, 3, 4, 4, 5, 5, 5]
+After  : [1, 2, 3, 4, 5]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[65]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[65]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[1, 2, 3, 1, 7]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[85]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0.014667206399280985
+0.005589188487931551
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[83]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0.0047898532458248155
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Add-&amp;-remove-values-from-set">Add &amp; remove values from set<a class="anchor-link" href="#Add-&amp;-remove-values-from-set">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Add values to set</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dataScientist</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="s1">&#39;R&#39;</span><span class="p">,</span> <span class="s1">&#39;SQL&#39;</span><span class="p">,</span> <span class="s1">&#39;Git&#39;</span><span class="p">,</span> <span class="s1">&#39;Tableau&#39;</span><span class="p">}</span>     
+<span class="n">dataEngineer</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s1">&#39;SoS&#39;</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">dataEngineer</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;Scala&#39;, &#39;Python&#39;, &#39;Hadoop&#39;, &#39;Java&#39;, &#39;SoS&#39;, &#39;Git&#39;, &#39;SQL&#39;}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Remove values from set</strong></p>
+<p>There are 2 ways to remove values from <code>set</code></p>
+<ol>
+<li>Using <code>remove()</code> method -  The shortfall of using this is if we try to remove a value that is not in your set, we will get a KeyError.</li>
+<li>Using <code>discard()</code> method - This will not throw Error if the value is not found. This is equivalent to <code>get()</code> method in <code>dict</code>.</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dataScientist</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="s1">&#39;R&#39;</span><span class="p">,</span> <span class="s1">&#39;SQL&#39;</span><span class="p">,</span> <span class="s1">&#39;Git&#39;</span><span class="p">,</span> <span class="s1">&#39;Tableau&#39;</span><span class="p">}</span>     
+<span class="n">dataScientist</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;Python&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dataScientist</span><span class="p">)</span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;R&#39;, &#39;Tableau&#39;, &#39;Git&#39;, &#39;SQL&#39;}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dataScientist</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;Java&#39;</span><span class="p">)</span>          <span class="c1"># Throws error as the value is not inside the set</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">KeyError</span>                                  Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-35-ce19914cb54d&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-intense-fg ansi-bold">()</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>dataScientist<span class="ansi-yellow-intense-fg ansi-bold">.</span>remove<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-blue-intense-fg ansi-bold">&#39;Java&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>          <span class="ansi-red-intense-fg ansi-bold"># Throws error as the value is not inside the set</span>
+
+<span class="ansi-red-intense-fg ansi-bold">KeyError</span>: &#39;Java&#39;</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dataScientist</span><span class="o">.</span><span class="n">discard</span><span class="p">(</span><span class="s1">&#39;Java&#39;</span><span class="p">)</span>  
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Set-operations"><code>Set</code> operations<a class="anchor-link" href="#Set-operations">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A common use of sets in Python is computing standard math operations such as <code>union, intersection, difference, and symmetric difference</code>.</p>
+<ul>
+<li><code>set.union(A,B)</code> - All values that are members of A or B or both</li>
+<li><code>set.intersection(A,B)</code> - All values that are members of both A and B</li>
+<li><code>set.difference(A,B)</code> - All values of A that not in B</li>
+<li><code>set.symmetric_difference(A,B)</code> - All values which are in one of the sets, but not in both <ul>
+<li>&lt;=&gt; <code>set.union(A,B) - set.intersection(A,B)</code> </li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dataScientist</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="s1">&#39;R&#39;</span><span class="p">,</span> <span class="s1">&#39;SQL&#39;</span><span class="p">,</span> <span class="s1">&#39;Git&#39;</span><span class="p">,</span> <span class="s1">&#39;Tableau&#39;</span><span class="p">,</span> <span class="s1">&#39;SAS&#39;</span><span class="p">])</span>
+<span class="n">dataEngineer</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="s1">&#39;Java&#39;</span><span class="p">,</span> <span class="s1">&#39;Scala&#39;</span><span class="p">,</span> <span class="s1">&#39;Git&#39;</span><span class="p">,</span> <span class="s1">&#39;SQL&#39;</span><span class="p">,</span> <span class="s1">&#39;Hadoop&#39;</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[77]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># For visualization purpose - 2 Circle VENN diagrams</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">matplotlib_venn</span> <span class="k">import</span> <span class="n">venn2</span><span class="p">,</span> <span class="n">venn2_circles</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">))</span>
+<span class="n">subset_10</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">dataScientist</span><span class="p">,</span> <span class="n">dataEngineer</span><span class="p">)))</span>
+<span class="n">subset_01</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">dataEngineer</span><span class="p">,</span><span class="n">dataScientist</span><span class="p">)))</span>
+<span class="n">subset_11</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">dataScientist</span><span class="p">,</span> <span class="n">dataEngineer</span><span class="p">)))</span>
+
+<span class="n">v</span> <span class="o">=</span> <span class="n">venn2</span><span class="p">(</span><span class="n">subsets</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;10&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;01&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;11&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">},</span> <span class="n">set_labels</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;dataScientist&#39;</span><span class="p">,</span> <span class="s1">&#39;dataEngineer&#39;</span><span class="p">))</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">venn2_circles</span><span class="p">(</span><span class="n">subsets</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;solid&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
+<span class="n">v</span><span class="o">.</span><span class="n">get_label_by_id</span><span class="p">(</span><span class="s1">&#39;10&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">set_text</span><span class="p">(</span><span class="n">subset_10</span><span class="p">);</span><span class="n">v</span><span class="o">.</span><span class="n">get_label_by_id</span><span class="p">(</span><span class="s1">&#39;10&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">set_fontsize</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">v</span><span class="o">.</span><span class="n">get_label_by_id</span><span class="p">(</span><span class="s1">&#39;01&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">set_text</span><span class="p">(</span><span class="n">subset_01</span><span class="p">);</span><span class="n">v</span><span class="o">.</span><span class="n">get_label_by_id</span><span class="p">(</span><span class="s1">&#39;01&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">set_fontsize</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">v</span><span class="o">.</span><span class="n">get_label_by_id</span><span class="p">(</span><span class="s1">&#39;11&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">set_text</span><span class="p">(</span><span class="n">subset_11</span><span class="p">);</span><span class="n">v</span><span class="o">.</span><span class="n">get_label_by_id</span><span class="p">(</span><span class="s1">&#39;11&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">set_fontsize</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+
+
+<div class="output_png output_subarea ">
+<img src="Python-Refresher-Notes_files/Python-Refresher-Notes_304_0.png"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">set</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="n">dataScientist</span><span class="p">,</span> <span class="n">dataEngineer</span><span class="p">)</span>                 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[7]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{&#39;Git&#39;, &#39;Hadoop&#39;, &#39;Java&#39;, &#39;Python&#39;, &#39;R&#39;, &#39;SAS&#39;, &#39;SQL&#39;, &#39;Scala&#39;, &#39;Tableau&#39;}</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[91]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">set</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">dataScientist</span><span class="p">,</span> <span class="n">dataEngineer</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[91]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{&#39;Git&#39;, &#39;Python&#39;, &#39;SQL&#39;}</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[92]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">set</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">dataScientist</span><span class="p">,</span> <span class="n">dataEngineer</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[92]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{&#39;R&#39;, &#39;SAS&#39;, &#39;Tableau&#39;}</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[93]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">set</span><span class="o">.</span><span class="n">symmetric_difference</span><span class="p">(</span><span class="n">dataScientist</span><span class="p">,</span> <span class="n">dataEngineer</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[93]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{&#39;Hadoop&#39;, &#39;Java&#39;, &#39;R&#39;, &#39;SAS&#39;, &#39;Scala&#39;, &#39;Tableau&#39;}</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[95]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">set</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="n">dataScientist</span><span class="p">,</span> <span class="n">dataEngineer</span><span class="p">)</span> <span class="o">-</span> <span class="nb">set</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">dataScientist</span><span class="p">,</span> <span class="n">dataEngineer</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[95]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{&#39;Hadoop&#39;, &#39;Java&#39;, &#39;R&#39;, &#39;SAS&#39;, &#39;Scala&#39;, &#39;Tableau&#39;}</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[85]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">subset</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;R&#39;</span><span class="p">,</span> <span class="s1">&#39;SAS&#39;</span><span class="p">}</span>
+<span class="nb">set</span><span class="o">.</span><span class="n">issubset</span><span class="p">(</span><span class="n">subset</span><span class="p">,</span> <span class="n">dataScientist</span><span class="p">),</span> <span class="nb">set</span><span class="o">.</span><span class="n">issubset</span><span class="p">(</span><span class="n">subset</span><span class="p">,</span> <span class="n">dataEngineer</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[85]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(True, False)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="in-and-not-in-operators"><code>in</code> and <code>not in</code> operators<a class="anchor-link" href="#in-and-not-in-operators">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Works similar to checking in list and tuple<ul>
+<li><code>in &lt;=&gt;</code> element ∈ set `</li>
+<li><code>not in &lt;=&gt;</code> element ∉ set `</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[79]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">possibleSet</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="s1">&#39;R&#39;</span><span class="p">,</span> <span class="s1">&#39;SQL&#39;</span><span class="p">,</span> <span class="s1">&#39;Git&#39;</span><span class="p">,</span> <span class="s1">&#39;Tableau&#39;</span><span class="p">,</span> <span class="s1">&#39;SAS&#39;</span><span class="p">,</span> <span class="s1">&#39;Java&#39;</span><span class="p">,</span> <span class="s1">&#39;Spark&#39;</span><span class="p">,</span> <span class="s1">&#39;Scala&#39;</span><span class="p">}</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[82]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Membership test</span>
+<span class="s1">&#39;Python&#39;</span> <span class="ow">in</span> <span class="n">possibleSet</span><span class="p">,</span> <span class="s1">&#39;C++&#39;</span> <span class="ow">not</span>  <span class="ow">in</span> <span class="n">possibleSet</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[82]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(True, True)</pre>
 </div>
 
 </div>
