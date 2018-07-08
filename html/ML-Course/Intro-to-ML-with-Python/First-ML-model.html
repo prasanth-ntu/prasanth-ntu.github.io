@@ -11816,7 +11816,68 @@ $( document ).ready(function(){
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><h1>Table of Contents<span class="tocSkip"></span></h1></p>
-<div class="toc"><ul class="toc-item"><li><span><a href="#Meet-the-Data" data-toc-modified-id="Meet-the-Data-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Meet the Data</a></span></li><li><span><a href="#Train-&amp;-Test-Data" data-toc-modified-id="Train-&amp;-Test-Data-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Train &amp; Test Data</a></span></li><li><span><a href="#Let's-look-at-our-data" data-toc-modified-id="Let's-look-at-our-data-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Let's look at our data</a></span></li><li><span><a href="#Building-our-first-model:-K-NN" data-toc-modified-id="Building-our-first-model:-K-NN-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>Building our first model: K-NN</a></span></li><li><span><a href="#Making-predictions" data-toc-modified-id="Making-predictions-5"><span class="toc-item-num">5&nbsp;&nbsp;</span>Making predictions</a></span></li><li><span><a href="#Summary" data-toc-modified-id="Summary-6"><span class="toc-item-num">6&nbsp;&nbsp;</span>Summary</a></span></li></ul></div>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Just-run-it" data-toc-modified-id="Just-run-it-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Just run it</a></span></li><li><span><a href="#Meet-the-Data" data-toc-modified-id="Meet-the-Data-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Meet the Data</a></span></li><li><span><a href="#Train-&amp;-Test-Data" data-toc-modified-id="Train-&amp;-Test-Data-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Train &amp; Test Data</a></span></li><li><span><a href="#Let's-look-at-our-data" data-toc-modified-id="Let's-look-at-our-data-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>Let's look at our data</a></span></li><li><span><a href="#Building-our-first-model:-K-NN" data-toc-modified-id="Building-our-first-model:-K-NN-5"><span class="toc-item-num">5&nbsp;&nbsp;</span>Building our first model: K-NN</a></span><ul class="toc-item"><li><span><a href="#K-NN---Quick-Intro" data-toc-modified-id="K-NN---Quick-Intro-5.1"><span class="toc-item-num">5.1&nbsp;&nbsp;</span>K-NN - Quick Intro</a></span></li></ul></li><li><span><a href="#Making-predictions" data-toc-modified-id="Making-predictions-6"><span class="toc-item-num">6&nbsp;&nbsp;</span>Making predictions</a></span></li><li><span><a href="#Accuracy-of-our-model" data-toc-modified-id="Accuracy-of-our-model-7"><span class="toc-item-num">7&nbsp;&nbsp;</span>Accuracy of our model</a></span></li><li><span><a href="#Summary" data-toc-modified-id="Summary-8"><span class="toc-item-num">8&nbsp;&nbsp;</span>Summary</a></span></li></ul></div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Just-run-it">Just run it<a class="anchor-link" href="#Just-run-it">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[129]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="k">import</span> <span class="n">load_iris</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="k">import</span> <span class="n">KNeighborsClassifier</span>
+
+<span class="n">iris_dataset</span> <span class="o">=</span> <span class="n">load_iris</span><span class="p">()</span>
+
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">,</span> <span class="n">_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">iris_dataset</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">],</span> 
+                                                    <span class="n">iris_dataset</span><span class="p">[</span><span class="s1">&#39;target&#39;</span><span class="p">],</span> 
+                                                    <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">knn</span><span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">knn</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">)</span>
+
+<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;HURRAY! You have predicted </span><span class="si">{:6.4f}% o</span><span class="s1">f the flowers correctly into their respective species.&#39;</span>
+       <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">knn</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span><span class="n">Y_test</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>HURRAY! You have predicted 97.3684% of the flowers correctly into their respective species.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In the sections coming below, we will see the breakdown of the model you built just now.</p>
+
 </div>
 </div>
 </div>
@@ -11834,8 +11895,8 @@ $( document ).ready(function(){
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>As mentioned earlier, we will use Iris dataset, a well known dataset in ML and Statistics.
-We can download it into our program from <code>scikti-learn</code>&gt;&gt;&gt;<code>datasets</code> module. To load the data, we need to use <code>load_iris()</code> function.</p>
+<p>As mentioned in the website introduction, we will use Iris dataset, a well known dataset in ML and Statistics.
+We can download it into our program from <code>scikti-learn</code> <code>datasets</code> module. To load the data, we need to use <code>load_iris()</code> function.</p>
 
 </div>
 </div>
@@ -11885,7 +11946,7 @@ We can download it into our program from <code>scikti-learn</code>&gt;&gt;&gt;<c
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Keys of iris_dataset: 
-dict_keys([&#39;target&#39;, &#39;target_names&#39;, &#39;feature_names&#39;, &#39;data&#39;, &#39;DESCR&#39;])
+dict_keys([&#39;data&#39;, &#39;target&#39;, &#39;target_names&#39;, &#39;DESCR&#39;, &#39;feature_names&#39;])
 </pre>
 </div>
 </div>
@@ -11893,6 +11954,28 @@ dict_keys([&#39;target&#39;, &#39;target_names&#39;, &#39;feature_names&#39;, &#
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Details of the iris_dataset keys &amp; values</strong></p>
+<ul>
+<li><code>DESCR</code> - Short description of the dataset</li>
+<li><code>feature_names</code> - the name of 4 measurements made from each flower </li>
+<li><code>target_names</code> -  the name of 3 species of the flowers that we are going to work with</li>
+<li><code>data</code> - contains numeric measurements of sepal length, sepal width, petal length and petal width in <code>numpy</code> array(all in cm) </li>
+<li><code>target</code> -  Species that each flower belongs to<ul>
+<li><code>0</code> means Setosa</li>
+<li><code>1</code> means Versicolour</li>
+<li><code>2</code> means Virginica</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -11933,10 +12016,10 @@ Data Set Characteristics:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="n">iris_dataset</span><span class="p">[</span><span class="s1">&#39;target_names&#39;</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Target flower species names:</span><span class="se">\n</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">iris_dataset</span><span class="p">[</span><span class="s1">&#39;target_names&#39;</span><span class="p">]))</span>
 </pre></div>
 
 </div>
@@ -11951,7 +12034,8 @@ Data Set Characteristics:
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[&#39;setosa&#39; &#39;versicolor&#39; &#39;virginica&#39;]
+<pre>Target flower species names:
+[&#39;setosa&#39; &#39;versicolor&#39; &#39;virginica&#39;]
 </pre>
 </div>
 </div>
@@ -11962,10 +12046,10 @@ Data Set Characteristics:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="n">iris_dataset</span><span class="p">[</span><span class="s1">&#39;feature_names&#39;</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Features/ measurements made from each flower:</span><span class="se">\n</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">iris_dataset</span><span class="p">[</span><span class="s1">&#39;feature_names&#39;</span><span class="p">]))</span>
 </pre></div>
 
 </div>
@@ -11980,7 +12064,8 @@ Data Set Characteristics:
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[&#39;sepal length (cm)&#39;, &#39;sepal width (cm)&#39;, &#39;petal length (cm)&#39;, &#39;petal width (cm)&#39;]
+<pre>Features/ measurements made from each flower:
+[&#39;sepal length (cm)&#39;, &#39;sepal width (cm)&#39;, &#39;petal length (cm)&#39;, &#39;petal width (cm)&#39;]
 </pre>
 </div>
 </div>
@@ -11991,10 +12076,11 @@ Data Set Characteristics:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="n">iris_dataset</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">iris_dataset</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">]))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Shape of data containing numeric measurements of 150 flowers: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">iris_dataset</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Type of dataset: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">iris_dataset</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">])))</span>
 </pre></div>
 
 </div>
@@ -12009,7 +12095,8 @@ Data Set Characteristics:
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>(150, 4) &lt;class &#39;numpy.ndarray&#39;&gt;
+<pre>Shape of data containing numeric measurements of 150 flowers: (150, 4)
+Type of dataset: &lt;class &#39;numpy.ndarray&#39;&gt;
 </pre>
 </div>
 </div>
@@ -12020,10 +12107,10 @@ Data Set Characteristics:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="n">iris_dataset</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">][:</span><span class="mi">5</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Feature data from first 5 row/ flower entries:</span><span class="se">\n</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">iris_dataset</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">][:</span><span class="mi">5</span><span class="p">]))</span>
 </pre></div>
 
 </div>
@@ -12038,11 +12125,12 @@ Data Set Characteristics:
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[[5.1 3.5 1.4 0.2]
- [4.9 3.  1.4 0.2]
- [4.7 3.2 1.3 0.2]
- [4.6 3.1 1.5 0.2]
- [5.  3.6 1.4 0.2]]
+<pre>Feature data from first 5 row/ flower entries:
+[[ 5.1  3.5  1.4  0.2]
+ [ 4.9  3.   1.4  0.2]
+ [ 4.7  3.2  1.3  0.2]
+ [ 4.6  3.1  1.5  0.2]
+ [ 5.   3.6  1.4  0.2]]
 </pre>
 </div>
 </div>
@@ -12050,6 +12138,17 @@ Data Set Characteristics:
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>From the above data array, we can see that the first 5 flowers have a petal width of 0.2 cm and first flower/ row has the longest sepal length of 5.1 cm.</p>
+<p><code>target</code> is a 1D array, with one entry per flower in <code>data</code></p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -12113,37 +12212,15 @@ Data Set Characteristics:
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Train-&amp;-Test-Data">Train &amp; Test Data<a class="anchor-link" href="#Train-&amp;-Test-Data">&#182;</a></h1>
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">train_test_split</span>
-<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">iris_dataset</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">],</span> 
-                                                    <span class="n">iris_dataset</span><span class="p">[</span><span class="s1">&#39;target&#39;</span><span class="p">],</span> 
-                                                    <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">y_train</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">100</span><span class="p">]:</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Features:&#39;</span><span class="p">,</span> <span class="n">iris_dataset</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">,:],</span> <span class="s1">&#39;,&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;Target class:&#39;</span><span class="p">,</span> <span class="n">iris_dataset</span><span class="p">[</span><span class="s1">&#39;target&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">],</span> <span class="s1">&#39;,&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;Target class names:&#39;</span><span class="p">,</span> <span class="n">iris_dataset</span><span class="p">[</span><span class="s1">&#39;target_names&#39;</span><span class="p">][</span><span class="n">iris_dataset</span><span class="p">[</span><span class="s1">&#39;target&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">]])</span>
 </pre></div>
 
 </div>
@@ -12158,7 +12235,9 @@ Data Set Characteristics:
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>(112, 4) (112,)
+<pre>Features: [ 5.1  3.5  1.4  0.2] , Target class: 0 , Target class names: setosa
+Features: [ 7.   3.2  4.7  1.4] , Target class: 1 , Target class names: versicolor
+Features: [ 6.3  3.3  6.   2.5] , Target class: 2 , Target class names: virginica
 </pre>
 </div>
 </div>
@@ -12172,18 +12251,75 @@ Data Set Characteristics:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Let's-look-at-our-data">Let's look at our data<a class="anchor-link" href="#Let's-look-at-our-data">&#182;</a></h1>
+<h1 id="Train-&amp;-Test-Data">Train &amp; Test Data<a class="anchor-link" href="#Train-&amp;-Test-Data">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p style="color:red; font-size:120%;  border-left: 5px solid blue; padding-left: 10px;">Never train on test data</p><p>In Machine Learning, the first thing is to split the dataset into 2 subsets:</p>
+<ul>
+<li><strong>training set</strong> - Set used to train the model.</li>
+<li><strong>test set</strong> - Set used to test the trained model.</li>
+</ul>
+<p><strong>Training set</strong></p>
+<ul>
+<li>This dataset will be used to build our model (i.e. to learn or to fit the parameters) .</li>
+<li><em>e.g. weights in a binary logistic classifier.</em></li>
+</ul>
+<p><strong>Test set</strong></p>
+<ul>
+<li>This dataset is used to asses the model's performance.</li>
+<li>It's independent of the training dataset, but that follows the same probability distribution as the training datase (i.e. don't pick a test set with different characteristics than the training set).</li>
+</ul>
+<p><strong>Validation set</strong></p>
+<ul>
+<li>This dataset is used to tune the hyperparameters (i.e. the architecture) of our model to avoid overtfitting.</li>
+<li><em>e.g. In artificial neural networks, a hyperparameter is, for example, the number of neurons/nodes in each layer.</em></li>
+</ul>
+<p>For further reading, refer this <a href = "https://en.wikipedia.org/wiki/Training,_test,_and_validation_sets" target="_blank"> Training, Test and Validaiton Sets - Wiki Page</a></p><p><em>We will see more about this splitting the data sets in later posts</em></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In our first ML model, we will not be tuning any hyperparameters and so, there's no need for a validation set.</p>
+<p>Using <code>scikit-learn</code> built-in function <code>train_test_split</code>, we can <strong>shuffle</strong> the dataset and split them into <code>train set (75%)</code> and <code>test set (25%)</code>.</p>
+<p>We set the <code>random_state=0</code> inside the <code>train_test_split()</code> to make sure we get the same output if we run the function multiple times (for repeatability).</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">mglearn</span>
-<span class="n">iris_dataframe</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">iris_dataset</span><span class="o">.</span><span class="n">feature_names</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">train_test_split</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">,</span> <span class="n">Y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">iris_dataset</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">],</span> 
+                                                    <span class="n">iris_dataset</span><span class="p">[</span><span class="s1">&#39;target&#39;</span><span class="p">],</span> 
+                                                    <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Train set:&#39;</span><span class="p">,</span> <span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">Y_train</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Test set:&#39;</span><span class="p">,</span> <span class="n">X_test</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">Y_test</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12197,9 +12333,9 @@ Data Set Characteristics:
 <div class="output_area">
 <div class="prompt"></div>
 
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>/home/prasanth/deeplearning/lib/python3.5/importlib/_bootstrap.py:222: RuntimeWarning: numpy.dtype size changed, may indicate binary incompatibility. Expected 96, got 88
-  return f(*args, **kwds)
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Train set: (112, 4) (112,)
+Test set: (38, 4) (38,)
 </pre>
 </div>
 </div>
@@ -12208,13 +12344,69 @@ Data Set Characteristics:
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The <code>train_test_split()</code> function extracts 75% of data together with corresponding labels as training set and the rest as test set. Using a test set containing 20-25% of overall data is a good rule of thumb.</p>
+<p style="color:gray; font-size:115%;  border-left: 5px solid blue; padding-left: 10px;">Shuffle the data before train-test splitting to make sure that the test set has similar characteristics as training set.</p><p>Before splitting the data, <code>train_test_split()</code> function shuffles the dataset using a pseudorandom number generator. 
+<strong>Why should we shuffle?</strong></p>
+<ul>
+<li>If we don't shuffle, the test or train set might contain all data points from one target class (not a good generalization of entire data set). </li>
+<li>A typical classifier will probably fail miserably (underfit/ overfit) &amp; some classifiers might even throw errors during such case.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Let's-look-at-our-data">Let's look at our data<a class="anchor-link" href="#Let's-look-at-our-data">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Before building our model, we should inspect the data to see</p>
+<ul>
+<li>if the task is easily solvable without ML. </li>
+<li>if the desired information is contained in the data.</li>
+<li>to find abnormalities and pecularities<ul>
+<li>e.g. discrepancy measurements between centimeters and inches</li>
+</ul>
+</li>
+</ul>
+<p style="color:green; font-size:115%;  border-left: 5px solid blue; padding-left: 10px;">
+One of the best ways to inspect the data is to vizualise it.</p><p>As we have 4 features, we need <code>(4 rows x 4 cols - 4 self)</code> to use scatter plots to make a pairwise comparison of all the features. Python has built-in functions to do it. At first, we will convert the training data into <code>pandas DataFrame</code> which has a function called <code>plotting.scatter_matrix</code> to create pair plots. The diagonals of this matrix is filled with <code>histograms</code> of each feature.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[112]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">grr</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">plotting</span><span class="o">.</span><span class="n">scatter_matrix</span><span class="p">(</span><span class="n">iris_dataframe</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">y_train</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">15</span><span class="p">),</span> 
-                                 <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">hist_kwds</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;bins&#39;</span><span class="p">:</span><span class="mi">20</span><span class="p">},</span> <span class="n">s</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span><span class="n">alpha</span><span class="o">=.</span><span class="mi">8</span><span class="p">,</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">mglearn</span>
+
+<span class="c1"># create pandas datafrome from data in X_train</span>
+<span class="c1"># label the 4 columns using the iris_dataset.feature names </span>
+<span class="n">iris_dataframe</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">iris_dataset</span><span class="o">.</span><span class="n">feature_names</span><span class="p">)</span>
+
+<span class="c1"># create a scatter matrix from dataframe</span>
+<span class="c1"># color the scatter using Y_train target label/class data</span>
+<span class="n">grr</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">plotting</span><span class="o">.</span><span class="n">scatter_matrix</span><span class="p">(</span><span class="n">iris_dataframe</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">Y_train</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">),</span> 
+                                 <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">hist_kwds</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;bins&#39;</span><span class="p">:</span><span class="mi">20</span><span class="p">},</span> <span class="n">s</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=.</span><span class="mi">8</span><span class="p">,</span> 
                                  <span class="n">cmap</span><span class="o">=</span><span class="n">mglearn</span><span class="o">.</span><span class="n">cm3</span><span class="p">)</span>
 </pre></div>
 
@@ -12232,7 +12424,79 @@ Data Set Characteristics:
 
 
 <div class="output_png output_subarea ">
-<img src="First-ML-model_files/First-ML-model_19_0.png"
+<img src="First-ML-model_files/First-ML-model_28_0.png"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><ul>
+    <li style="float:left; margin-left:10px;list-style-type:none;"> <b>Species legend</b></li> 
+    <li style="color:#0000aa;float:left; margin-left:30px;"> setosa</li> 
+    <li style="color:#ff2020;float:left; margin-left:30px"> versicolor</li> 
+    <li style="color:#50ff50;float:left; margin-left:30px;"> virginica</li>
+</ul></p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>From the plots, we can see that the 3 classes are relatively well seperated using the 4 measurments/ features. This implies that a ML model will likely be able to learn to separate them.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[124]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Alternatively, we can use seaborn library to make the scatter plot</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s2">&quot;ticks&quot;</span><span class="p">)</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="s2">&quot;iris&quot;</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;species&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[124]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;seaborn.axisgrid.PairGrid at 0x20a6bdf8908&gt;</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+<div class="prompt"></div>
+
+
+
+<div class="output_png output_subarea ">
+<img src="First-ML-model_files/First-ML-model_31_1.png"
 >
 </div>
 
@@ -12251,12 +12515,115 @@ Data Set Characteristics:
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Let's build the actual machine learning model. There are many classification algorithms in <code>scikit-leanr</code> and other python packages. We will use <code>k-nearest neighbours</code> classifier, which is easy to use &amp; understand.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="K-NN---Quick-Intro">K-NN - Quick Intro<a class="anchor-link" href="#K-NN---Quick-Intro">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>One of the simplest &amp; most used classification algo.</li>
+<li>It's a non-parametric, lazy learning algo.<ul>
+<li>non-parametric - No parameters are learned from the model</li>
+<li>lazy algo - There is no explicit training phase involved</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>Think of the figure shown below as a two class problem (<code>red</code> and <code>blue</code> points).
+Our goal is to predict which target class the new test data - '<code>green</code>' point belongs to!</p>
+<p><strong>Training</strong></p>
+<ul>
+<li>Building this model just involves storing the training data set (<code>red</code> and <code>blue</code> points).</li>
+</ul>
+<p><strong>Testing</strong></p>
+<ul>
+<li>To make a prediction for a new test data (<code>green</code> point), the algo finds the point in the training set closest to the new data point (<em>it will compare with each <code>blue</code> &amp; <code>red</code> point</em>).</li>
+<li>Then, it assigns label of the training point to the new data point</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="https://prasanth-ntu.github.io/html/ML-Course/Intro-to-ML-with-Python/images/KNN-wikipedia.png" 
+    alt="KNN-wikipedia" title="KNN-wikipedia" style="max-width:300px;"></p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The <code>k</code> in <code>k-nearest neighbour</code> define the number of neighbours to consider before assigning a label to the test data point.</p>
+<ul>
+<li>If <code>k=1</code>, it will use only the closest neighbour to the new data point<ul>
+<li>'<code>green</code>' point will be classified as '<code>red</code>' label as '<code>red</code>' data point is the closest to it</li>
+</ul>
+</li>
+<li>If <code>k=2</code>, it will use 2 closest neighbours to the new data point<ul>
+<li>'<code>green</code>' point will still be classified as '<code>red</code>' label as the 2 data points closest to it are '<code>red</code>'</li>
+</ul>
+</li>
+<li>If <code>k=3</code>, it will use 3 closest neighbours to the new data point<ul>
+<li>'<code>green</code>' point will still be classified as '<code>red</code>' label as 2 among 3 data points closest to it are '<code>red</code>'</li>
+</ul>
+</li>
+<li>If <code>k=5</code>, it will use 5 closest neighbours to the new data point<ul>
+<li>'<code>green</code>' point will now be classified as '<code>blue</code>' label as 3 among 5 data points closest to it are '<code>blue</code>'</li>
+</ul>
+</li>
+</ul>
+<p><em>We will revisit KNN in a much greater depth in the future posts.</em></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+<p><code>sklearn.neighbours</code> module contains the <code>KNeighborsClassifier</code> algorithm.</p>
+<ul>
+<li>To use the algo, we need to define the <code>n_neighbours</code> parameter. We will set it to <code>1</code> for now. </li>
+<li>We will store the object returned in variable named <code>knn</code>.</li>
+</ul>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[126]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="k">import</span> <span class="n">KNeighborsClassifier</span>
+<span class="n">knn</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12264,25 +12631,26 @@ Data Set Characteristics:
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">knn</span><span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-</pre></div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>To build the model on training set, we call the <code>knn</code> object with <code>fit()</code> method which takes 2 arguments:</p>
+<ul>
+<li>Training data</li>
+<li>Training labels/ classes</li>
+</ul>
 
 </div>
 </div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">knn</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">knn</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12315,17 +12683,38 @@ Data Set Characteristics:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>In addition to <code>n_neighbours</code> parameter in <code>KNeighborsClassifier</code>, there are many other parameters which is returned by <code>fit()</code> method as seen above. We dont have to worry about other parameters now.
+<em>The important parameters will be covered in future posts.</em></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Making-predictions">Making predictions<a class="anchor-link" href="#Making-predictions">&#182;</a></h1>
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now that we have built our first ML model using KNN on Training data set, we can now make predictions on test set to see how well our model performs on new unseen dataset.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[141]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">y_pred</span> <span class="o">=</span> <span class="n">knn</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
-<span class="nb">print</span> <span class="p">(</span><span class="n">y_pred</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;First row :&#39;</span><span class="p">,</span> <span class="s1">&#39;Measurements&#39;</span><span class="p">,</span> <span class="n">X_test</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s1">&#39; | Target Label: &#39;</span><span class="p">,</span> <span class="n">Y_test</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Second row:&#39;</span><span class="p">,</span> <span class="s1">&#39;Measurements&#39;</span><span class="p">,</span> <span class="n">X_test</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s1">&#39; | Target Label: &#39;</span><span class="p">,</span> <span class="n">Y_test</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
 </pre></div>
 
 </div>
@@ -12340,67 +12729,8 @@ Data Set Characteristics:
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[2 1 0 2 0 2 0 1 1 1 2 1 1 1 1 0 1 1 0 0 2 1 0 0 2 0 0 1 1 0 2 1 0 2 2 1 0
- 2]
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="nb">print</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">y_pred</span> <span class="o">==</span> <span class="n">y_test</span><span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>0.9736842105263158
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="n">knn</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span><span class="n">y_test</span><span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>0.9736842105263158
+<pre>First row : Measurements [ 5.8  2.8  5.1  2.4]  | Target Label:  2
+Second row: Measurements [ 6.   2.2  4.   1. ]  | Target Label:  1
 </pre>
 </div>
 </div>
@@ -12414,26 +12744,21 @@ Data Set Characteristics:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Summary">Summary<a class="anchor-link" href="#Summary">&#182;</a></h1>
+<p>The first row in <code>test</code> data set belong to <code>target class 2</code> which is <code>virginica</code>. The second row in <code>test</code> data set belong to <code>target class 1</code> which is <code>versicolor</code>.
+Let's see whether our model is able to predict it properly.</p>
+<p>To make prediction, we need to call <code>predict()</code> function of the <code>knn</code> object with data to be predicted as input argument.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[144]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="k">import</span> <span class="n">load_iris</span>
-<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">train_test_split</span>
-<span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="k">import</span> <span class="n">KNeighborsClassifier</span>
-
-<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">iris_dataset</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">],</span> 
-                                                    <span class="n">iris_dataset</span><span class="p">[</span><span class="s1">&#39;target&#39;</span><span class="p">],</span> 
-                                                    <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">knn</span><span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">knn</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
-
-<span class="nb">print</span> <span class="p">(</span><span class="n">knn</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span><span class="n">y_test</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">y_pred</span> <span class="o">=</span> <span class="n">knn</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Predicted label for test data - First row :&#39;</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Predicted label for test data - Second row:&#39;</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
 </pre></div>
 
 </div>
@@ -12448,7 +12773,8 @@ Data Set Characteristics:
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>0.9736842105263158
+<pre>Predicted label for test data - First row : 2
+Predicted label for test data - Second row: 1
 </pre>
 </div>
 </div>
@@ -12456,6 +12782,209 @@ Data Set Characteristics:
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This matches with our original target of the test set. Seems like our ML model have learnt quite well.</p>
+<h1 id="Accuracy-of-our-model">Accuracy of our model<a class="anchor-link" href="#Accuracy-of-our-model">&#182;</a></h1><p>Well, we can't be sure of how well our model has learnt unless we test it on the entire <code>test data set</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[145]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">y_pred</span> <span class="o">=</span> <span class="n">knn</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Test set predictions:</span><span class="se">\n</span><span class="s2"> </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">y_pred</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Test set predictions:
+ [2 1 0 2 0 2 0 1 1 1 2 1 1 1 1 0 1 1 0 0 2 1 0 0 2 0 0 1 1 0 2 1 0 2 2 1 0
+ 2]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>There are many metrics to measure the model performance &amp; we will use <code>Accuracy</code> as our eval metric.</p>
+<p><p style="color:gray; font-size:115%;  border-left: 5px solid blue; padding-left: 10px;">Accuracy is fraction of flowers for which the right species was predicted.</p>
+<p><code>accuracy = no of correct predictions / total no of dataset</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[148]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">accuracy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">y_pred</span> <span class="o">==</span> <span class="n">Y_test</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Test set accuracy: </span><span class="si">{:.4f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">accuracy</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Test set accuracy: 0.9737
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>To calculate accuracy, we need to call <code>score()</code> function with two input arguments.</p>
+<ul>
+<li>data to be predicted</li>
+<li>original target label </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[149]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Test set accuracy: </span><span class="si">{:.4f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">knn</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span><span class="n">Y_test</span><span class="p">)))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Test set accuracy: 0.9737
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A test accuracy of 97% means we made right predictions for 97% of our flower species on test set. We can safely assume that our model to be correct 97% of time for new datasets. For a hobbist like me, this level of accuracy is trust worthy enough. 
+Nevertheless, in coming posts, we will see how to improve the performance and limitations/ conditions are in tunining our model.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Summary">Summary<a class="anchor-link" href="#Summary">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[152]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">,</span> <span class="n">_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">iris_dataset</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">],</span> 
+                                                    <span class="n">iris_dataset</span><span class="p">[</span><span class="s1">&#39;target&#39;</span><span class="p">],</span> 
+                                                    <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">knn</span><span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">knn</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">)</span>
+
+<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;HURRAY! You have predicted </span><span class="si">{:6.4f}% o</span><span class="s1">f the flowers correctly into their respective species.&#39;</span>
+       <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">knn</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span><span class="n">Y_test</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>HURRAY! You have predicted 97.3684% of the flowers correctly into their respective species.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The above snippet contains the <code>core code</code> for implementing any ML algo using <code>scikit-learn</code>.</p>
+<p>The common functions to all supervised models are</p>
+<ul>
+<li><code>fit</code></li>
+<li><code>predict</code></li>
+<li><code>score</code></li>
+</ul>
+<p>With these concepts, we can develop models to implement many ML tasks.</p>
+<p>In coming posts, we will go in depth about different kinds of models, theory behind them and their implementation using <code>scikit-learn</code> and other packages (if time permits).</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
