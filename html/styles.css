@@ -24,6 +24,7 @@ p {
 }
 p.normal {
 		margin-left: 0px;
+		font-family:"monaco",Georgia, Times New Roman;
 }
 
 ul {
