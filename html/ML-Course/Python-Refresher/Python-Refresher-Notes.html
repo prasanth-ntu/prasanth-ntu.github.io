@@ -11783,7 +11783,7 @@ div#notebook {
 <script>
 $( document ).ready(function(){
 
-            var cfg = {"base_numbering": "0", "nav_menu": {}, "number_sections": true, "sideBar": true, "skip_h1_title": false, "title_cell": "Table of Contents", "title_sidebar": "Contents", "toc_cell": false, "toc_position": {"height": "calc(100% - 180px)", "left": "10px", "top": "150px", "width": "341px"}, "toc_section_display": true, "toc_window_display": true};
+            var cfg = {"base_numbering": "0", "nav_menu": {}, "number_sections": true, "sideBar": true, "skip_h1_title": false, "title_cell": "Table of Contents", "title_sidebar": "Contents", "toc_cell": false, "toc_position": {"height": "calc(100% - 180px)", "left": "10px", "top": "150px", "width": "343px"}, "toc_section_display": true, "toc_window_display": true};
 
             // fire the main function with these parameters
             require(['nbextensions/toc2/toc2'], function (toc2) {
@@ -11805,6 +11805,7 @@ $( document ).ready(function(){
 <li><code>HTML</code> : <a href="https://prasanth-ntu.github.io/html/ML-Course/Python-Refresher/Python-Refresher-Notes.html" target="_blank">Click here</a></li>
 <li><code>GITHUB</code> : <a href="https://github.com/prasanth-ntu/prasanth-ntu.github.io/blob/master/html/ML-Course/Python-Refresher/Python-Refresher-Notes.ipynb" target="_blank">Click here</a></li>
 </ul>
+<p><i>To go back to ML website</i>,  <a href="https://prasanth-ntu.github.io/html/ML-Course-4.html" target="_blank">Click here</a></p>
 
 </div>
 </div>
@@ -11833,6 +11834,7 @@ $( document ).ready(function(){
 <li><a href="#Dictionaries">Dictionaries</a> <br></li>
 <li><a href="#Strings">Strings</a> <br></li>
 <li><a href="#Set">Set</a> <br></li>
+<li><a href="#Reading and Writing Files">Reading and Writing Files</a> <br></li>
 <li><a href="#Others">Others</a> <br></li>
 <li><a href="#Sample Projects">Sample Projects</a> <br></li>
 <li><a href="#Packages used">Packages used</a> <br></li>
@@ -17896,109 +17898,6 @@ After  : [1, 2, 3, 4, 5]
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[56]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[65]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[65]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[1, 2, 3, 1, 7]</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[85]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>0.014667206399280985
-0.005589188487931551
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[83]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>0.0047898532458248155
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -18220,7 +18119,7 @@ After  : [1, 2, 3, 4, 5]
 
 
 <div class="output_png output_subarea ">
-<img src="Python-Refresher-Notes_files/Python-Refresher-Notes_304_0.png"
+<img src="Python-Refresher-Notes_files/Python-Refresher-Notes_300_0.png"
 >
 </div>
 
@@ -18492,19 +18391,713 @@ After  : [1, 2, 3, 4, 5]
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Reading-and-Wrinting-Files">Reading and Wrinting Files<a class="anchor-link" href="#Reading-and-Wrinting-Files">&#182;</a></h1>
+<p><a id="Reading and Writing Files"></a></p>
+<h1 id="Reading-and-Writing-Files">Reading and Writing Files<a class="anchor-link" href="#Reading-and-Writing-Files">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id=".txt-files"><code>.txt</code> files<a class="anchor-link" href="#.txt-files">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="open()"><code>open()</code><a class="anchor-link" href="#open()">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Python has a built-in functions <code>open()</code> with which we can open the file and read its contents.
+The function returns a <strong>file handle</strong> if the requested file exisits &amp; we have proper permission to read the file.</p>
+<ul>
+<li>Opening doesn't mean reading the data. It just establishes the connectedion between RAM &amp; Harddisk.</li>
+<li><code>file handle</code> - A variable used to manipulate the file. Equivalent to <code>File &gt; Open</code> in Microsoft Word.</li>
+</ul>
+<p><em>Note</em>: Handle doesn't have all the file data. It simply establishes a connection.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[164]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">f_name</span> <span class="o">=</span> <span class="s1">&#39;files/read-file-example.txt&#39;</span>   <span class="c1"># For mac &amp; linux users, change the directory slashes accordingly</span>
+<span class="n">f_handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">f_name</span><span class="p">)</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[165]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="n">f_handle</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;_io.TextIOWrapper name=&#39;files/read-file-example.txt&#39; mode=&#39;r&#39; encoding=&#39;cp1252&#39;&gt;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>file handle</strong></p>
+<p>In its simplest form, a file handle for reading data works sort of like a pipe: the operating system puts data (usually strings) in one end, and we extract data out of the other end, usually one line at a time.</p>
+<p> <img src="https://prasanth-ntu.github.io/html/ML-Course/Python-Refresher/images/fhandle_read_file.png" 
+alt="fhandle_read_file" title="fhandle_read_file" style="align:middle; width:55%"></p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Read/-print-every-line-in-a-file">Read/ print every line in a file<a class="anchor-link" href="#Read/-print-every-line-in-a-file">&#182;</a></h3><ul>
+<li>Though the file handle doesn't contain the file data, we can use <code>for loop</code> to read the contents of the file line by line.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f_handle</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="n">line</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>This is Line 1.
+
+This is Line 2.
+
+This is Line 3.
+
+This is Line 4.
+
+This is Line 5 (last line).
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Why <code>open()</code> does't read entire file?</strong></p>
+<p>Some files might be quite large with many GBs of data. The <code>open()</code> just created a handle to read the file contents. Then,  for loop actually reads the data from the file. This way, Python takes care of splitting the data in the file into separate lines using the newline character <code>\n</code>. Because the for loop reads the data one line at a time, it can efficiently read and count the lines in very large files without running out of main memory (RAM) to store the data.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>readline()</code> - To read text file one line at a time</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[166]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">f_name</span> <span class="o">=</span> <span class="s1">&#39;files/read-file-example.txt&#39;</span>
+<span class="n">f_handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">f_name</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">f_handle</span><span class="o">.</span><span class="n">readline</span><span class="p">())</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">f_handle</span><span class="o">.</span><span class="n">readline</span><span class="p">())</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>This is Line 1.
+
+This is Line 2.
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>readlines()</code> - To read all the lines in the text file</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[167]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">f_name</span> <span class="o">=</span> <span class="s1">&#39;files/read-file-example.txt&#39;</span>
+<span class="n">f_handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">f_name</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">f_handle</span><span class="o">.</span><span class="n">readlines</span><span class="p">())</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;This is Line 1.\n&#39;, &#39;This is Line 2.\n&#39;, &#39;This is Line 3.\n&#39;, &#39;This is Line 4.\n&#39;, &#39;This is Line 5 (last line).&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="read()-entire-file"><code>read()</code> entire file<a class="anchor-link" href="#read()-entire-file">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>If we know the file is relatively small compared to the size of your main memory, we can read the whole file into one string using the <code>read()</code> on the file handle.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[168]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">f_name</span> <span class="o">=</span> <span class="s1">&#39;files/read-file-example.txt&#39;</span>
+<span class="n">f_handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">f_name</span><span class="p">)</span>
+<span class="n">file_content</span> <span class="o">=</span> <span class="n">f_handle</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">file_content</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>This is Line 1.
+This is Line 2.
+This is Line 3.
+This is Line 4.
+This is Line 5 (last line).
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="write()-a-line-into-file"><code>write()</code> a line into file<a class="anchor-link" href="#write()-a-line-into-file">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p> <img src="https://prasanth-ntu.github.io/html/ML-Course/Python-Refresher/images/fhandle_write_file.png" 
+alt="fhandle_write_file" title="fhandle_write_file" style="align:middle; width:55%"></p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">line1</span> <span class="o">=</span> <span class="s1">&#39;This is Line 1.</span><span class="se">\n</span><span class="s1">&#39;</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>To write a file, we have to open it with mode <code>w</code> as second parameter.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[169]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">f_name</span> <span class="o">=</span> <span class="s1">&#39;files/write-file-example-1.txt&#39;</span>
+<span class="n">fhandle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">f_name</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The <code>write()</code> method of the file handle object puts data into the file, returning the number of characters written.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fhandle</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">line1</span><span class="p">)</span>          <span class="c1"># Writes the line into the text file and returns the no of characters written</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[16]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>16</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="close()-the-file"><code>close()</code> the file<a class="anchor-link" href="#close()-the-file">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>When we are done writing, we have to explicitly close the file to make sure that the last bit of data is physically written to the hard disk disk from the buffer so it will not be lost if the power goes off.</p>
+<p style="color:red"></p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fhandle</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p> <img src="https://prasanth-ntu.github.io/html/ML-Course/Python-Refresher/images/fhandle_close_file.png" 
+alt="fhandle_close_file" title="fhandle_close_file" style="align:middle; width:45%"></p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>write multiple lines</strong> into a file using for loop and <code>write()</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">line1</span> <span class="o">=</span> <span class="s1">&#39;This is Line 1.</span><span class="se">\n</span><span class="s1">&#39;</span>
+<span class="n">line2</span> <span class="o">=</span> <span class="s1">&#39;This is Line 2.</span><span class="se">\n</span><span class="s1">&#39;</span>
+<span class="n">line3</span> <span class="o">=</span> <span class="s1">&#39;This is Line 3 (last line).</span><span class="se">\n</span><span class="s1">&#39;</span>
+<span class="n">lines</span> <span class="o">=</span> <span class="p">[</span><span class="n">line1</span><span class="p">,</span> <span class="n">line2</span><span class="p">,</span> <span class="n">line3</span><span class="p">]</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">lines</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;This is Line 1.\n&#39;, &#39;This is Line 2.\n&#39;, &#39;This is Line 3 (last line).\n&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[170]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">f_name</span> <span class="o">=</span> <span class="s1">&#39;files/write-file-example-2.txt&#39;</span>
+<span class="n">fhandle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">f_name</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">:</span>
+    <span class="n">fhandle</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+<span class="n">fhandle</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="writelines()"><code>writelines()</code><a class="anchor-link" href="#writelines()">&#182;</a></h3><p>write multile lines into a file</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">f_name</span> <span class="o">=</span> <span class="s1">&#39;files</span><span class="se">\\</span><span class="s1">write-file-example-2.txt&#39;</span>
+<span class="n">fhandle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">f_name</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+<span class="n">fhandle</span><span class="o">.</span><span class="n">writelines</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
+<span class="n">fhandle</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="open()-Mode"><code>open()</code> Mode<a class="anchor-link" href="#open()-Mode">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Including a mode argument is optional because a default value of <code>'r'</code> will be assumed if it is omitted. The <code>'r'</code> value stands for read mode, which is just one of many.</p>
+<p>The modes are:  <p><pre>
+    ========= ===============================================================
+    Character| Meaning
+    --------- ---------------------------------------------------------------
+    'r'      | open for reading (default)
+    'w'      | open for writing, truncating the file first
+    'x'      | create a new file and open it for writing
+    'a'      | open for writing, appending to the end of the file if it exists
+    'b'      | binary mode
+    't'      | text mode (default)
+    '+'      | open a disk file for updating (reading and writing)
+    'U'      | universal newline mode (deprecated)
+    ========= ===============================================================</pre></p></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>To append a file</strong></p>
+<ul>
+<li>For example, the append <code>'a'</code> mode doesn't overwrite the existing contents of the file.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[171]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">f_name</span> <span class="o">=</span> <span class="s1">&#39;fileswrite-file-example-2.txt&#39;</span>
+<span class="n">fhandle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">f_name</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">)</span>
+<span class="n">fhandle</span><span class="o">.</span><span class="n">writelines</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
+<span class="n">fhandle</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id=".csv-files">.csv files<a class="anchor-link" href="#.csv-files">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>What is <code>.csv</code> file?</p>
+<ul>
+<li>a very popular import and export data format used in spreadsheets and databases. </li>
+<li>comma-separated values (CSV) file is a delimited <strong>text file</strong> that uses a comma to separate values. </li>
+<li>A CSV file stores tabular data (numbers and text) in plain text. </li>
+<li>Each line of the file is a data record. <ul>
+<li>Each record consists of one or more fields, separated by commas.</li>
+</ul>
+</li>
+</ul>
+<p>Python <code>csv</code> module</p>
+<ul>
+<li>Contains classes related to reading and writing tabular data in CSV format</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[93]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">header</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Hero Name&#39;</span><span class="p">,</span> <span class="s1">&#39;symbol&#39;</span><span class="p">,</span> <span class="s1">&#39;height&#39;</span><span class="p">,</span> <span class="s1">&#39;weight&#39;</span><span class="p">]</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;Batman&#39;</span><span class="p">,</span> <span class="s1">&#39;bat&#39;</span><span class="p">,</span> <span class="mf">1.82</span><span class="p">,</span> <span class="mi">85</span><span class="p">],</span>
+        <span class="p">[</span><span class="s1">&#39;Ironman&#39;</span><span class="p">,</span> <span class="s1">&#39;S&#39;</span><span class="p">,</span> <span class="mf">1.78</span><span class="p">,</span> <span class="mi">300</span><span class="p">],</span>
+        <span class="p">[</span><span class="s1">&#39;Spiderman&#39;</span><span class="p">,</span> <span class="s1">&#39;Spider&#39;</span><span class="p">,</span> <span class="mf">1.62</span><span class="p">,</span> <span class="mi">70</span><span class="p">]]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="csv.writer()"><code>csv.writer()</code><a class="anchor-link" href="#csv.writer()">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[172]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
+
+<span class="n">f_name</span> <span class="o">=</span> <span class="s1">&#39;files/write-csv-example-1.csv&#39;</span>     <span class="c1"># For mac &amp; linux users, change the directory slashes accordingly</span>
+<span class="n">f_handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">f_name</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span>  <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+<span class="n">csv_writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">f_handle</span><span class="p">)</span>
+
+<span class="n">csv_writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span><span class="n">header</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+    <span class="n">csv_writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    
+<span class="n">f_handle</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="csv.reader()"><code>csv.reader()</code><a class="anchor-link" href="#csv.reader()">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[173]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
+<span class="n">f_name</span> <span class="o">=</span> <span class="s1">&#39;files/write-csv-example-1.csv&#39;</span>    <span class="c1"># For mac &amp; linux users, change the directory slashes accordingly</span>
+<span class="n">f_handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">f_name</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">csv_reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">f_handle</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">csv_reader</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    
+<span class="n">f_handle</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;Hero Name&#39;, &#39;symbol&#39;, &#39;height&#39;, &#39;weight&#39;]
+[&#39;Batman&#39;, &#39;bat&#39;, &#39;1.82&#39;, &#39;85&#39;]
+[&#39;Ironman&#39;, &#39;S&#39;, &#39;1.78&#39;, &#39;300&#39;]
+[&#39;Spiderman&#39;, &#39;Spider&#39;, &#39;1.62&#39;, &#39;70&#39;]
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -18668,6 +19261,332 @@ After  : [1, 2, 3, 4, 5]
 <h1 id="Sample-Projects">Sample Projects<a class="anchor-link" href="#Sample-Projects">&#182;</a></h1>
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="email-parsing-&amp;-scraping"><code>email parsing &amp; scraping</code><a class="anchor-link" href="#email-parsing-&amp;-scraping">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We will work on <code>mbox.txt</code> file which holds collections of publically availale email messages that are are concatenated and stored as plain text in a single file. For further details on mbox, refer <a href="https://en.wikipedia.org/wiki/Mbox">https://en.wikipedia.org/wiki/Mbox</a>.</p>
+<p><em>We are going to parse and scrape through the txt file to extract information about senders, their email address, no of emails sent by each sender and the time at which emails are sent.</em></p>
+<p>To do this, we will need a basic knowledge of <code>for loop</code>, <code>string slicing, splitting &amp; searching</code>, <code>list</code>, <code>dict</code>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[142]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">f_name</span> <span class="o">=</span> <span class="s1">&#39;files/mbox.txt&#39;</span>   <span class="c1"># For mac &amp; linux users, change the directory slashes accordingly</span>
+<span class="n">f_handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">f_name</span><span class="p">)</span>
+
+<span class="n">email_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">f_handle</span><span class="p">:</span>
+    <span class="c1"># Extract the row that startswith the word &#39;From &#39; and store in a list</span>
+    <span class="k">if</span> <span class="n">row</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;From &#39;</span><span class="p">):</span>
+        <span class="n">email</span> <span class="o">=</span> <span class="n">row</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="n">email_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">email</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Find the no of times email received from each sender</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[147]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">email_dict</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">email_list</span><span class="p">:</span>
+    <span class="n">email</span> <span class="o">=</span> <span class="n">row</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">email_dict</span><span class="p">[</span><span class="n">email</span><span class="p">]</span> <span class="o">=</span> <span class="n">email_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">email</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="n">email_dict</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[147]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{&#39;a.fish@lancaster.ac.uk&#39;: 14,
+ &#39;aaronz@vt.edu&#39;: 110,
+ &#39;ajpoland@iupui.edu&#39;: 48,
+ &#39;antranig@caret.cam.ac.uk&#39;: 18,
+ &#39;arwhyte@umich.edu&#39;: 27,
+ &#39;bahollad@indiana.edu&#39;: 4,
+ &#39;bkirschn@umich.edu&#39;: 27,
+ &#39;chmaurer@iupui.edu&#39;: 111,
+ &#39;colin.clark@utoronto.ca&#39;: 1,
+ &#39;csev@umich.edu&#39;: 19,
+ &#39;cwen@iupui.edu&#39;: 158,
+ &#39;david.horwitz@uct.ac.za&#39;: 67,
+ &#39;dlhaines@umich.edu&#39;: 84,
+ &#39;gbhatnag@umich.edu&#39;: 3,
+ &#39;ggolden@umich.edu&#39;: 8,
+ &#39;gjthomas@iupui.edu&#39;: 44,
+ &#39;gopal.ramasammycook@gmail.com&#39;: 25,
+ &#39;gsilver@umich.edu&#39;: 28,
+ &#39;hu2@iupui.edu&#39;: 7,
+ &#39;ian@caret.cam.ac.uk&#39;: 96,
+ &#39;jimeng@umich.edu&#39;: 93,
+ &#39;jleasia@umich.edu&#39;: 2,
+ &#39;jlrenfro@ucdavis.edu&#39;: 1,
+ &#39;john.ellis@rsmart.com&#39;: 8,
+ &#39;josrodri@iupui.edu&#39;: 28,
+ &#39;jzaremba@unicon.net&#39;: 9,
+ &#39;kimsooil@bu.edu&#39;: 14,
+ &#39;knoop@umich.edu&#39;: 5,
+ &#39;ktsao@stanford.edu&#39;: 12,
+ &#39;lance@indiana.edu&#39;: 8,
+ &#39;louis@media.berkeley.edu&#39;: 24,
+ &#39;mbreuker@loi.nl&#39;: 9,
+ &#39;mmmay@indiana.edu&#39;: 161,
+ &#39;nuno@ufp.pt&#39;: 28,
+ &#39;ostermmg@whitman.edu&#39;: 17,
+ &#39;ray@media.berkeley.edu&#39;: 32,
+ &#39;rjlowe@iupui.edu&#39;: 90,
+ &#39;sgithens@caret.cam.ac.uk&#39;: 43,
+ &#39;ssmail@indiana.edu&#39;: 5,
+ &#39;stephen.marquard@uct.ac.za&#39;: 29,
+ &#39;stuart.freeman@et.gatech.edu&#39;: 17,
+ &#39;thoppaymallika@fhda.edu&#39;: 1,
+ &#39;tnguyen@iupui.edu&#39;: 6,
+ &#39;wagnermr@iupui.edu&#39;: 44,
+ &#39;zach.thomas@txstate.edu&#39;: 17,
+ &#39;zqian@umich.edu&#39;: 195}</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[152]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">email_dict</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[152]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>dict_values([29, 24, 195, 90, 158, 28, 44, 18, 25, 67, 32, 161, 17, 6, 111, 110, 96, 19, 93, 28, 5, 27, 84, 7, 43, 27, 3, 44, 14, 48, 8, 5, 1, 28, 17, 12, 17, 8, 2, 8, 1, 14, 4, 9, 9, 1])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Finding the email id who sent max no of emails</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[162]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">max_email</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">email_dict</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<span class="k">for</span> <span class="n">email</span><span class="p">,</span> <span class="n">count</span> <span class="ow">in</span> <span class="n">email_dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">count</span> <span class="o">==</span> <span class="n">max_email</span><span class="p">:</span>
+        <span class="nb">print</span> <span class="p">(</span><span class="n">email</span><span class="p">,</span> <span class="n">count</span><span class="p">)</span>
+        <span class="k">break</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>---Finding the email id who sent max no of emails:---
+zqian@umich.edu 195
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Find total number of emails received in a hourly basis</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[145]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">email_hrs</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">email_list</span><span class="p">:</span>
+    <span class="n">hr</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">row</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">email_hrs</span><span class="p">[</span><span class="n">hr</span><span class="p">]</span> <span class="o">=</span> <span class="n">email_hrs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">hr</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[146]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">email_hrs</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[146]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{0: 23,
+ 1: 10,
+ 2: 11,
+ 3: 19,
+ 4: 23,
+ 5: 10,
+ 6: 45,
+ 7: 42,
+ 8: 72,
+ 9: 166,
+ 10: 198,
+ 11: 154,
+ 12: 108,
+ 13: 114,
+ 14: 150,
+ 15: 152,
+ 16: 181,
+ 17: 97,
+ 18: 58,
+ 19: 46,
+ 20: 36,
+ 21: 36,
+ 22: 28,
+ 23: 18}</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[141]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">x</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">email_hrs</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<span class="n">height</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">email_hrs</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">height</span> <span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Emails received in each hour&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Hour of the day&#39;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;No of emails recevied&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+
+
+<div class="output_png output_subarea ">
+<img src="Python-Refresher-Notes_files/Python-Refresher-Notes_374_0.png"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -19215,6 +20134,7 @@ Game over. Do you want to continue (y or n): n
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
 <li>Automate the Boring Stuff with Python - <a href="https://automatetheboringstuff.com/">https://automatetheboringstuff.com/</a></li>
+<li>Python for informatics - <a href="http://www.pythonlearn.com/">http://www.pythonlearn.com/</a></li>
 </ul>
 
 </div>
