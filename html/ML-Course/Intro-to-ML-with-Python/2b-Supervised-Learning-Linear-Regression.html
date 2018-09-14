@@ -11803,7 +11803,7 @@ $( document ).ready(function(){
 <p><em>For full screen view &amp; to download, visit </em></p>
 <ul>
 <li><code>HTML</code> : <a href="https://prasanth-ntu.github.io/html/ML-Course/Intro-to-ML-with-Python/2b-Supervised-Learning-Linear-Regression.html" target="_blank">Click here</a></li>
-<li><code>GITHUB</code> : <a href="https://github.com/prasanth-ntu/prasanth-ntu.github.io/blob/master/html/ML-Course/Intro-to-ML-with-Python" target="_blank">Click here</a></li>
+<li><code>GITHUB</code> : <a href="https://prasanth-ntu.github.io/html/ML-Course/Intro-to-ML-with-Python/2b-Supervised-Learning-Linear-Regression.ipynb" target="_blank">Click here</a></li>
 </ul>
 <p><em>To get back to ML website</em>, <a href="https://prasanth-ntu.github.io/html/ML-Course-13.html" target="_blank">Click here</a></p>
 
@@ -11816,7 +11816,7 @@ $( document ).ready(function(){
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><h1>Table of Contents<span class="tocSkip"></span></h1></p>
-<div class="toc"><ul class="toc-item"><li><span><a href="#Linear-Models-for-regression" data-toc-modified-id="Linear-Models-for-regression-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Linear Models for regression</a></span><ul class="toc-item"><li><span><a href="#Linear-Regression--Theory" data-toc-modified-id="Linear-Regression--Theory-1.1"><span class="toc-item-num">1.1&nbsp;&nbsp;</span>Linear Regression- Theory</a></span><ul class="toc-item"><li><span><a href="#Linear-regression-with-one-variable" data-toc-modified-id="Linear-regression-with-one-variable-1.1.1"><span class="toc-item-num">1.1.1&nbsp;&nbsp;</span>Linear regression with one variable</a></span><ul class="toc-item"><li><span><a href="#Model-Representation" data-toc-modified-id="Model-Representation-1.1.1.1"><span class="toc-item-num">1.1.1.1&nbsp;&nbsp;</span>Model Representation</a></span></li><li><span><a href="#Cost-function" data-toc-modified-id="Cost-function-1.1.1.2"><span class="toc-item-num">1.1.1.2&nbsp;&nbsp;</span>Cost function</a></span></li><li><span><a href="#Gradient-Descent" data-toc-modified-id="Gradient-Descent-1.1.1.3"><span class="toc-item-num">1.1.1.3&nbsp;&nbsp;</span>Gradient Descent</a></span></li><li><span><a href="#Gradient-Descent-for-linear-regression" data-toc-modified-id="Gradient-Descent-for-linear-regression-1.1.1.4"><span class="toc-item-num">1.1.1.4&nbsp;&nbsp;</span>Gradient Descent for linear regression</a></span></li></ul></li></ul></li></ul></li><li><span><a href="#Linear-Models-for-regression" data-toc-modified-id="Linear-Models-for-regression-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Linear Models for regression</a></span><ul class="toc-item"><li><span><a href="#Linear-Regression" data-toc-modified-id="Linear-Regression-2.1"><span class="toc-item-num">2.1&nbsp;&nbsp;</span>Linear Regression</a></span><ul class="toc-item"><li><span><a href="#Dataset-with-one-dimension" data-toc-modified-id="Dataset-with-one-dimension-2.1.1"><span class="toc-item-num">2.1.1&nbsp;&nbsp;</span>Dataset with one dimension</a></span></li><li><span><a href="#Dataset-with-multi-dimensions" data-toc-modified-id="Dataset-with-multi-dimensions-2.1.2"><span class="toc-item-num">2.1.2&nbsp;&nbsp;</span>Dataset with multi dimensions</a></span></li></ul></li><li><span><a href="#Ridge-Regression" data-toc-modified-id="Ridge-Regression-2.2"><span class="toc-item-num">2.2&nbsp;&nbsp;</span>Ridge Regression</a></span><ul class="toc-item"><li><span><a href="#alpha" data-toc-modified-id="alpha-2.2.1"><span class="toc-item-num">2.2.1&nbsp;&nbsp;</span><code>alpha</code></a></span></li><li><span><a href="#alpha---Qualitative-insight" data-toc-modified-id="alpha---Qualitative-insight-2.2.2"><span class="toc-item-num">2.2.2&nbsp;&nbsp;</span>alpha - Qualitative insight</a></span></li></ul></li></ul></li><li><span><a href="#Summary" data-toc-modified-id="Summary-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Summary</a></span></li><li><span><a href="#Later-use" data-toc-modified-id="Later-use-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>Later use</a></span></li></ul></div>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Linear-Models-for-regression" data-toc-modified-id="Linear-Models-for-regression-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Linear Models for regression</a></span><ul class="toc-item"><li><span><a href="#Linear-Regression--Theory" data-toc-modified-id="Linear-Regression--Theory-1.1"><span class="toc-item-num">1.1&nbsp;&nbsp;</span>Linear Regression- Theory</a></span><ul class="toc-item"><li><span><a href="#Linear-regression-with-one-variable" data-toc-modified-id="Linear-regression-with-one-variable-1.1.1"><span class="toc-item-num">1.1.1&nbsp;&nbsp;</span>Linear regression with one variable</a></span><ul class="toc-item"><li><span><a href="#Model-Representation" data-toc-modified-id="Model-Representation-1.1.1.1"><span class="toc-item-num">1.1.1.1&nbsp;&nbsp;</span>Model Representation</a></span></li><li><span><a href="#Cost-function" data-toc-modified-id="Cost-function-1.1.1.2"><span class="toc-item-num">1.1.1.2&nbsp;&nbsp;</span>Cost function</a></span></li><li><span><a href="#Gradient-Descent" data-toc-modified-id="Gradient-Descent-1.1.1.3"><span class="toc-item-num">1.1.1.3&nbsp;&nbsp;</span>Gradient Descent</a></span></li><li><span><a href="#Gradient-Descent-for-linear-regression" data-toc-modified-id="Gradient-Descent-for-linear-regression-1.1.1.4"><span class="toc-item-num">1.1.1.4&nbsp;&nbsp;</span>Gradient Descent for linear regression</a></span></li></ul></li></ul></li></ul></li><li><span><a href="#Linear-Models-for-regression" data-toc-modified-id="Linear-Models-for-regression-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Linear Models for regression</a></span><ul class="toc-item"><li><span><a href="#Linear-Regression" data-toc-modified-id="Linear-Regression-2.1"><span class="toc-item-num">2.1&nbsp;&nbsp;</span>Linear Regression</a></span><ul class="toc-item"><li><span><a href="#makewave:-1-D-dataset" data-toc-modified-id="makewave:-1-D-dataset-2.1.1"><span class="toc-item-num">2.1.1&nbsp;&nbsp;</span>makewave: <em>1</em>-D dataset</a></span></li><li><span><a href="#boston-housing:-n-D-dataset" data-toc-modified-id="boston-housing:-n-D-dataset-2.1.2"><span class="toc-item-num">2.1.2&nbsp;&nbsp;</span>boston housing: <em>n</em>-D dataset</a></span></li></ul></li><li><span><a href="#Ridge-Regression" data-toc-modified-id="Ridge-Regression-2.2"><span class="toc-item-num">2.2&nbsp;&nbsp;</span>Ridge Regression</a></span><ul class="toc-item"><li><span><a href="#boston-housing:-n-D-dataset" data-toc-modified-id="boston-housing:-n-D-dataset-2.2.1"><span class="toc-item-num">2.2.1&nbsp;&nbsp;</span>boston housing: <em>n</em>-D dataset</a></span></li><li><span><a href="#alpha" data-toc-modified-id="alpha-2.2.2"><span class="toc-item-num">2.2.2&nbsp;&nbsp;</span><code>alpha</code></a></span></li><li><span><a href="#alpha---Qualitative-insight" data-toc-modified-id="alpha---Qualitative-insight-2.2.3"><span class="toc-item-num">2.2.3&nbsp;&nbsp;</span>alpha - Qualitative insight</a></span></li><li><span><a href="#Training-size---insight" data-toc-modified-id="Training-size---insight-2.2.4"><span class="toc-item-num">2.2.4&nbsp;&nbsp;</span>Training size - insight</a></span></li></ul></li><li><span><a href="#Lasso" data-toc-modified-id="Lasso-2.3"><span class="toc-item-num">2.3&nbsp;&nbsp;</span>Lasso</a></span><ul class="toc-item"><li><span><a href="#boston-housing:-n-D-dataset" data-toc-modified-id="boston-housing:-n-D-dataset-2.3.1"><span class="toc-item-num">2.3.1&nbsp;&nbsp;</span>boston housing: <em>n</em>-D dataset</a></span></li><li><span><a href="#alpha" data-toc-modified-id="alpha-2.3.2"><span class="toc-item-num">2.3.2&nbsp;&nbsp;</span><code>alpha</code></a></span></li><li><span><a href="#alpha---Qualitative-insight" data-toc-modified-id="alpha---Qualitative-insight-2.3.3"><span class="toc-item-num">2.3.3&nbsp;&nbsp;</span>alpha - Qualitative insight</a></span></li></ul></li></ul></li><li><span><a href="#Miscallaneous" data-toc-modified-id="Miscallaneous-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Miscallaneous</a></span><ul class="toc-item"><li><span><a href="#Additional-Datasets" data-toc-modified-id="Additional-Datasets-3.1"><span class="toc-item-num">3.1&nbsp;&nbsp;</span>Additional Datasets</a></span><ul class="toc-item"><li><span><a href="#Dataset-1:-1-D" data-toc-modified-id="Dataset-1:-1-D-3.1.1"><span class="toc-item-num">3.1.1&nbsp;&nbsp;</span>Dataset 1: 1-D</a></span></li><li><span><a href="#Dataset-2:-2-D" data-toc-modified-id="Dataset-2:-2-D-3.1.2"><span class="toc-item-num">3.1.2&nbsp;&nbsp;</span>Dataset 2: 2-D</a></span></li><li><span><a href="#Dataset-3:-n-D" data-toc-modified-id="Dataset-3:-n-D-3.1.3"><span class="toc-item-num">3.1.3&nbsp;&nbsp;</span>Dataset 3: <em>n</em>-D</a></span></li></ul></li><li><span><a href="#ElasticNet" data-toc-modified-id="ElasticNet-3.2"><span class="toc-item-num">3.2&nbsp;&nbsp;</span>ElasticNet</a></span></li></ul></li><li><span><a href="#Summary" data-toc-modified-id="Summary-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>Summary</a></span></li></ul></div>
 </div>
 </div>
 </div>
@@ -11835,6 +11835,16 @@ $( document ).ready(function(){
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Linear-Regression--Theory">Linear Regression- Theory<a class="anchor-link" href="#Linear-Regression--Theory">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Refer "<code>Coursera &gt; Introduction to Machine Learning &gt; Week 1 &amp; 2</code>" for in-depth theory behind Linear Regression with one variable and multi variable</p>
+
 </div>
 </div>
 </div>
@@ -11973,7 +11983,7 @@ $( document ).ready(function(){
 
 
 <div class="output_png output_subarea ">
-<img src="2b-Supervised-Learning-Linear-Regression_files/2b-Supervised-Learning-Linear-Regression_13_1.png"
+<img src="2b-Supervised-Learning-Linear-Regression_files/2b-Supervised-Learning-Linear-Regression_14_1.png"
 >
 </div>
 
@@ -12003,9 +12013,12 @@ $( document ).ready(function(){
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>There are many different linear models for regression. The difference lies in how the model parameters <code>w</code> and <code>b</code> are learned from the training data, and how model complexity can be controlled. In this post, we will look at the most popular linear models for regression, namely</p>
 <ul>
-<li><code>Linear Regression</code></li>
-<li><code>Ridge Regression</code></li>
-<li><code>Lasso</code></li>
+<li><p><code style="font-size:120%;color:green">Linear Regression</code></p>
+<p><img src="https://prasanth-ntu.github.io/html/ML-Course/Intro-to-ML-with-Python/images/Cost_function_3_LR.png" alt="Cost function - Linear Regression" title="Cost function - Ridge Regression" style="max-width:250px;"></p></li>
+<li><p><code style="font-size:120%;color:green">Ridge Regression</code></p>
+<p><img src="https://prasanth-ntu.github.io/html/ML-Course/Intro-to-ML-with-Python/images/Cost_function_3_RR.png" alt="Cost function - Ridge Regression" title="Cost function - Ridge Regression" style="max-width:280px;"></p></li>
+<li><p><code style="font-size:120%;color:green">Lasso</code></p>
+<p><img src="https://prasanth-ntu.github.io/html/ML-Course/Intro-to-ML-with-Python/images/Cost_function_3_Lasso.png" alt="Cost function - Lasso" title="Cost function - Lasso" style="max-width:320px;"></p></li>
 </ul>
 
 </div>
@@ -12028,9 +12041,9 @@ $( document ).ready(function(){
 <ul>
 <li>Aka ordinary least squares (OLS), is the simplest and most classic linear method. </li>
 <li>Linear Regression finds the best parameters <code>w</code> and <code>b</code> that minimises the mean squared error between true output, y and predicted output, h(x) or  on the training set.</li>
-<li><code>mean squared error (MSE)</code>= sum of squared differences between between the predictions and true values <p><img src="https://prasanth-ntu.github.io/html/ML-Course/Intro-to-ML-with-Python/images/MSE_1.png" alt="MSE" title="MSE" style="max-width:180px;"></p></li>
+<li><code>mean squared error (MSE)</code>= sum of squared differences between between the true and prediction values <p><img src="https://prasanth-ntu.github.io/html/ML-Course/Intro-to-ML-with-Python/images/MSE_1.png" alt="MSE" title="MSE" style="max-width:250px;"></p></li>
 </ul>
-<p style="color:red; font-size:110%;  border-left: 5px solid blue; padding-left: 10px;"><b>Linear regression has no parameters to control which makes it easy to use, but it also has no way to control model complexity. </b></p><p>For more details, refer <a href="http://scikit-learn.org/stable/modules/linear_model.html#ordinary-least-squares">http://scikit-learn.org/stable/modules/linear_model.html#ordinary-least-squares</a></p>
+<p style="color:red; font-size:110%;  border-left: 5px solid blue; padding-left: 10px;"><b>Linear regression has no parameters to control/tune which makes it easy to use, but it also has no way to control model complexity. </b></p><p>For more details, refer <a href="http://scikit-learn.org/stable/modules/linear_model.html#ordinary-least-squares">http://scikit-learn.org/stable/modules/linear_model.html#ordinary-least-squares</a></p>
 
 </div>
 </div>
@@ -12040,13 +12053,23 @@ $( document ).ready(function(){
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Dataset-with-one-dimension">Dataset with one dimension<a class="anchor-link" href="#Dataset-with-one-dimension">&#182;</a></h3>
+<h3 id="makewave:-1-D-dataset">makewave: <em>1</em>-D dataset<a class="anchor-link" href="#makewave:-1-D-dataset">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Let's look at an one-dimensional (one input variable) <code>wave</code> dataset for which we will find a linear line that best approximates the input features with output values.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">mglearn</span>
@@ -12150,7 +12173,7 @@ lr.intercept_: -0.031804343026759746
 <div class="prompt input_prompt">In&nbsp;[91]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">)</span>                        <span class="c1"># plot the training data</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span><span class="n">y_test</span><span class="p">,</span> <span class="s1">&#39;x&#39;</span><span class="p">)</span>                          <span class="c1"># plot the test data</span>
@@ -12182,7 +12205,7 @@ lr.intercept_: -0.031804343026759746
 
 
 <div class="output_png output_subarea ">
-<img src="2b-Supervised-Learning-Linear-Regression_files/2b-Supervised-Learning-Linear-Regression_23_0.png"
+<img src="2b-Supervised-Learning-Linear-Regression_files/2b-Supervised-Learning-Linear-Regression_25_0.png"
 >
 </div>
 
@@ -12229,8 +12252,11 @@ Test set score: 0.66
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li><p>An <code>R<sup>2</sup></code> test score of 0.66 is not very good.</p></li>
-<li>However, <em>scores on training and test sets are very close</em>.<ul>
+<li><p>An <code>R<sup>2</sup></code> test score of 0.66 is not very good. </p><ul>
+<li><em>We achieved a training score of 0.819 &amp; Test score of 0.834 using KNN with <code>n=3</code> in previous post for the same dataset.</em></li>
+</ul>
+</li>
+<li>However, <em>scores on training and test sets are very close when using Linear Regression</em>.<ul>
 <li>This implies <strong>we are likely undefitting</strong>.</li>
 <li>For 1D dataset, the model is usually very simple and restricted and there's little danger of overfitting.</li>
 </ul>
@@ -12254,7 +12280,7 @@ Test set score: 0.66
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Dataset-with-multi-dimensions">Dataset with multi dimensions<a class="anchor-link" href="#Dataset-with-multi-dimensions">&#182;</a></h3>
+<h3 id="boston-housing:-n-D-dataset">boston housing: <em>n</em>-D dataset<a class="anchor-link" href="#boston-housing:-n-D-dataset">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -12274,10 +12300,15 @@ Test set score: 0.66
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[119]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="n">mglearn</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">load_extended_boston</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">mglearn</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="k">import</span> <span class="n">LinearRegression</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">train_test_split</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">X</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="n">mglearn</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">load_extended_boston</span><span class="p">()</span>
 <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Shape of training set: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
 <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Shape of test set    : </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">X_test</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
@@ -12356,7 +12387,7 @@ Test set score    : 0.61
 <li>Rigde regression addresses some of the problems of standard Linear Regression (Ordinary Least Squares) by <em>imposing a penalty on the size of the coefficients</em>. </li>
 <li><em>We want the magnitude of coefficients (weights or slope) to be as small as possible;  in other words, all values of <code>w</code> should be close to zero</em>.  <ul>
 <li>Intuitively, this means each feature should have as little effect on the outcome (=&gt; having a small slope) while still predicting well.</li>
-<li>This constraint is called as `Regularization</li>
+<li>This constraint is called as <code>Regularization</code></li>
 </ul>
 </li>
 </ul>
@@ -12373,6 +12404,15 @@ Test set score    : 0.61
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="boston-housing:-n-D-dataset">boston housing: <em>n</em>-D dataset<a class="anchor-link" href="#boston-housing:-n-D-dataset">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>Let's ses how well <code>ridge regression</code> performs on the <code>boston house dataset</code>.</p>
 
 </div>
@@ -12380,10 +12420,15 @@ Test set score    : 0.61
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[120]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="k">import</span> <span class="n">Ridge</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">mglearn</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="k">import</span> <span class="n">Ridge</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">train_test_split</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">X</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="n">mglearn</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">load_extended_boston</span><span class="p">()</span>
 
 <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Shape of training set: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
@@ -12430,7 +12475,7 @@ Test set score: 0.75
 </ul>
 <p><strong>The results are consitent with our expectation. </strong></p>
 <ul>
-<li>With <code>linear regression</code>, we are overfitting our training data.</li>
+<li>With <code>linear regression</code>, we were overfitting our training data.</li>
 <li><code>Ridge</code> is a more restricted model, and we are less likely to overfit<ul>
 <li>A less complex model =&gt; worse performance on train set, but better generalization on unknown test set.</li>
 </ul>
@@ -12456,7 +12501,7 @@ Test set score: 0.75
 <div class="text_cell_render border-box-sizing rendered_html">
 <p style="color:green; font-size:110%;  border-left: 5px solid blue; padding-left: 10px;">The Ridge model makes a trade-off between the model simplicity (near-zero `w` coefficients) and its performance on training set.</p><ul>
 <li>The tradeoff can be specified by the us, using the <code>alpha</code> parameter (called as <code>Regularization strength</code>)</li>
-<li>When <code>alpha</code> parameter is not specified as in previous case, it uses default value of <code>alpha=1.0</code>, which have to be optimized each dataset.</li>
+<li>When <code>alpha</code> parameter is not specified as in previous case, it uses default value of <code>alpha=1.0</code>, which have to be optimized for each dataset.</li>
 </ul>
 <p style="color:orangered; font-size:110%;  border-left: 5px solid blue; padding-left: 10px;"> Larger values specify stronger regularization (by forcing the coefficients <code>w</code> to move toward zero), which decreases the training set performance but might help generalization </p>
 </div>
@@ -12464,7 +12509,7 @@ Test set score: 0.75
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[198]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">training_score</span> <span class="o">=</span> <span class="p">[]</span>
@@ -12474,7 +12519,8 @@ Test set score: 0.75
     <span class="n">ridge</span> <span class="o">=</span> <span class="n">Ridge</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
     <span class="n">training_score</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ridge</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">))</span>
     <span class="n">test_score</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ridge</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;alpha: </span><span class="si">{:8.4f}</span><span class="s2"> | Training set score: </span><span class="si">{:.2f}</span><span class="s2"> | Test set score: </span><span class="si">{:.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">alpha</span><span class="p">,</span> <span class="n">ridge</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">),</span> <span class="n">ridge</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;alpha: </span><span class="si">{:8.4f}</span><span class="s2"> | Training score: </span><span class="si">{:.2f}</span><span class="s2"> | Test score: </span><span class="si">{:.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+           <span class="n">alpha</span><span class="p">,</span> <span class="n">ridge</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">),</span> <span class="n">ridge</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)))</span>
 </pre></div>
 
 </div>
@@ -12489,17 +12535,17 @@ Test set score: 0.75
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>alpha:   0.0010 | Training set score: 0.95 | Test set score: 0.63
-alpha:   0.0030 | Training set score: 0.95 | Test set score: 0.65
-alpha:   0.0100 | Training set score: 0.94 | Test set score: 0.70
-alpha:   0.0300 | Training set score: 0.94 | Test set score: 0.75
-alpha:   0.1000 | Training set score: 0.93 | Test set score: 0.77
-alpha:   0.3000 | Training set score: 0.91 | Test set score: 0.77
-alpha:   1.0000 | Training set score: 0.89 | Test set score: 0.75
-alpha:   3.0000 | Training set score: 0.85 | Test set score: 0.71
-alpha:  10.0000 | Training set score: 0.79 | Test set score: 0.64
-alpha:  30.0000 | Training set score: 0.72 | Test set score: 0.55
-alpha: 100.0000 | Training set score: 0.60 | Test set score: 0.42
+<pre>alpha:   0.0010 | Training score: 0.95 | Test score: 0.63
+alpha:   0.0030 | Training score: 0.95 | Test score: 0.65
+alpha:   0.0100 | Training score: 0.94 | Test score: 0.70
+alpha:   0.0300 | Training score: 0.94 | Test score: 0.75
+alpha:   0.1000 | Training score: 0.93 | Test score: 0.77
+alpha:   0.3000 | Training score: 0.91 | Test score: 0.77
+alpha:   1.0000 | Training score: 0.89 | Test score: 0.75
+alpha:   3.0000 | Training score: 0.85 | Test score: 0.71
+alpha:  10.0000 | Training score: 0.79 | Test score: 0.64
+alpha:  30.0000 | Training score: 0.72 | Test score: 0.55
+alpha: 100.0000 | Training score: 0.60 | Test score: 0.42
 </pre>
 </div>
 </div>
@@ -12510,10 +12556,13 @@ alpha: 100.0000 | Training set score: 0.60 | Test set score: 0.42
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[201]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">semilogx</span><span class="p">(</span><span class="n">alpha_settings</span><span class="p">,</span> <span class="n">training_score</span><span class="p">,</span> <span class="s1">&#39;-.&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;training R^2 score&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">alpha_settings</span><span class="p">,</span> <span class="n">test_score</span><span class="p">,</span> <span class="s1">&#39;-.&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;test R^2 accuracy&quot;</span><span class="p">)</span>
@@ -12564,7 +12613,7 @@ Worst alpha = 100 | Training score = 0.596 | Test score = 0.415
 
 
 <div class="output_png output_subarea ">
-<img src="2b-Supervised-Learning-Linear-Regression_files/2b-Supervised-Learning-Linear-Regression_38_1.png"
+<img src="2b-Supervised-Learning-Linear-Regression_files/2b-Supervised-Learning-Linear-Regression_41_1.png"
 >
 </div>
 
@@ -12595,11 +12644,11 @@ Worst alpha = 100 | Training score = 0.596 | Test score = 0.415
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[205]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="k">import</span> <span class="n">KNeighborsRegressor</span>
-
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># compare the different models (KNN with linear and ridge regression) on the multi dimensional `boston` dataset</span>
+<span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="k">import</span> <span class="n">KNeighborsRegressor</span>
 
 <span class="n">training_score</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">test_score</span> <span class="o">=</span> <span class="p">[]</span>
@@ -12616,12 +12665,12 @@ Worst alpha = 100 | Training score = 0.596 | Test score = 0.415
     <span class="c1"># save test set (generalization) accuracy</span>
     <span class="n">test_score</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">knn</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">))</span>
 
-<span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">neighbors_settings</span><span class="p">,</span> <span class="n">training_score</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;training R^2 score&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">neighbors_settings</span><span class="p">,</span> <span class="n">test_score</span><span class="p">,</span> <span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;test R^2 accuracy&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Accuracy&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;n_neighbors&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Comparison of training and test R^2 score as a function of n_neighbors</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Comparison of training and test R^2 score as a function of n_neighbors [in KNN]</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
@@ -12650,7 +12699,7 @@ Worst alpha = 100 | Training score = 0.596 | Test score = 0.415
 
 
 <div class="output_png output_subarea ">
-<img src="2b-Supervised-Learning-Linear-Regression_files/2b-Supervised-Learning-Linear-Regression_40_0.png"
+<img src="2b-Supervised-Learning-Linear-Regression_files/2b-Supervised-Learning-Linear-Regression_43_0.png"
 >
 </div>
 
@@ -12715,7 +12764,7 @@ Worst n_neighour = 20 | Training score = 0.675 | Test score = 0.479
 <span class="n">ridge01</span> <span class="o">=</span> <span class="n">Ridge</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
 <span class="n">lr</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
 
-<span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Comparing coefcient magnitudes for ridge regression with diﬀerent values of alpha and for linear regression&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ridge</span><span class="o">.</span><span class="n">coef_</span><span class="p">,</span> <span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Ridge alpha=1&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ridge10</span><span class="o">.</span><span class="n">coef_</span><span class="p">,</span> <span class="s1">&#39;^&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Ridge alpha=10&quot;</span><span class="p">)</span>
@@ -12746,7 +12795,7 @@ Worst n_neighour = 20 | Training score = 0.675 | Test score = 0.479
 
 
 <div class="output_png output_subarea ">
-<img src="2b-Supervised-Learning-Linear-Regression_files/2b-Supervised-Learning-Linear-Regression_44_0.png"
+<img src="2b-Supervised-Learning-Linear-Regression_files/2b-Supervised-Learning-Linear-Regression_47_0.png"
 >
 </div>
 
@@ -12787,6 +12836,1284 @@ Worst n_neighour = 20 | Training score = 0.675 | Test score = 0.479
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Training-size---insight">Training size - insight<a class="anchor-link" href="#Training-size---insight">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Another way to understand the effect of regularization is to fix <code>alpha</code> but vary the <strong>size of training data</strong>.
+In the figure below, the <code>boston housing</code> dataset is subsampled &amp; evaluated on <code>LinearRegression</code> and <code>Ridge(alpha=1)</code> with training subsets of increasing size.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">mglearn</span><span class="o">.</span><span class="n">plots</span><span class="o">.</span><span class="n">plot_ridge_n_samples</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Learning curves for ridge regression and linear regression </span><span class="se">\n</span><span class="s1"> on Boston housing dataset&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">1.2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">([</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">1.02</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+
+
+<div class="output_png output_subarea ">
+<img src="2b-Supervised-Learning-Linear-Regression_files/2b-Supervised-Learning-Linear-Regression_51_0.png"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>From the above learning curve, we can deduce that</p>
+<ul>
+<li>Training score is higher than test score for different training set size, for both linear and ridge regression.</li>
+<li>As ridge is regularized (as weights are constrained), the training score of ridge is always lower than linear regression. </li>
+<li>However, the test score for ridge is better, especially for smaller training dataset.</li>
+</ul>
+<p>As more and more data becomes available for training the model, both models improve, and linear regression catches up with ridge. The lesson here is that with enough training data, regularization becomes less important. Another interesting aspect is the decrease of training set preformance when more data is added. This implies that, with more data, it becomes harder for the model to overfit or memorize the data crudely.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Lasso">Lasso<a class="anchor-link" href="#Lasso">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><p>An alternative to <code>Ridge</code> for  regularizing and to restrict the weight/ slope coefficients close to zero, but in a slightly different way.</p>
+</li>
+<li><p>The lasso regression is also known as <code>L1 regularization</code>, penalizes the sum of absolute value of the <code>w</code></p>
+<p><img src="https://prasanth-ntu.github.io/html/ML-Course/Intro-to-ML-with-Python/images/Cost_function_3_Lasso.png" alt="Cost function - Lasso" title="Cost function - Lasso" style="max-width:320px;"></p></li>
+<li><p>The ridge regression is also known as <code>L2 regularization</code>, penalizes the Euclidean length of <code>w</code></p>
+<p><img src="https://prasanth-ntu.github.io/html/ML-Course/Intro-to-ML-with-Python/images/Cost_function_3_RR.png" alt="Cost function - Ridge Regression" title="Cost function - Ridge Regression" style="max-width:280px;"></p></li>
+</ul>
+<p style="color:red; font-size:110%;  border-left: 5px solid blue; padding-left: 10px;">The consequence of <code>L1 regularization</code> is that when using lasso, some coefficients are <i>exactly zero</i></p><p style="color:green; font-size:110%;  border-left: 5px solid blue; padding-left: 10px;">This can be seen as <b>automatic feature selection</b>, where having some coefficients as 0 reveals the most important features of the model, thereby making it easier to interpret it</i></p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="boston-housing:-n-D-dataset">boston housing: <em>n</em>-D dataset<a class="anchor-link" href="#boston-housing:-n-D-dataset">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[92]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">mglearn</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="k">import</span> <span class="n">Lasso</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">train_test_split</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">X</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="n">mglearn</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">load_extended_boston</span><span class="p">()</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Shape of training set: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Shape of test set    : </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">X_test</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
+
+<span class="n">lasso</span> <span class="o">=</span> <span class="n">Lasso</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s1">&#39;Lasso details:&#39;</span><span class="p">,</span> <span class="n">lasso</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Number of features used: </span><span class="si">{}</span><span class="s2"> out of </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">lasso</span><span class="o">.</span><span class="n">coef_</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">),</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Training set score: </span><span class="si">{:.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">lasso</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Test set score: </span><span class="si">{:.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">lasso</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Shape of training set: (379, 104)
+Shape of test set    : (127, 104)
+
+Lasso details: Lasso(alpha=1.0, copy_X=True, fit_intercept=True, max_iter=1000,
+   normalize=False, positive=False, precompute=False, random_state=None,
+   selection=&#39;cyclic&#39;, tol=0.0001, warm_start=False)
+
+Number of features used: 4 out of 104
+Training set score: 0.29
+Test set score: 0.21
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="alpha"><code>alpha</code><a class="anchor-link" href="#alpha">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>We can see that Lasso does quite badly on both training (<code>0.29</code>) and testing (<code>0.21</code>) whereas <em>Ridge scored <code>0.77</code> on test set</em>. </li>
+<li>A low training and test score indicates <strong>underfitting</strong> and it's obvious that the <strong>model only used <code>4</code> out of <code>104</code> input features</strong></li>
+<li>Similar to <code>Ridge</code>, we can control the regularization strength using <code>alpha</code> parameter. </li>
+<li>To resovle underfitting issue, let's reduce the <code>alpha</code> from <code>default value (1.0)</code> to <code>0.01</code>, thereby reducing the regularization strength.   </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[93]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lasso</span> <span class="o">=</span> <span class="n">Lasso</span><span class="p">(</span><span class="n">alpha</span><span class="o">=.</span><span class="mi">01</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="mi">100000</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s1">&#39;Lasso details:&#39;</span><span class="p">,</span> <span class="n">lasso</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Number of features used: </span><span class="si">{}</span><span class="s2"> out of </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">lasso</span><span class="o">.</span><span class="n">coef_</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">),</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Training set score: </span><span class="si">{:.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">lasso</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Test set score: </span><span class="si">{:.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">lasso</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+Lasso details: Lasso(alpha=0.01, copy_X=True, fit_intercept=True, max_iter=100000,
+   normalize=False, positive=False, precompute=False, random_state=None,
+   selection=&#39;cyclic&#39;, tol=0.0001, warm_start=False)
+
+Number of features used: 33 out of 104
+Training set score: 0.90
+Test set score: 0.77
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>It's evident that lower <code>alpha</code> allows us to fit a more complex model, thereby improving the score. </li>
+<li>The performance on test data is <code>0.77</code> and is slightly better than <code>Ridge</code> as we are using only <strong>33 out of 104</strong> features. </li>
+<li>If we set the <code>alpha</code> too low, we again remove the effect of regularization and end up overfitting, similar to <code>LinearRegression</code>.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[95]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lasso</span> <span class="o">=</span> <span class="n">Lasso</span><span class="p">(</span><span class="n">alpha</span><span class="o">=.</span><span class="mi">0001</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="mi">100000</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s1">&#39;Lasso details:&#39;</span><span class="p">,</span> <span class="n">lasso</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Number of features used: </span><span class="si">{}</span><span class="s2"> out of </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">lasso</span><span class="o">.</span><span class="n">coef_</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">),</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Training set score: </span><span class="si">{:.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">lasso</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Test set score: </span><span class="si">{:.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">lasso</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+Lasso details: Lasso(alpha=0.0001, copy_X=True, fit_intercept=True, max_iter=100000,
+   normalize=False, positive=False, precompute=False, random_state=None,
+   selection=&#39;cyclic&#39;, tol=0.0001, warm_start=False)
+
+Number of features used: 94 out of 104
+Training set score: 0.95
+Test set score: 0.64
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>It's evident that a very low <code>alpha</code> (close to 0) causes overfitting, thereby failing to generalize well on test set. </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="alpha---Qualitative-insight">alpha - Qualitative insight<a class="anchor-link" href="#alpha---Qualitative-insight">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[105]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lasso1</span> <span class="o">=</span> <span class="n">Lasso</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">lasso0_01</span> <span class="o">=</span> <span class="n">Lasso</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="mi">100000</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">lasso0_0001</span> <span class="o">=</span> <span class="n">Lasso</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.0001</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="mi">100000</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">ridge0_1</span><span class="o">=</span> <span class="n">Ridge</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Comparing coefcient magnitudes for lasso regression with diﬀerent values of alpha and for ridge regression&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">lasso1</span><span class="o">.</span><span class="n">coef_</span><span class="p">,</span> <span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Lasso alpha=1&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">lasso0_01</span><span class="o">.</span><span class="n">coef_</span><span class="p">,</span> <span class="s1">&#39;^&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Lasso alpha=0.01&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">lasso0_0001</span><span class="o">.</span><span class="n">coef_</span><span class="p">,</span> <span class="s1">&#39;v&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Lasso alpha=0.0001&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ridge0_1</span><span class="o">.</span><span class="n">coef_</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Ridge alpha=0.1&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Coefficient index&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Coefficient magnitude&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hlines</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">ridge0_1</span><span class="o">.</span><span class="n">coef_</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">25</span><span class="p">,</span><span class="mi">25</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;No of features used by Lasso(alpha=1)     = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">lasso1</span><span class="o">.</span><span class="n">coef_</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)))</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;No of features used by Lasso(alpha=0.01)  = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">lasso0_01</span><span class="o">.</span><span class="n">coef_</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)))</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;No of features used by Lasso(alpha=0.0001 = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">lasso0_0001</span><span class="o">.</span><span class="n">coef_</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)))</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;No of features used by Ridge(alpha=0.1)   = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ridge0_1</span><span class="o">.</span><span class="n">coef_</span><span class="p">)))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+
+
+<div class="output_png output_subarea ">
+<img src="2b-Supervised-Learning-Linear-Regression_files/2b-Supervised-Learning-Linear-Regression_64_0.png"
+>
+</div>
+
+</div>
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>No of features used by Lasso(alpha=1)     = 4
+No of features used by Lasso(alpha=0.01)  = 33
+No of features used by Lasso(alpha=0.0001 = 94
+No of features used by Ridge(alpha=0.1)   = 104
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p style="color:green; font-size:110%;  border-left: 5px solid blue; padding-left: 10px;"> A higher <code>alpha</code> means a more restricted model (more penalty), so we execpt a lot of <code>losso coef_</code> (weights) to have zero magnitude for a higher value of <code>alpha</code>.</p><p>This is confirmed by the above plot. Here,</p>
+<ul>
+<li><code>x-axis</code> spans over 104 data points, but only first 50 data point are shown. It corresponds to the <code>coeff_</code> or<code>weight</code> of <code>n</code>th feature/ dimension</li>
+<li><code>y-axis</code> shows the numeric (magnitude) values of the corresponding values of the coefficients.<p style="color:blue"> &#9632; Coefficients of <code style="color:blue">Losso model with alpha=1</code>: <font color="black">Here, the majority of the coefficients are zero and the remaining 4 features are also small in magnitude</font></p>
+  <p style="color:orange"> &#9650; Coefficients of <code style="color:orange">Losso model with alpha=0.01</code>: <font color="black">Here, most of the features are still zero, but the remaining 33 features are slightly less restricted than when alpha=1</font></p>
+  <p style="color:green"> &#9660; Coefficients of <code style="color:green">Losso model with alpha=0.0001</code>: <font color="black">Heremodel is slightly unregularized, woith most coefficients non-zero and large magnitude</font></p>
+  <p style="color:red"> &#9679; Coefficients of <code style="color:red">Ridge model with alpha=0.1</code>: <font color="black">Here, all the coefficients are non-zero though the test results are similar to Lasso model with alpha=0.01</font></p></li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Miscallaneous">Miscallaneous<a class="anchor-link" href="#Miscallaneous">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Additional-Datasets">Additional Datasets<a class="anchor-link" href="#Additional-Datasets">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Dataset-1:-1-D">Dataset 1: 1-D<a class="anchor-link" href="#Dataset-1:-1-D">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>You are the CEO  of a restaurant franchise and are considering different cities for opening a new outlet. The chain  already has trucks in various cities and you have data for profits and population from cities.</p>
+<p>You would like to use this data to help you select which city to expand next based solely on the city population.</p>
+<ul>
+<li>The first column is the population of city and </li>
+<li>the second column is the profit of a good truck in that city. The -ve value for profit indicates a loss</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[339]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># This block of code downloads the data file from GitHub incase if it doesn&#39;t exist in the computer</span>
+<span class="kn">import</span> <span class="nn">urllib</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;https://prasanth-ntu.github.io/html/ML-Course/Intro-to-ML-with-Python/data/ex1data1.txt&#39;&#39;&#39;</span>
+
+<span class="n">path</span> <span class="o">=</span>  <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">url</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">2</span><span class="p">],</span> <span class="n">url</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+    <span class="n">path_out</span><span class="p">,</span> <span class="n">message</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlretrieve</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;File downloaded to:&quot;</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;File already exists:&quot;</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>File already exists: data\ex1data1.txt
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[290]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Population in 10,000s&#39;</span><span class="p">,</span> <span class="s1">&#39;Profit in $10,000s&#39;</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[291]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>           <span class="c1"># displays the first 5 rows</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[291]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Population in 10,000s</th>
+      <th>Profit in $10,000s</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>6.1101</td>
+      <td>17.5920</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>5.5277</td>
+      <td>9.1302</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>8.5186</td>
+      <td>13.6620</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>7.0032</td>
+      <td>11.8540</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5.8598</td>
+      <td>6.8233</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[292]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>   <span class="c1"># displays the basic stats of each column</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[292]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Population in 10,000s</th>
+      <th>Profit in $10,000s</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>97.000000</td>
+      <td>97.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>8.159800</td>
+      <td>5.839135</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>3.869884</td>
+      <td>5.510262</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>5.026900</td>
+      <td>-2.680700</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>5.707700</td>
+      <td>1.986900</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>6.589400</td>
+      <td>4.562300</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>8.578100</td>
+      <td>7.046700</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>22.203000</td>
+      <td>24.147000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[297]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">fname</span> <span class="o">=</span> <span class="n">path</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">genfromtxt</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Size of dataset:&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">data</span><span class="p">[:,</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">]</span>   <span class="c1"># input feature - city population</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">data</span><span class="p">[:,</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>    <span class="c1"># output  - profit</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="s1">&#39;rx&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Population in 10,000s&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Profit in $10,000s&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Scatter plot of entire data&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Size of dataset: (97, 2)
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+<div class="prompt"></div>
+
+
+
+<div class="output_png output_subarea ">
+<img src="2b-Supervised-Learning-Linear-Regression_files/2b-Supervised-Learning-Linear-Regression_74_1.png"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Dataset-2:-2-D">Dataset 2: 2-D<a class="anchor-link" href="#Dataset-2:-2-D">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Suppose we are selling our hoeu and we want to know what a good market price would be. One way to do this is to first collect information on recent houses sold in the neighourhood and make a model of housing prices.</p>
+<ul>
+<li>The first column in the size of the house (in sq feet)</li>
+<li>the second column in the number of bedrooms</li>
+<li>the third column is the price of the house</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[340]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># This block of code downloads the data file from GitHub incase if it doesn&#39;t exist in the computer</span>
+<span class="kn">import</span> <span class="nn">urllib</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;https://prasanth-ntu.github.io/html/ML-Course/Intro-to-ML-with-Python/data/ex1data2.txt&#39;&#39;&#39;</span>
+
+<span class="n">path</span> <span class="o">=</span>  <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">url</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">2</span><span class="p">],</span> <span class="n">url</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+    <span class="n">path_out</span><span class="p">,</span> <span class="n">message</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlretrieve</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;File downloaded to:&quot;</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;File already exists:&quot;</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>File already exists: data\ex1data2.txt
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[319]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;House size (in sq ft)&#39;</span><span class="p">,</span><span class="s1">&#39;No of bedrooms&#39;</span><span class="p">,</span><span class="s1">&#39;House price&#39;</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[320]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>           <span class="c1"># displays the first 5 rows</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[320]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>House size (in sq ft)</th>
+      <th>No of bedrooms</th>
+      <th>House price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2104</td>
+      <td>3</td>
+      <td>399900</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1600</td>
+      <td>3</td>
+      <td>329900</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2400</td>
+      <td>3</td>
+      <td>369000</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1416</td>
+      <td>2</td>
+      <td>232000</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>3000</td>
+      <td>4</td>
+      <td>539900</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[321]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>   <span class="c1"># displays the basic stats of each column</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[321]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>House size (in sq ft)</th>
+      <th>No of bedrooms</th>
+      <th>House price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>47.000000</td>
+      <td>47.000000</td>
+      <td>47.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>2000.680851</td>
+      <td>3.170213</td>
+      <td>340412.659574</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>794.702354</td>
+      <td>0.760982</td>
+      <td>125039.899586</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>852.000000</td>
+      <td>1.000000</td>
+      <td>169900.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>1432.000000</td>
+      <td>3.000000</td>
+      <td>249900.000000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>1888.000000</td>
+      <td>3.000000</td>
+      <td>299900.000000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>2269.000000</td>
+      <td>4.000000</td>
+      <td>384450.000000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>4478.000000</td>
+      <td>5.000000</td>
+      <td>699900.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[327]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">fname</span> <span class="o">=</span> <span class="n">path</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">genfromtxt</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Size of entire dataset:&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">data</span><span class="p">[:,</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>   <span class="c1"># input features</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">data</span><span class="p">[:,</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>    <span class="c1"># output  - </span>
+
+<span class="kn">from</span> <span class="nn">mpl_toolkits.mplot3d</span> <span class="k">import</span> <span class="n">Axes3D</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">y</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;House size (in sq ft)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;No of bedrooms&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_zlabel</span><span class="p">(</span><span class="s1">&#39;House Price&#39;</span><span class="p">);</span> 
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;3D Scatter plot of entire data&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Size of entire dataset: (47, 3)
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+<div class="prompt"></div>
+
+
+
+<div class="output_png output_subarea ">
+<img src="2b-Supervised-Learning-Linear-Regression_files/2b-Supervised-Learning-Linear-Regression_81_1.png"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Dataset-3:-n-D">Dataset 3: <em>n</em>-D<a class="anchor-link" href="#Dataset-3:-n-D">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The code below will generate some sparse data to play with. 
+To generate more features per input sample, change the <code>n_features</code> variable and to generate more data samples, increase the <code>n_samples</code> variable in the code below.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[336]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">n_samples</span><span class="p">,</span> <span class="n">n_features</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">200</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="k">import</span> <span class="n">r2_score</span>
+
+<span class="c1"># #############################################################################</span>
+<span class="c1"># Generate some sparse data to play with</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">n_samples</span><span class="p">,</span> <span class="n">n_features</span><span class="p">)</span>
+<span class="n">coef</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">n_features</span><span class="p">)</span>
+<span class="n">inds</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">n_features</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">inds</span><span class="p">)</span>
+<span class="n">coef</span><span class="p">[</span><span class="n">inds</span><span class="p">[</span><span class="mi">10</span><span class="p">:]]</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># sparsify coef  =&gt; Makes most of the coef as zero</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">coef</span><span class="p">)</span>
+
+<span class="c1"># add noise</span>
+<span class="n">y</span> <span class="o">+=</span> <span class="mf">0.01</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="n">n_samples</span><span class="p">)</span>
+
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Dataset size:&quot;</span><span class="p">,</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">y</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Dataset size: (50, 200) (50,)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="ElasticNet">ElasticNet<a class="anchor-link" href="#ElasticNet">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>ElasticNet</strong></p>
+<ul>
+<li>A linear regresion model that combines the penalaties of <code>Lasso</code> and <code>Ridge</code></li>
+<li>This combination works best in practice, though at the price of haign two parameters to adjust<ul>
+<li>one for L1 regularization</li>
+<li>one for L2 regularization</li>
+</ul>
+</li>
+</ul>
+<p>Refer <a href="http://scikit-learn.org/stable/modules/linear_model.html#elastic-net">http://scikit-learn.org/stable/modules/linear_model.html#elastic-net</a> for more details on it as it's out of scope for this post.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[106]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">mglearn</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="k">import</span> <span class="n">ElasticNet</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">train_test_split</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">X</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="n">mglearn</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">load_extended_boston</span><span class="p">()</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Shape of training set: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Shape of test set    : </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">X_test</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[131]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">training_score_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">test_score_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">best_test_score</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">best_alpha</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">best_l1_ratio</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">alpha_settings</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.001</span><span class="p">,</span> <span class="mf">0.003</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.03</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">]</span>
+<span class="n">l1_ratio_setting</span> <span class="o">=</span>  <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.3</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.7</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.9</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">alpha</span> <span class="ow">in</span> <span class="n">alpha_settings</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">l1_ratio</span> <span class="ow">in</span> <span class="n">l1_ratio_setting</span><span class="p">:</span>
+        <span class="n">elastic</span> <span class="o">=</span> <span class="n">ElasticNet</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">,</span><span class="n">l1_ratio</span><span class="o">=</span><span class="n">l1_ratio</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="mi">100000</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+        <span class="n">train_score</span><span class="p">,</span> <span class="n">test_score</span> <span class="o">=</span> <span class="n">elastic</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">),</span> <span class="n">elastic</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+        <span class="n">training_score_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">train_score</span><span class="p">)</span>
+        <span class="n">test_score_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">test_score</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;alpha: </span><span class="si">{:8.4f}</span><span class="s2"> | l1_ratio: </span><span class="si">{:8.4f}</span><span class="s2"> | Training score: </span><span class="si">{:.4f}</span><span class="s2"> | Test score: </span><span class="si">{:.4f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">alpha</span><span class="p">,</span> <span class="n">l1_ratio</span><span class="p">,</span> <span class="n">train_score</span><span class="p">,</span> <span class="n">test_score</span><span class="p">))</span>  
+        
+        <span class="k">if</span> <span class="n">best_test_score</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">best_test_score</span> <span class="o">&lt;</span> <span class="n">test_score</span><span class="p">:</span>
+            <span class="n">best_test_score</span> <span class="o">=</span> <span class="n">test_score</span>
+            <span class="n">best_alpha</span> <span class="o">=</span> <span class="n">alpha</span>
+            <span class="n">best_l1_ratio</span> <span class="o">=</span> <span class="n">l1_ratio</span>
+
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">----------------- BEST on TEST set----------------&quot;</span><span class="p">)</span>          
+<span class="n">elastic</span> <span class="o">=</span> <span class="n">ElasticNet</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">,</span><span class="n">l1_ratio</span><span class="o">=</span><span class="n">l1_ratio</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="mi">100000</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Coefficients of the elastic model:&quot;</span><span class="p">,</span> <span class="n">elastic</span><span class="o">.</span><span class="n">coef_</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>alpha:   0.0010 | l1_ratio:   0.1000 | Training score: 0.9114 | Test score: 0.7719
+alpha:   0.0010 | l1_ratio:   0.2000 | Training score: 0.9132 | Test score: 0.7728
+alpha:   0.0010 | l1_ratio:   0.3000 | Training score: 0.9150 | Test score: 0.7737
+alpha:   0.0010 | l1_ratio:   0.4000 | Training score: 0.9170 | Test score: 0.7746
+alpha:   0.0010 | l1_ratio:   0.5000 | Training score: 0.9191 | Test score: 0.7752
+alpha:   0.0010 | l1_ratio:   0.6000 | Training score: 0.9215 | Test score: 0.7758
+alpha:   0.0010 | l1_ratio:   0.7000 | Training score: 0.9242 | Test score: 0.7760
+alpha:   0.0010 | l1_ratio:   0.8000 | Training score: 0.9272 | Test score: 0.7755
+alpha:   0.0010 | l1_ratio:   0.9000 | Training score: 0.9312 | Test score: 0.7735
+alpha:   0.0010 | l1_ratio:   1.0000 | Training score: 0.9397 | Test score: 0.7397
+alpha:   0.0030 | l1_ratio:   0.1000 | Training score: 0.8847 | Test score: 0.7515
+alpha:   0.0030 | l1_ratio:   0.2000 | Training score: 0.8875 | Test score: 0.7542
+alpha:   0.0030 | l1_ratio:   0.3000 | Training score: 0.8904 | Test score: 0.7570
+alpha:   0.0030 | l1_ratio:   0.4000 | Training score: 0.8936 | Test score: 0.7597
+alpha:   0.0030 | l1_ratio:   0.5000 | Training score: 0.8971 | Test score: 0.7626
+alpha:   0.0030 | l1_ratio:   0.6000 | Training score: 0.9010 | Test score: 0.7655
+alpha:   0.0030 | l1_ratio:   0.7000 | Training score: 0.9054 | Test score: 0.7689
+alpha:   0.0030 | l1_ratio:   0.8000 | Training score: 0.9103 | Test score: 0.7730
+alpha:   0.0030 | l1_ratio:   0.9000 | Training score: 0.9161 | Test score: 0.7779
+alpha:   0.0030 | l1_ratio:   1.0000 | Training score: 0.9256 | Test score: 0.7806
+alpha:   0.0100 | l1_ratio:   0.1000 | Training score: 0.8386 | Test score: 0.7012
+alpha:   0.0100 | l1_ratio:   0.2000 | Training score: 0.8423 | Test score: 0.7055
+alpha:   0.0100 | l1_ratio:   0.3000 | Training score: 0.8462 | Test score: 0.7102
+alpha:   0.0100 | l1_ratio:   0.4000 | Training score: 0.8506 | Test score: 0.7153
+alpha:   0.0100 | l1_ratio:   0.5000 | Training score: 0.8555 | Test score: 0.7209
+alpha:   0.0100 | l1_ratio:   0.6000 | Training score: 0.8612 | Test score: 0.7270
+alpha:   0.0100 | l1_ratio:   0.7000 | Training score: 0.8678 | Test score: 0.7337
+alpha:   0.0100 | l1_ratio:   0.8000 | Training score: 0.8755 | Test score: 0.7415
+alpha:   0.0100 | l1_ratio:   0.9000 | Training score: 0.8848 | Test score: 0.7515
+alpha:   0.0100 | l1_ratio:   1.0000 | Training score: 0.8965 | Test score: 0.7656
+alpha:   0.0300 | l1_ratio:   0.1000 | Training score: 0.7843 | Test score: 0.6303
+alpha:   0.0300 | l1_ratio:   0.2000 | Training score: 0.7872 | Test score: 0.6342
+alpha:   0.0300 | l1_ratio:   0.3000 | Training score: 0.7904 | Test score: 0.6384
+alpha:   0.0300 | l1_ratio:   0.4000 | Training score: 0.7941 | Test score: 0.6433
+alpha:   0.0300 | l1_ratio:   0.5000 | Training score: 0.7986 | Test score: 0.6490
+alpha:   0.0300 | l1_ratio:   0.6000 | Training score: 0.8042 | Test score: 0.6557
+alpha:   0.0300 | l1_ratio:   0.7000 | Training score: 0.8109 | Test score: 0.6638
+alpha:   0.0300 | l1_ratio:   0.8000 | Training score: 0.8200 | Test score: 0.6750
+alpha:   0.0300 | l1_ratio:   0.9000 | Training score: 0.8328 | Test score: 0.6914
+alpha:   0.0300 | l1_ratio:   1.0000 | Training score: 0.8540 | Test score: 0.7208
+alpha:   0.1000 | l1_ratio:   0.1000 | Training score: 0.7030 | Test score: 0.5262
+alpha:   0.1000 | l1_ratio:   0.2000 | Training score: 0.7064 | Test score: 0.5307
+alpha:   0.1000 | l1_ratio:   0.3000 | Training score: 0.7100 | Test score: 0.5357
+alpha:   0.1000 | l1_ratio:   0.4000 | Training score: 0.7143 | Test score: 0.5414
+alpha:   0.1000 | l1_ratio:   0.5000 | Training score: 0.7192 | Test score: 0.5476
+alpha:   0.1000 | l1_ratio:   0.6000 | Training score: 0.7250 | Test score: 0.5549
+alpha:   0.1000 | l1_ratio:   0.7000 | Training score: 0.7320 | Test score: 0.5644
+alpha:   0.1000 | l1_ratio:   0.8000 | Training score: 0.7400 | Test score: 0.5768
+alpha:   0.1000 | l1_ratio:   0.9000 | Training score: 0.7497 | Test score: 0.5933
+alpha:   0.1000 | l1_ratio:   1.0000 | Training score: 0.7710 | Test score: 0.6302
+
+
+----------------- BEST on TEST set----------------
+Coefficients of the elastic model: [ -0.           0.          -0.           0.          -0.           0.          -0.
+  -0.          -0.          -0.          -6.94791033   0.         -15.73526712
+  -0.           0.          -0.           0.          -0.          -0.          -0.
+  -0.          -0.          -0.          -0.          -0.          -0.           0.
+  -0.           0.           0.           0.           0.          -0.           0.
+  -0.          -0.           0.          -0.          -0.           0.          -0.
+  -0.          -0.          -0.          -0.          -0.          -0.          -0.
+  -0.           0.           0.           0.           0.           0.           0.
+   0.           0.           1.57250048   0.          -0.06794425  -0.          -0.
+  -0.          -0.          -0.          -0.          -0.          -0.
+  19.43341184  -0.          -0.          -0.          -5.13377204  -0.
+   5.34522643  -0.          -0.          -0.          -0.          -0.          -0.
+   0.          -0.45788656  -0.          -0.          -0.          -0.          -0.
+  -0.          -0.          -0.          -0.           0.          -0.          -0.
+  -0.          -0.          -0.          -0.          -0.          -0.           0.
+  -0.           0.        ]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Summary">Summary<a class="anchor-link" href="#Summary">&#182;</a></h1>
 </div>
 </div>
@@ -12796,7 +14123,13 @@ Worst n_neighour = 20 | Training score = 0.675 | Test score = 0.479
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Later-use">Later use<a class="anchor-link" href="#Later-use">&#182;</a></h1>
+<p>We have covered about 3 most popular linear models for regression, namely</p>
+<ul>
+<li><p><code style="font-size:120%;color:green">Linear Regression</code></p></li>
+<li><p><code style="font-size:120%;color:green">Ridge Regression</code></p></li>
+<li><p><code style="font-size:120%;color:green">Lasso</code></p></li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -12805,33 +14138,29 @@ Worst n_neighour = 20 | Training score = 0.675 | Test score = 0.479
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><em>What does <code>score</code> give us? An extract from previous tutorial</em></p>
+<p><strong>General Practice</strong></p>
 <ul>
-<li><p>For <code>Classificaiton</code> problems, we used <code>accuracy</code> as our evaluation metric. However for regression, we can't use accuracy. There are still many metrics to measure the regression model performance & by default, <code>score</code> method in <code>sklearn</code> returns <code>R<sup>2</sup></code> score.</p></li>
-<li><p>The <code>R<sup>2</sup></code> score, also known as the <b>coefficient of determination</b>, is a measure of goodness of a prediction for a regression model, and yields a score between 0 and 1. A value of 1 corresponds to a perfect prediction</p></li>
-<li><p><code>R^2 = (1 - u/v)</code> where</p>
-<ul>
-<li><code>u</code> is the residual sum of squares <code>((y_true - y_pred) ** 2).sum()</code></li>
-<li><code>v</code> is the total sum of square <code>((y_true - y_true.mean())**2)</code></li>
+<li><code>linear regression</code> is where people start with as it doesn't involve any tuning of parameters, like <code>alpha</code>. However, the LR model might easily overfit on the training set and fail to generalize on test set.</li>
+<li><code>ridge regression</code> is usually the first choice when compared to <code>Lasso</code>, especailly when we have fewer features</li>
 </ul>
-</li>
+<p><strong>When is Lasso better?</strong></p>
+<ul>
+<li>If we have large number of input features and expect only few of them to be important, <code>Lasso</code> is a better choice</li>
+<li>If we would like to have a model that is easy to interpret, <code>Lasso</code> is better as it will select only a subset of features.</li>
 </ul>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now that we have covered Linear models for regression, let's explore Linear models for Classification in the next post.</p>
 
 </div>
 </div>
-</div>
-
 </div>
     </div>
   </div>
