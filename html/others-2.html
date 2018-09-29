@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!-- The HTML document itself begins with <html> and ends with </html> -->
+<html lang="en-US">
+
+	<!--The <head> element contains meta information about the document 
+			Meta data is not displayed
+	-->
+	
+	
+	<head>
+		<meta charset="UTF-8">
+		<meta property="og:title" content="ML Course - Logistic Regression">
+		<meta property="og:description" content="A tutorial on Logistic Regression">
+		<meta name="description" content="A tutorial on Logistic Regression">
+		<meta name="keywords" content="ML,Python,AI,Machine Learning, Data Analysis, Artifical Intelligence, Programming, Tutorial">
+		<meta name="author" content="Prasanth Thangavel">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title>ML Course</title>
+				<!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">-->
+		<link rel="stylesheet" href="https://prasanth-ntu.github.io/html/styles.css">
+
+
+		<link rel="icon" href="https://prasanth-ntu.github.io/html/images/avid learner.jpeg">
+		
+		
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122668953-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-122668953-1');
+		</script>
+
+	</head>
+	
+	<style>
+		div.card {
+			width: 350px; height: 350px;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			text-align: center;
+		}
+
+		div.header {
+				
+				color: white;
+				padding: 10px;
+				font-size: 40px;
+		}
+
+		div.container {
+				padding: 10px;
+		}
+	</style>
+
+
+	
+	<body>
+		<div class="header">
+		<ul class="navigation_menu">
+			<li class="navigation_menu"><a href="https://prasanth-ntu.github.io/">About</a></li>
+			<li class="navigation_menu"><a href="https://prasanth-ntu.github.io/html/ML-Course-1.html">Machine Learning</a></li>
+			<li class="navigation_menu"><a href="https://prasanth-ntu.github.io/html/automate-with-python.html">Automate with Python</a></li>
+			<li class="navigation_menu"><a href="#https://prasanth-ntu.github.io/html/others.html"  style="background-color: gray;">Others</a></li>
+		</ul>
+		</div>
+			
+		<br><br><br>
+	
+		<div class="w3-row-padding">
+			<div class="w3-third">
+				<div class="card">
+					<div class="header">
+						<h1>Testing Title</h1>
+					</div>
+
+					<div class="container">
+						<p>January 1, 2016</p>
+
+						<img  src="https://prasanth-ntu.github.io/html/ML-Course/Intro-to-ML-with-Python/images/classification_vs_regression.jpg" 
+		alt="3 species of IRIS flowers" title="Classification and Regression" style="max-width:100%" >
+					</div>
+				</div>
+			</div>
+
+  <div class="w3-third">
+    <h2>Paris</h2>
+    <p>Paris is the capital of France.</p> 
+    <p>The Paris area is one of the largest population centers in Europe,
+    with more than 12 million inhabitants.</p>
+		<img  class="img_center" src="https://prasanth-ntu.github.io/html/ML-Course/Intro-to-ML-with-Python/images/classification_vs_regression.jpg" 
+		alt="3 species of IRIS flowers" title="Classification and Regression" style="max-width:100%" >
+  </div>
+
+  <div class="w3-third">
+    <h2>Tokyo</h2>
+    <p>Tokyo is the capital of Japan.</p>
+    <p>It is the center of the Greater Tokyo Area,
+    and the most populous metropolitan area in the world.</p>
+  </div>
+</div>
+		
+		<h1>Supervised Learning - Logisitic Regression</h1>
+		<h2>What we will learn here</h2>
+		<hr>
+		<p class="normal">Linear models are a class of models that are widely used and extensively studied in the last few dacades, with roots going back over a hundred years. 
+		Linear Models can be used for both <i>Classification & Regression problems</i>. 
+
+		</p>
+		<p class="normal" style="margin-top:0px;	border-left: 6px solid blue;	margin-left: 10%;padding-left:20px;list-style: none;">
+		Logisitic Regression is similar to linear regression, but instead of predicting a continuous value, it predicts which class (or) category the input data belongs to.
+		<p class="normal">We will go over the intuition of the algorithm, apply it to both <i>synthetic & real-world dataset </i>to see exactly how it works, 
+		and gain an intrinsic understanding of its inner-workings by writing code from scratch &  tuning its most important parameter 
+		<code style="font-size:120%;"><b>C</b> (inverse of regularization strength)</code> to see its effect on <b>model complexity and generalization</b>. 
+		Finally, we will explore the imporant parameters of the model, its strength & weakness.</p>
+		
+		
+		
+		
+		<br><h2><a href="https://prasanth-ntu.github.io/html/ML-Course/Intro-to-ML-with-Python/2c-Supervised-Learning-Logistic-Regression.html">Supervised Learning - Logisitic Regression - Notebook</a></h2>
+		<hr>
+				<iframe src="https://prasanth-ntu.github.io/html/ML-Course/Intro-to-ML-with-Python/2c-Supervised-Learning-Logistic-Regression.html" 
+				style="border:none;overflow:hidden;margin-left:10%" height="720px"width="90%"></iframe>
+		<br><hr><br>
+		
+	
+	</div>
+	</div>
+		<hr>
+		
+		
+		<p class="normal" style="text-align: center;">
+<a href="https://prasanth-ntu.github.io/html/ML-Course-13.html" class="but" style="background-color: #f1f1f1;color: black;;">&laquo; Previous: Linear Regression</a>
+<a href="https://prasanth-ntu.github.io/html/ML-Course-15.html" class="but" style="background-color:#4CAF50;color: white;">Next: Neural Networks &raquo;</a>
+
+<!-- <a href="https://prasanth-ntu.github.io/html/ML-Course-6.html" class="but" style="background-color:#4CAF50;color: white;">Next: Coming Soon &raquo;</a> -->
+		</p>
+				
+		<div class="footer">
+			<p style="font-family:verdana; text-align: center; font-size:90%;">
+				<em>Education transformed my life and I want to transform others using education.<br>I firmly believe that “Knowledge grows when shared"<br>I am doing my best to share the knowledge.
+				</em>
+			</p>
+			<p style="text-align: center;"> I am active in <a href="https://www.quora.com/profile/Prasanth-Thangavel" target="_self">Quora</a>, <a href="https://github.com/prasanth-ntu">Github</a>
+			</p>
+			<p style="text-align: center;"><a href="#">Scroll to the top</a>
+			</p>
+		</div>
+	</body>
+	
+</html>
