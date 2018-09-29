@@ -17,9 +17,10 @@
 	  <meta name="viewport" content="width=device-width, initial-scale=1">
 		
 		<title>ML Course</title>
-				<!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">-->
+		
+		<!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">-->
 		<link rel="stylesheet" href="https://prasanth-ntu.github.io/html/styles.css">
-
+		<link rel="stylesheet" href="https://prasanth-ntu.github.io/html/styles_responsive_columns.css">
 
 		<link rel="icon" href="https://prasanth-ntu.github.io/html/images/avid learner.jpeg">
 		
@@ -37,6 +38,63 @@
 	</head>
 	
 	<style>
+		@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+		* { box-sizing: border-box; }
+
+
+
+		/* STRUCTURE */
+
+		.wrapper {
+			padding: 5px;
+			max-width: 1080px;
+			width: 100%;
+			margin: 20px auto;
+		}
+		header {
+			padding: 0 15px;
+		}
+
+		.columns {
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: center;
+			margin: 5px 0;
+		}
+
+		.column {
+			flex: 1;
+
+			margin: 2px;
+			padding: 10px;
+			&:first-child { margin-left: 0; }
+			&:last-child { margin-right: 0; }
+			
+		}
+
+
+		@media screen and (max-width: 980px) {
+			.columns .column {
+				margin-bottom: 5px;
+				flex-basis: 40%;
+				&:nth-last-child(2) {
+					margin-right: 0;
+				}
+				&:last-child {
+					flex-basis: 100%;
+					margin: 0;
+				}
+			}
+		}
+
+		@media screen and (max-width: 680px) {
+			.columns .column {
+				flex-basis: 100%;
+				margin: 0 0 5px 0;
+			}
+		}
+	
 	
 		div.card {
 			width: 350px; height: 350px;
@@ -45,10 +103,9 @@
 		}
 
 		div.header {
-				
 				color: white;
 				padding: 10px;
-				font-size: 40px;
+				font-size: 20px;
 		}
 
 		div.container {
@@ -69,71 +126,45 @@
 		</div>
 			
 		<br><br><br>
-	
-		<div class="w3-row-padding">
-			<div class="w3-third">
-				<div class="card">
-					<div class="header">
-						<h1>Testing Title</h1>
-					</div>
-					<div class="container">
-						<p>January 1, 2016</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="w3-third">
-				<div class="card">
-					<div class="header">
-						<h1>Testing Title</h1>
-					</div>
-					<div class="container">
-						<p>January 1, 2016</p>
-					<img  src="https://prasanth-ntu.github.io/html/ML-Course/Intro-to-ML-with-Python/images/classification_vs_regression.jpg" 
-						alt="3 species of IRIS flowers" title="Classification and Regression" style="max-width:100%" >
-					</div>
-				</div>
+		
+	<div class="wrapper">
+		<section class="columns">
+			<div class="column">
+						<div class="card">
+							<div class="header">
+								<h1>Testing Title 1</h1>
+							</div>
+							<div class="container">
+								<p>January 1, 2016</p>
+							</div>
+						</div>
 			</div>
 			
-			<div class="w3-third">
-				<div class="card">
-					<div class="header">
-						<h1>Testing Title</h1>
-					</div>
-					<div class="container">
-						<p>January 1, 2016</p>
-					<img  src="https://prasanth-ntu.github.io/html/ML-Course/Intro-to-ML-with-Python/images/classification_vs_regression.jpg" 
-						alt="3 species of IRIS flowers" title="Classification and Regression" style="max-width:100%" >
-					</div>
-				</div>
+			<div class="column">
+						<div class="card">
+							<div class="header">
+								<h1>Testing Title 1</h1>
+							</div>
+							<div class="container">
+								<p>January 1, 2016</p>
+							</div>
+						</div>
 			</div>
-		
-		<h1>Supervised Learning - Logisitic Regression</h1>
-		<h2>What we will learn here</h2>
-		<hr>
-		<p class="normal">Linear models are a class of models that are widely used and extensively studied in the last few dacades, with roots going back over a hundred years. 
-		Linear Models can be used for both <i>Classification & Regression problems</i>. 
-
-		</p>
-		<p class="normal" style="margin-top:0px;	border-left: 6px solid blue;	margin-left: 10%;padding-left:20px;list-style: none;">
-		Logisitic Regression is similar to linear regression, but instead of predicting a continuous value, it predicts which class (or) category the input data belongs to.
-		<p class="normal">We will go over the intuition of the algorithm, apply it to both <i>synthetic & real-world dataset </i>to see exactly how it works, 
-		and gain an intrinsic understanding of its inner-workings by writing code from scratch &  tuning its most important parameter 
-		<code style="font-size:120%;"><b>C</b> (inverse of regularization strength)</code> to see its effect on <b>model complexity and generalization</b>. 
-		Finally, we will explore the imporant parameters of the model, its strength & weakness.</p>
-		
-		
-		
-		
-		<br><h2><a href="https://prasanth-ntu.github.io/html/ML-Course/Intro-to-ML-with-Python/2c-Supervised-Learning-Logistic-Regression.html">Supervised Learning - Logisitic Regression - Notebook</a></h2>
-		<hr>
-				<iframe src="https://prasanth-ntu.github.io/html/ML-Course/Intro-to-ML-with-Python/2c-Supervised-Learning-Logistic-Regression.html" 
-				style="border:none;overflow:hidden;margin-left:10%" height="720px"width="90%"></iframe>
-		<br><hr><br>
-		
-	
+			
+			<div class="column">
+						<div class="card">
+							<div class="header">
+								<h1>Testing Title 1</h1>
+							</div>
+							<div class="container">
+								<p>orem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam, porro. Doloribus vitae non dolores modi dolorum </p>
+							</div>
+						</div>
+			</div>
+		</section>	
 	</div>
-	</div>
+		
+		
 		<hr>
 		
 		
