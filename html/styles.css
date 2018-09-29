@@ -183,6 +183,7 @@ a.but {
     text-decoration: none;
     display: inline-block;
     padding: 8px 16px;
+		border-radius: 4px;
 }
 a.but:link {
     text-decoration: none;
