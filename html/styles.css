@@ -135,10 +135,10 @@ li.navigation_menu a:hover {
     display: table;
 }
 .menu {
-    width: 30%;
+    width: 10%;
 }
 .content {
-    width: 70%;
+    width: 90%;
 		float: left;
 }
 .menu ul {
