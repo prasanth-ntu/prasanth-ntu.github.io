@@ -51,7 +51,7 @@
 			<div class="column menu">
 				<ul>
 				  <li><a href="https://prasanth-ntu.github.io/html/learn-python/learn-python-1.html">What is Python?</a></li>
-					<li style="background-color: #4CAF50; color: white;">First Python Code</a></li>
+					<li style="background-color: #4CAF50; color: white;">Data Types, Operators, Variables,<br> Input and Output</a></li>
 					
 				</ul>
 			</div>
@@ -60,182 +60,19 @@
 		
 		
 
-		<h1> Python Introduction</h1>
-		<p class="normal"><i><a href="https://prasanth-ntu.github.io/html/learn-python/First_Python_Code.html">Click here</a> to open notebook in full screen</i>.</p>
-		<p class="normal"><i><a href="#Notebook">Click here</a> to jump straight to notebook</i>.</p>
-		<h2 style="font-family:Inconsolata,Consolas, Monaco;" >Welcome Pythonists </h2>
-		<hr>
-		<p class="normal">
-		Python is a general-purpose, versatile and popular programming language. 
-		It's great as a first language as it is simple and easy to read, and it is also a good language to have in any programmer's stack as it can be used for everything from web development to software development and scientific applications.. 
-		<br><br>Organizations using Python include 
-			<ul  style="margin-top:-10px;	border-left: 6px solid blue;	margin-left: 10%;padding-left:20px;list-style: none;">
-				<li>IBM</li>
-				<li>CIA</li>
-				<li>NASA</li>
-				<li>Quora</li>
-				<li>Google</li>
-				<li>Yahooo</li>
-				<li>Dropbox</li>
-				<li>YouTube</li>
-				<li>UCL Irvine</li>
+		<h1> Data Types, Operators, Variables, Input and Output</h1>
+		<p class="normal"><i><a href="https://prasanth-ntu.github.io/html/learn-python/Python_Basics_Notes.html">Click here</a> to open notebook in full screen</i>.</p>
+		<!--<p class="normal"><i><a href="#Notebook">Click here</a> to jump straight to notebook</i>.</p>-->
+		<p class="normal">In this post, we will learn about
+		<ul>				
+				<li>Data Types - How computers sees the data/ information?</li>
+				<li>Operations - How does python work on (operates) on different data types?</li>
+				<li>Variables - How does computers store information in their memory?</li> 
+				<li>Output - How to print or display the output on the screen?</li> 
+				<li>Input - How to get input from the user into our computer?</li> 
 		</ul></p>
-		
-		<p class="normal">	To find what Python is all about, explore some of the links below:
-			<ul style="margin-top:-10px;">
-				<li><a href="https://www.python.org/doc/essays/blurb/">What is Python? Executive Summary</a></li>
-				<li><a href="https://www.python.org/doc/essays/comparisons/">Compare Python with other languages</a></li>
-				<li><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">Python (programming language) - Wikipedia</a></li>
-				<li><a href="https://www.python.org/about/success/">Python Success Stories</a></li>		
-				<li><a href="https://www.quora.com/What-is-the-most-famous-software-written-in-Python">What is the most famous software written in Python? - Quora Post</a></li>
-				<li><a href="https://wiki.python.org/moin/SimplePrograms">Collection of short programs, which show off Python's syntax and readability</a></li>
-			</ul></p>
 
-		<p class="normal">
-		Visit <a href="http://pythontutor.com/" target="_blank">Python Tutor Visualizer </a> to visualise the code and understand what happens behind the screen when each line of Python code runs.	
-		It shows the assignment of all the variables and the variale scopes graphically as shown below.</p>
-				<img src="https://prasanth-ntu.github.io/html/ML-Course/Python-Refresher/images/Python tutor.png" 
-		alt="Python Tutor Visualizer" style="margin-left:10%; max-width:80%">
-		
-		
-		<h2> IDLE Installation (optional) </h2>
-		<hr>
-		<p class="normal"><i>If you alread have IDLE or other development IDE's, you can skip installing IDLE.</i>
-		</p>
-		<p class="normal">Visit <a href = "https://www.python.org/downloads/" target="_blank"> https://www.python.org/downloads/</a> to download and install latest version of python with IDLE.
-		As of writing this page, the latest version is <span style="font-family:Inconsolata,Consolas, Monaco;color:blue"> Python 3.7.0</span>. IDLE Shell will look something like the image below (<i>We can customise the environment to suit our taste</i>).</p>
-		<img src="https://prasanth-ntu.github.io/html/ML-Course/Python-Refresher/images/Python IDLE Shell.PNG" 
-		alt="Python IDLE Shell" style="margin-left:10%; max-width:60%">
-			
-			
-			
-		<h2> Time for Fun </h2>
-		<hr>	
-		<p class="normal">
-		Without talking any further, let's dive straight into the program and have some fun.
-		Run the <i>code</i> below</p>	
-		<pre class="prettyprint linenums" style="margin-left: 10%;margin-right:10%">
-<code>import this</code></pre>
-<p class="normal"> and you will see the output as shown below. <i>The Zen of Python is a collection of 20 software principles that influences the design of Python Programming Language</i>.
-		It is included as an easter egg in the Python interpreter, which can be displayed by entering <code class="style">import this</code> </p>
-		
-			<pre style="margin-left: 10%;margin-right: 10%; border-style: groove; border-left: 6px solid red; padding-left:10px">
-The Zen of Python, by Tim Peters
-
-Beautiful is better than ugly.
-Explicit is better than implicit.
-Simple is better than complex.
-Complex is better than complicated.
-Flat is better than nested.
-Sparse is better than dense.
-Readability counts.
-Special cases aren't special enough to break the rules.
-Although practicality beats purity.
-Errors should never pass silently.
-Unless explicitly silenced.
-In the face of ambiguity, refuse the temptation to guess.
-There should be one-- and preferably only one --obvious way to do it.
-Although that way may not be obvious at first unless you're Dutch.
-Now is better than never.
-Although never is often better than *right* now.
-If the implementation is hard to explain, it's a bad idea.
-If the implementation is easy to explain, it may be a good idea.
-Namespaces are one honking great idea -- let's do more of those!</pre>
-	
-	<br><p class="normal">If you run the <i>code</i> below</p>	
-<pre class="prettyprint linenums" style="margin-left: 10%;margin-right:10%">
-<code>print (this.s)</code></pre>
-		<p class="normal"> and you will see the output as shown below. Here, the <i>Zen of Python is ceaser chipered by 13 places</i>.
-		For more details on <code class="style">import this</code> module, ceaser chiphering & ROT-13, 
-		refer <a href = "https://en.wikipedia.org/wiki/ROT13">wikipedia</a> or 
-		<a href = "https://stackoverflow.com/questions/37301273/attributes-of-python-module-this"> stack overflow</a>.
-		</p>		
-			<pre style="margin-left: 10%;margin-right: 10%; border-style: groove; border-left: 6px solid red; padding-left:10px">
-Gur Mra bs Clguba, ol Gvz Crgref
-
-Ornhgvshy vf orggre guna htyl.
-Rkcyvpvg vf orggre guna vzcyvpvg.
-Fvzcyr vf orggre guna pbzcyrk.
-Pbzcyrk vf orggre guna pbzcyvpngrq.
-Syng vf orggre guna arfgrq.
-Fcnefr vf orggre guna qrafr.
-Ernqnovyvgl pbhagf.
-Fcrpvny pnfrf nera'g fcrpvny rabhtu gb oernx gur ehyrf.
-Nygubhtu cenpgvpnyvgl orngf chevgl.
-Reebef fubhyq arire cnff fvyragyl.
-Hayrff rkcyvpvgyl fvyraprq.
-Va gur snpr bs nzovthvgl, ershfr gur grzcgngvba gb thrff.
-Gurer fubhyq or bar-- naq cersrenoyl bayl bar --boivbhf jnl gb qb vg.
-Nygubhtu gung jnl znl abg or boivbhf ng svefg hayrff lbh'er Qhgpu.
-Abj vf orggre guna arire.
-Nygubhtu arire vf bsgra orggre guna *evtug* abj.
-Vs gur vzcyrzragngvba vf uneq gb rkcynva, vg'f n onq vqrn.
-Vs gur vzcyrzragngvba vf rnfl gb rkcynva, vg znl or n tbbq vqrn.
-Anzrfcnprf ner bar ubaxvat terng vqrn -- yrg'f qb zber bs gubfr!</pre>
-
-	<br><p class="normal"><i>To decrypt the above encoded module, you can run one of the 2 codes shown below.</i>
-		</p>
-		<pre class="prettyprint linenums" style="margin-left: 10%;margin-right:10%">
-<code>import codecs
-print (codecs.decode(this.s, 'rot13'))</code></pre>
-
-			<pre class="prettyprint linenums" style="margin-left: 10%;margin-right:10%">
-<code>print ("".join([this.d.get(c, c) for c in this.s]))</code></pre>
-
-
-
-
-	<br><h2> Installing packages using pip </h2>
-		<hr>	
-		<p class="normal">
-		Pip is a package manager used to install and manage softwares written in Python.
-		You can access the pip from command prompt or terminal.</p>
-		
-			<p class="normal"><b>To check the pip version</b></p>
-			<pre style="margin-left: 10%;margin-right: 10%; border-style: groove; border-left: 6px solid red; padding-left:10px">
-pip -V</pre>
-		<img src="https://prasanth-ntu.github.io/html/images/pip version check.png" 
-		alt="Pip version" style="margin-left:10%; width:80%">
-		
-	<p class="normal"><b>To check whether a package is already installed</b></p>
-			<pre style="margin-left: 10%;margin-right: 10%; border-style: groove; border-left: 6px solid red; padding-left:10px">
-pip show package_name</pre>
-		<img src="https://prasanth-ntu.github.io/html/images/pip show example.png" 
-		alt="pip show example" style="margin-left:10%; width:80%">
-		
-		<p class="normal">If the package doesnt exist, it will show nothing</p>
-		<img src="https://prasanth-ntu.github.io/html/images/pip show example 2.png" 
-		alt="pip show example" style="margin-left:10%; width:80%">
-
-		<p class="normal"><b>To install a new package</b></p>
-			<pre style="margin-left: 10%;margin-right: 10%; border-style: groove; border-left: 6px solid red; padding-left:10px">
-pip install package_name</pre>
-		<img src="https://prasanth-ntu.github.io/html/images/pip install mglearn.PNG" 
-		alt="pip show example" style="margin-left:10%; width:80%">
-	
-		<br><h2> Python Packages used in this course</h2>
-		<hr>	
-		<p class="normal">Mandatory pacakges<ul  style="margin-top:0px;	border-left: 6px solid blue;	margin-left: 10%;padding-left:20px;list-style: none; font-size:20px">
-		
-				<code><li>numpy</li>
-				<li>matplotlib</li>
-				<li>sklearn</li>
-				<li>scipy</li>
-				<li>pandas</li>
-				<li>mglearn</li>
-				<li>graphviz</li>
-				<li>tensorflow</li></code>
-		</ul></p>
-		
-		<p class="normal">Optional packages
-		<ul  style="margin-top:0px;	border-left: 6px solid blue;	margin-left: 10%;padding-left:20px;list-style: none; font-size:20px">
-		
-				<code>
-				<li>matplotlib-venn</li>
-				<li>seaborn</li></code>
-		</ul></p>
-	
-	
+		<
 	<a id ="Notebook"></a>
 	<br><h2><a href="https://prasanth-ntu.github.io/html/learn-python/1-Python-Notes.html">Python Introduction - Notebook</a></h2>
 		<hr>
@@ -245,31 +82,6 @@ pip install package_name</pre>
 
 		
 	
-	<br><h2>For Nerds and Geeks - Computer Hardware Architecture</h2>
-		<hr>	<p class="normal">	
-		Before we start learning the Python programming language to give instructions to computers, 
-		let's have a sneak peek of how computers are built. If you were to rip off a computer or cell phone and look deep inside, 
-		we would find the following parts:</p>
-		<img src="https://prasanth-ntu.github.io/html/images/computer_hardware_architecture.png" 
-		alt="computer_hardware_architecture" title="computer_hardware_architecture" style="margin-left:10%; width:55%">
-		<p class="normal"><ul>
-			<li><code class="style"><b>Central Processing Unit</b></code> is where our program is executed. It's obsessed with "what's next". <i>If our computer is rated at 1 GHz, it will ask "what's next" 1 million times per second.  i.e. runs one million instructions / sec</i>.</li>
-			<br><li><code class="style"><b>Main Memory</b></code> is used to store information that CPU needs in a hurry. 
-			<b>Data and programs currently in use are stored in RAM</b>. Their drawback is info stored in it vanishes when the computer is turned off.</li>
-			<br><li><code class="style"><b>Secondary Memory</b></code> is also used to store information, but it is much slower than the main memory. 
-			<b>Data and program files are usually stored in Hard Disk</b>. 
-			The advantage of the secondary memory is that it can store information even when there is no power to the computer and are usually cheaper than RAM & offer more storage space.</li>
-			<br><li><code class="style"><b>Network Connection</b></code> is used to retrieve information over internet or intranet. We can think of the network as a very slow place to store and retrieve data that might not always be "up". So in a sense, the network is a slower and at times unreliable form of Secondary Memory.
-			However, the recent advancements in fibre optics enabled widespread access to network speed of 1 Gbps & more. Transferring data between the servers will be atleast 100MB/s and will be faster than USB3.0.
-			</li>
-			<br><li><code class="style"><b>Input & Output devices</b></code> are simply our screen, keyboard, mouse, microphone, speaker, touchpad, etc. They are all of the ways we interact with the computer.</li>
-			</ul>
-		</p> 
-		<p class="normal">	
-			As a programmer, we will mostly be "talking" to the CPU and telling it what to do next by writing down instructions. 
-			We call these stored instructions a <b>program</b> and the act of writing these instructions down is called as <b>programming</b>.
-	
-
 	<br><h2>For Further reading</h2>
 		<hr>		
 			<p class="normal"><ul>				
