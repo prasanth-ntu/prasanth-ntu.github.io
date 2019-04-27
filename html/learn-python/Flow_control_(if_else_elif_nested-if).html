@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>Python_Basics_Notes</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Flow_control_(if_else_elif_nested-if)</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -11783,7 +11783,7 @@ div#notebook {
 <script>
 $( document ).ready(function(){
 
-            var cfg = {"base_numbering": 1, "nav_menu": {}, "number_sections": true, "sideBar": true, "skip_h1_title": false, "title_cell": "Table of Contents", "title_sidebar": "Contents", "toc_cell": false, "toc_position": {"height": "calc(100% - 180px)", "left": "10px", "top": "150px", "width": "267px"}, "toc_section_display": true, "toc_window_display": true};
+            var cfg = {"base_numbering": 1, "nav_menu": {}, "number_sections": true, "sideBar": true, "skip_h1_title": false, "title_cell": "Table of Contents", "title_sidebar": "Contents", "toc_cell": false, "toc_position": {}, "toc_section_display": true, "toc_window_display": true};
 
             // fire the main function with these parameters
             require(['nbextensions/toc2/toc2'], function (toc2) {
@@ -11800,8 +11800,8 @@ $( document ).ready(function(){
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>For Full screen view, <a href="https://prasanth-ntu.github.io/html/learn-python/Python_Basics_Notes.html" target="_blank">Click here</a>. To download the notebook from <code>GITHUB</code> : <a href="https://prasanth-ntu.github.io/html/learn-python/Python_Basics_Notes.ipynb" target="_blank">Click here</a>. 
-<i>To go back to Learn Python website</i>,  <a href="https://prasanth-ntu.github.io/html/learn-python/learn-python-2.html" target="_blank">Click here</a></p>
+<p>For Full screen view, <a href="https://prasanth-ntu.github.io/html/learn-python/Flow_control_(if_else_elif_nested-if).html" target="_blank">Click here</a>. To download the notebook from <code>GITHUB</code> : <a href="https://prasanth-ntu.github.io/html/learn-python/Flow_control_(if_else_elif_nested-if).ipynb" target="_blank">Click here</a>. 
+<i>To go back to Learn Python website</i>,  <a href="https://prasanth-ntu.github.io/html/learn-python/learn-python-3.html" target="_blank">Click here</a></p>
 
 </div>
 </div>
@@ -11812,15 +11812,20 @@ $( document ).ready(function(){
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p style="font-size:110%">In this post, we will learn about
-<ul style="font-size:110%">             
-    <li><b style="font-size:110%"><a href="#Data types">Data Types</a></b> - How computers sees the data/ information?</li>
-    <li><b style="font-size:110%"><a href="#Operators">Operators</a></b> - How does python work on (operates) on different data types?</li>
-<li><b style="font-size:110%"><a href="#Variables">Variables</a></b> - How does computers store information in their memory?</li> 
-<li><b style="font-size:110%"><a href="#Output">Output</a></b> - How to print or display the output on the screen?</li> 
-<li><b style="font-size:110%"><a href="#Input">Input</a></b> - How to get input from the user into our computer?</li> 
-<li><b style="font-size:110%"><a href="#Data Type Conversion">Data Type Conversion</a></b> - How to convert data from one type to another?</li> 
-<li><b style="font-size:110%"><a href="#Challenge 1">Challenge 1</a></b> - To test our your understanding on the topics covered!</li> 
 
+<ul>
+    <li><span style="font-size:110%">Operators</span></li>
+    <ul style="font-size:100%">             
+        <li><b style="font-size:100%"><a href="#Comparison Operators">Comparison Operators</a></b> - How to compare values?</li>
+        <li><b style="font-size:100%"><a href="#Boolean Operators">Boolean Operators</a></b> - How to combine multiple conditions?</li><br>
+    </ul>
+    <li><span style="font-size:110%">Flow Control</span></li>
+    <ul style="font-size:100%">         
+        <li><b style="font-size:100%"><a href="#if">if</a></b> - Makes a single decision</li> 
+        <li><b style="font-size:100%"><a href="#else">else</a></b> - Makes either or decision</li> 
+        <li><b style="font-size:100%"><a href="#elif">elif</a></b> - Makes multiple (3 or more) decisions</li> 
+        <li><b style="font-size:100%"><a href="#nested if">nested if</a></b> - Condition inside a condition</li> 
+    </ul>
 </ul>
 </p>
 </div>
@@ -11831,8 +11836,7 @@ $( document ).ready(function(){
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><a id="Data types"></a></p>
-<h1 id="Common-data-types">Common data types<a class="anchor-link" href="#Common-data-types">&#182;</a></h1>
+<h1 id="Operators">Operators<a class="anchor-link" href="#Operators">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -11841,9 +11845,8 @@ $( document ).ready(function(){
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The way computers sees the data/information is very different from how we as humans see it. So, we need to understand a bit about if before learning to program.</p>
-<p>In the table below, I have summarized the 4 most commonly used data types in Python with few examples.</p>
-
+<p><a id="Comparison Operators"></a></p>
+<h2 id="Comparison-Operators">Comparison Operators<a class="anchor-link" href="#Comparison-Operators">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -11852,70 +11855,71 @@ $( document ).ready(function(){
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<table style="max-width:100%;margin-left:20px;border: 1px solid black; font-size:110%">
-    <caption style="text-align: center"><b> Basic Data Types in Python </b></caption>
+<p><p> The table below shows the commonly used Comparison operators used to compare values in Python.</p></p>
+<table style="max-width:100%;margin-left:10%;border: 1px solid black; font-size:110%">
+    <caption style="text-align: center"><b> Comparison Operators </b></caption>
     <tr>
-        <td style="color:blue; background-color:rgb(80, 80, 80); color:white; text-align: center">Data Type</td>
-        <td style="color:blue; background-color:rgb(80, 80, 80); color:white; text-align: center">Python keyword</td>  
-        <td style="color:blue; background-color:rgb(80, 80, 80); color:white; text-align: center">Example</td>
-        <td style="color:blue; background-color:rgb(80, 80, 80); color:white; text-align: center">Explanation</td>
+        <td style="color:blue; background-color:rgb(80, 80, 80); color:white; text-align: center">Operator</td>
+        <td style="color:blue; background-color:rgb(80, 80, 80); color:white; text-align: center">Description</td>  
+        <td style="color:blue; background-color:rgb(80, 80, 80); color:white; text-align: center">Example</td>  
+        <td style="color:blue; background-color:rgb(80, 80, 80); color:white; text-align: center">Output</td>  
+
+
     </tr>
     <tr style="color:black;text-align: center">
-        <td style="text-align: center">integer</td>
-        <td style="text-align: center"><code>int</code></td>
-        <td style="text-align: center"><code>2, 10, 100, 0, -5838</code></td>
-        <td style="text-align: center">Integers are just numbers that we normally use in daily life.</td>
+        <td style="text-align: center"><code><</code></td>
+        <td style="text-align: center">Less than</td>
+        <td style="text-align: center"><code>5<4 </code></td>
+        <td style="text-align: center"><code>False</code></td>
+
     </tr>
     <tr style="color:black;text-align: center">
-        <td style="text-align: center">float</td>
-        <td style="text-align: center"><code>float</code></td>
-        <td style="text-align: center"><code>2.10, 10.0, 100.8712, 0.0, -5838.12</code></td>
-        <td style="text-align: center">Floats are numbers with decimal values. <br>Any number with a . (dot) will be treated as float by Python.</td>
+        <td style="text-align: center"><code>></code></td>
+        <td style="text-align: center">Greater than</td>
+        <td style="text-align: center"><code>5>4 </code></td>
+        <td style="text-align: center"><code>True</code></td>
+
     </tr>
-        <tr style="color:black;text-align: center">
-        <td style="text-align: center">string</td>
-        <td style="text-align: center"><code>str</code></td>
-        <td style="text-align: center"><code>"hi', "hello", "I am so cool", "40.0, "-30"</code></td>
-        <td style="text-align: center">Anything inside single or double quotes will be treated as string in Python. <br>Usually, letter, words and symbols should always go inside the quotes as a string.</td>
+    <tr style="color:black;text-align: center">
+        <td style="text-align: center"><code><=</code></td>
+        <td style="text-align: center">Less than or equal to</td>
+        <td style="text-align: center"><code>5<=4</code></td>
+        <td style="text-align: center"><code>False</code></td>
     </tr>
-        </tr>
-        <tr style="color:black;text-align: center">
-        <td style="text-align: center">Boolean</td>
-        <td style="text-align: center"><code>bool</code></td>
-        <td style="text-align: center"><code>True, False</code></td>
-        <td style="text-align: center">Boolean data type has only two values. <br>True is similar to 1 (yes) and False is similar to 0 (no).</td>
+    <tr style="color:black;text-align: center">
+        <td style="text-align: center"><code>>=</code></td>
+        <td style="text-align: center">Greater than or equal to</td>
+        <td style="text-align: center"><code>5>=4</code></td>
+        <td style="text-align: center"><code>True</code></td>
+    </tr>
+    <tr style="color:black;text-align: center">
+        <td style="text-align: center"><code>==</code></td>
+        <td style="text-align: center">Equal to</td>
+        <td style="text-align: center"><code>5==4</code></td>
+        <td style="text-align: center"><code>False</code></td>
+    </tr>
+    <tr style="color:black;text-align: center">
+        <td style="text-align: center"><code>!=</code></td>
+        <td style="text-align: center">Not equal to</td>
+        <td style="text-align: center"><code>5!=4</code></td>
+        <td style="text-align: center"><code>False</code></td>
     </tr>
 </table>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="type()-function">type() function<a class="anchor-link" href="#type()-function">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>In fact, Python has a built-in command called <code>type()</code> to find the type of any data! <br>Let's see few examples below. Feel free to modify the data and check the results.
-
-<br><br>
-<i>Note: <code>print()</code> is a built-in function in python used to show output on the screen. We will see more about it in later section of this post.</i></p>
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Comparison operators - Example</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;5&lt;4 =&gt;&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="o">&lt;</span><span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;&gt;&lt;4 =&gt;&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="o">&gt;</span><span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;5&lt;=4 =&gt;&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="o">&lt;=</span><span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;5&gt;=4 =&gt;&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="o">&gt;=</span><span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;5==4 =&gt;&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="o">==</span><span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;5!=4 =&gt;&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="o">!=</span><span class="mi">4</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -11930,7 +11934,144 @@ $( document ).ready(function(){
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>&lt;class &#39;int&#39;&gt;
+<pre>5&lt;4 =&gt; False
+&gt;&lt;4 =&gt; True
+5&lt;=4 =&gt; False
+5&gt;=4 =&gt; True
+5==4 =&gt; False
+5!=4 =&gt; True
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># We can also compare string and other types</span>
+<span class="nb">print</span> <span class="p">(</span> <span class="s1">&#39;apple&#39;</span><span class="o">!=</span><span class="s1">&#39;banana&#39;</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span><span class="o">==</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>True
+True
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a id="Boolean Operators"></a></p>
+<h2 id="Boolean-Operators">Boolean Operators<a class="anchor-link" href="#Boolean-Operators">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><p> The table below shows the 3 types of Boolean Operators used to combine multiple conditions.</p></p>
+<table style="max-width:100%;margin-left:10%;border: 1px solid black; font-size:110%">
+    <caption style="text-align: center"><b> Boolean Operators </b></caption>
+    <tr>
+        <td style="color:blue; background-color:rgb(80, 80, 80); color:white; text-align: center">Operator</td>
+        <td style="color:blue; background-color:rgb(80, 80, 80); color:white; text-align: center">Description</td>  
+        <td style="color:blue; background-color:rgb(80, 80, 80); color:white; text-align: center">Example</td>  
+        <td style="color:blue; background-color:rgb(80, 80, 80); color:white; text-align: center">Output</td>  
+
+    </tr>
+    <tr style="color:black;text-align: center">
+        <td style="text-align: center"><code>and</code></td>
+        <td style="text-align: center">True if all the values are True</td>
+        <td style="text-align: center"><code>5>4 and 4>3 </code></td>
+        <td style="text-align: center"><code>True and True => True</code></td>
+
+    </tr>
+    <tr style="color:black;text-align: center">
+        <td style="text-align: center"><code></code></td>
+        <td style="text-align: center"></td>
+        <td style="text-align: center"><code>5>4 and 4<3</code></td>
+        <td style="text-align: center"><code>True and False => False</code></td>
+
+    </tr>
+    <tr style="color:black;text-align: center">
+        <td style="text-align: center"><code>or</code></td>
+        <td style="text-align: center">True as long as one value is True</td>
+        <td style="text-align: center"><code>5>4 or 4>3</code></td>
+        <td style="text-align: center"><code>True or True => True</code></td>
+    </tr>
+    <tr style="color:black;text-align: center">
+        <td style="text-align: center"><code></code></td>
+        <td style="text-align: center"></td>
+        <td style="text-align: center"><code>5>4 or 4<3</code></td>
+        <td style="text-align: center"><code>True or False => True</code></td>
+    </tr>
+    <tr style="color:black;text-align: center">
+        <td style="text-align: center"><code>not</code></td>
+        <td style="text-align: center">Flips the boolean value</td>
+        <td style="text-align: center"><code>not(True)</code></td>
+        <td style="text-align: center"><code>False</code></td>
+    </tr>
+    <tr style="color:black;text-align: center">
+        <td style="text-align: center"><code></code></td>
+        <td style="text-align: center"></td>
+        <td style="text-align: center"><code>not(False)</code></td>
+        <td style="text-align: center"><code>True</code></td>
+    </tr>
+</table>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;### and ###&#39;</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="mi">5</span><span class="o">&gt;</span><span class="mi">4</span> <span class="ow">and</span> <span class="mi">4</span><span class="o">&gt;</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># True</span>
+<span class="nb">print</span> <span class="p">(</span><span class="mi">5</span><span class="o">&gt;</span><span class="mi">4</span> <span class="ow">and</span> <span class="mi">4</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># False </span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>### and ###
+True
+False
 </pre>
 </div>
 </div>
@@ -11944,7 +12085,9 @@ $( document ).ready(function(){
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="mf">3.1415</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;### or ###&#39;</span><span class="p">)</span>  
+<span class="nb">print</span> <span class="p">(</span><span class="mi">5</span><span class="o">&gt;</span><span class="mi">4</span> <span class="ow">or</span> <span class="mi">4</span><span class="o">&gt;</span><span class="mi">3</span><span class="p">)</span>   <span class="c1"># True</span>
+<span class="nb">print</span> <span class="p">(</span><span class="mi">5</span><span class="o">&gt;</span><span class="mi">4</span> <span class="ow">or</span> <span class="mi">4</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">)</span>   <span class="c1"># True</span>
 </pre></div>
 
 </div>
@@ -11959,7 +12102,9 @@ $( document ).ready(function(){
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>&lt;class &#39;float&#39;&gt;
+<pre>### or ###
+True
+True
 </pre>
 </div>
 </div>
@@ -11970,10 +12115,12 @@ $( document ).ready(function(){
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="s1">&#39;Hello World!&#39;</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;### not ###&#39;</span><span class="p">)</span>  
+<span class="nb">print</span> <span class="p">(</span><span class="ow">not</span><span class="p">(</span><span class="kc">True</span><span class="p">))</span>    <span class="c1"># False</span>
+<span class="nb">print</span> <span class="p">(</span><span class="ow">not</span><span class="p">(</span><span class="kc">False</span><span class="p">))</span>   <span class="c1"># True</span>
 </pre></div>
 
 </div>
@@ -11988,7 +12135,9 @@ $( document ).ready(function(){
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>&lt;class &#39;str&#39;&gt;
+<pre>### not ###
+False
+True
 </pre>
 </div>
 </div>
@@ -12002,7 +12151,7 @@ $( document ).ready(function(){
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="kc">True</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;apple&#39;</span><span class="o">==</span><span class="s1">&#39;apple&#39;</span> <span class="ow">and</span> <span class="s1">&#39;apple&#39;</span><span class="o">!=</span><span class="s1">&#39;orange&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12017,7 +12166,7 @@ $( document ).ready(function(){
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>&lt;class &#39;bool&#39;&gt;
+<pre>True
 </pre>
 </div>
 </div>
@@ -12031,8 +12180,7 @@ $( document ).ready(function(){
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><a id="Operators"></a></p>
-<h1 id="Operators">Operators<a class="anchor-link" href="#Operators">&#182;</a></h1><p>We can do basic math operations in <code>python</code> pretty easily. All that we have to figure out is the symbol to be used for each math operation.</p>
+<h1 id="Flow-Control">Flow Control<a class="anchor-link" href="#Flow-Control">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -12041,554 +12189,95 @@ $( document ).ready(function(){
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Entering-expressions">Entering expressions<a class="anchor-link" href="#Entering-expressions">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="mi">2</span><span class="o">+</span><span class="mi">2</span>
-</pre></div>
+<p>Let's say you decided to watch a bunch of movies in your school holidays. However, each movie comes with a rating and you need to find out the movie ratings approved for your age.</p>
 
 </div>
 </div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[10]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>4</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p> The table below shows the commonly used math operators followed by example for each operator.</p>
-<table style="max-width:100%;margin-left:30%;border: 1px solid black; font-size:110%">
-    <caption style="text-align: center"><b> Commonly used math operators </b></caption>
+<p><p> The table below shows MPAA (Motion Picture Association of America) Film ratings</p></p>
+<table style="max-width:100%;margin-left:0%;border: 1px solid black; font-size:100%">
+    <caption style="text-align: center"><b> US Film Ratings </b></caption>
     <tr>
-        <td style="color:blue; background-color:rgb(80, 80, 80); color:white; text-align: center">Function</td>
-        <td style="color:blue; background-color:rgb(80, 80, 80); color:white; text-align: center">Operator</td>  
+        <td style="color:blue; background-color:rgb(80, 80, 80); color:white; text-align: center">Rating Symbol</td>
+        <td style="color:blue; background-color:rgb(80, 80, 80); color:white; text-align: center">Description</td>  
+        <td style="color:blue; background-color:rgb(80, 80, 80); color:white; text-align: center">Meaning</td>  
+        <td style="color:blue; background-color:rgb(80, 80, 80); color:white; text-align: center">Age limit?</td>  
+
     </tr>
     <tr style="color:black;text-align: center">
-        <td style="text-align: center">Addition</td>
-        <td style="text-align: center"><code>+</code></td>
+        <td style="text-align: center"><code>G</code></td>
+        <td style="text-align: center">General Audience</td>
+        <td style="text-align: center">All ages admitted</td>
+        <td style="text-align: center"><code>No age limit</code></td>
+
     </tr>
     <tr style="color:black;text-align: center">
-        <td style="text-align: center">Subtraction</td>
-        <td style="text-align: center"><code>-</code></td>
+        <td style="text-align: center"><code>PG</code></td>
+        <td style="text-align: center">Parenal Guidance Suggested</td>
+        <td style="text-align: center">Some material may not be suitable for children</td>
+        <td style="text-align: center"><code>No age limit</code></td>
+     </tr>
+    <tr style="color:black;text-align: center">
+        <td style="text-align: center"><code>PG-13</code></td>
+        <td style="text-align: center">Parents Strongly Cautioned</td>
+        <td style="text-align: center">Some material may be inappropriate for children under 13</td>
+        <td style="text-align: center"><code>age<13 requires adult</code></td>
     </tr>
     <tr style="color:black;text-align: center">
-        <td style="text-align: center">Multiplication</td>
-        <td style="text-align: center"><code>*</code></td>
-    </tr>
-        <tr style="color:black;text-align: center">
-        <td style="text-align: center">Division</td>
-        <td style="text-align: center"><code>/</code></td>
-    </tr>
-        <tr style="color:black;text-align: center">
-        <td style="text-align: center">Integer Division</td>
-        <td style="text-align: center"><code>//</code></td>
-    </tr>
-        <tr style="color:black;text-align: center">
-        <td style="text-align: center">Modulus or Remainder</td>
-        <td style="text-align: center"><code>%</code></td>
+        <td style="text-align: center"><code>R</code></td>
+        <td style="text-align: center">Restricted</td>
+        <td style="text-align: center">Under 17 requires accompanying parent or adult guardian</td>
+        <td style="text-align: center"><code>age<17 requires adult</code></td>
     </tr>
     <tr style="color:black;text-align: center">
-        <td style="text-align: center">Exponent or Power</td>
-        <td style="text-align: center"><code>**</code></td>
+        <td style="text-align: center"><code>NC-17</code></td>
+        <td style="text-align: center">Adults only</td>
+        <td style="text-align: center">No one 17 and under admitted</td>
+        <td style="text-align: center"><code>age > 17</code></td>
     </tr>
 </table>
-
-<p><b>Order of Precedence</b><br>
-
-The order of operations (also called precedence) of Python math operators is similar to that of mathematics. The `**` operator is evaluated first; the `*, /, //, and %` operators are evaluated next, from left to right; and the <code>+</code> and <code>-</code> operators are evaluated last (also from left to right).
-</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="mi">2</span><span class="o">+</span><span class="mi">3</span><span class="o">*</span><span class="mi">6</span>
-</pre></div>
-
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a id="if"></a></p>
+<h2 id="if">if<a class="anchor-link" href="#if">&#182;</a></h2>
 </div>
 </div>
 </div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[15]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>20</pre>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span><span class="p">)</span> <span class="o">*</span> <span class="mi">6</span>
-</pre></div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Using <code>if</code> condition, we can check the movie with specific film ratings you are allowed to watch based on your age. When if condition evalues to <code>True</code>, the block of statement indented inside will get executed. <br><br>
 
+<i><u><b>Note</b></u>:<br>
+    To run a code(s) inside the <code>if</code> statement, the correspondig code(s) should be indented.</i><br>
+<ul>
+    <li><b><span style="color:blue;">To indent the code, i would recommended to use a <code>tab</code> key than pressing spaces</span></b> as later on we might forget how many space keys to press to do an indentation.</li>
+    <li><b><span style="color:blue;">To de-indent the code, i would recommended to using <code>shift + tab</code> key or <code>backspace</code> key.</span></b></li>
+</ul></p>
 </div>
 </div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[16]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>30</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="mi">2</span><span class="o">**</span><span class="mi">5</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[17]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>32</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="mi">22</span><span class="o">/</span><span class="mi">7</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[18]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>3.142857142857143</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="mi">22</span><span class="o">//</span><span class="mi">7</span> <span class="c1"># integer division - truncates all the decimals (similar to round down)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[1]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>3</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="mi">22</span> <span class="o">%</span> <span class="mi">7</span> <span class="c1"># Returns the reminder of the division</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[2]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>1</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>The meaning of an operator (e.g. <code>+</code>) may change based on the data types of the values next to it</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Addition for int or float</span>
-<span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">1.2</span> <span class="o">+</span> <span class="mf">2.4</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[21]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>(3, 3.5999999999999996)</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p style="color:green;">Any line or sentence or code after hash mark<Code>#</code> will be treated as a <b>comment</b> by the python interpreter (its the program that runs the python code). The computer will simply ignore (skip) the comment from running. We can also use them to write notes or remind yourself what the code is trying to do. </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="String-concatenation-&amp;-Replication">String concatenation &amp; Replication<a class="anchor-link" href="#String-concatenation-&amp;-Replication">&#182;</a></h2><p><code>+</code> not only performs addition on numbers. It also performs concatenation (combine or join operation) on two or more strings. </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Concatenation for string data type</span>
-<span class="s1">&#39;Bruce&#39;</span> <span class="o">+</span> <span class="s1">&#39;Wayne&#39;</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[22]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&#39;BruceWayne&#39;</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p style="color:red;">If you try to use the + operator on a string and an integer value, Python will not know how to handle this, and it will display an error message</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="s1">&#39;Bruce&#39;</span> <span class="o">+</span> <span class="mi">42</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">TypeError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-23-1d945ca000fe&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-intense-fg ansi-bold">()</span>
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span><span class="ansi-blue-intense-fg ansi-bold">&#39;Bruce&#39;</span> <span class="ansi-yellow-intense-fg ansi-bold">+</span> <span class="ansi-cyan-intense-fg ansi-bold">42</span>
-
-<span class="ansi-red-intense-fg ansi-bold">TypeError</span>: must be str, not int</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>The <code>*</code> operator when used on one string value and one integer value becomes string replication operator.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="mi">2</span><span class="o">*</span><span class="mi">5</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[24]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>10</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="s1">&#39;Batman&#39;</span><span class="o">*</span><span class="mi">5</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[25]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&#39;BatmanBatmanBatmanBatmanBatman&#39;</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><a id="Variables"></a></p>
-<h1 id="Variables">Variables<a class="anchor-link" href="#Variables">&#182;</a></h1><p>
-Think of it like a box in the computer’s memory where we can store values by giving a name to it.<br>
-
-<b>Variable Names</b> are case sensitive. We can name a variable anything as long as it obeys the following three rules:
-<ul style="font-size:100%">             
-<li><b style="font-size:100%">Rule 1</b>- It can be only one word.</li>
-<li><b style="font-size:100%">Rule 2</b> - It can use only letters, numbers, and the underscore <code>__</code> character.</li>
-<li><b style="font-size:100%">Rule 3</b> - It can’t begin with a number.</li> 
-</ul>
-
-
-<i><font style="color:red">Example of invalid variable names</font></i>:    <code>current-balance</code>, <code>current balance 4account</code>, <code>total_(um</code>, <code>'batman'</code>
-</p><table style="max-width:80%;margin-left:10%;border: 1px solid black; font-size:110%">
-    <caption style="text-align: center"><b> Example of Invalid variable names and why they are invalid</b></caption>
-    <tr>
-        <td style="color:blue; background-color:rgb(80, 80, 80); color:white; text-align: center">Invalid variable name</td>
-        <td style="color:blue; background-color:rgb(80, 80, 80); color:white; text-align: center">Why it's invalid?</td>  
-    </tr>
-    <tr style="color:black;text-align: center">
-        <td style="text-align: center" width=30%><code>current-balance</code></td>
-        <td style="text-align: center">Other than <code>__</code>, no symbols are allowed in variable name</td>
-    </tr>
-    <tr style="color:black;text-align: center">
-        <td style="text-align: center"><code>current balance 4account</code></td>
-        <td style="text-align: center">Space is also note allowed in variable name</td>
-    </tr>
-        <tr style="color:black;text-align: center">
-        <td style="text-align: center"><code>total_(um</code></td>
-        <td style="text-align: center">The brackets are not allowed in variable name.</td>
-    </tr>
-        <tr style="color:black;text-align: center">
-        <td style="text-align: center"><code>'batman'</code></td>
-        <td style="text-align: center">Quotes are not allowed in variable name. Enclosing the variable name inside quotes makes them a string. We will see more about string in future posts.</td>
-    </tr>
-</table>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Now, let's see how to assign value to the variable and store it inside the computers memory. The format is <code>variable_name = value</code></p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Super Man&#39;</span>
-<span class="n">age</span> <span class="o">=</span> <span class="mi">49</span>
-<span class="n">pi</span> <span class="o">=</span> <span class="mf">3.1415</span>
-
-<span class="nb">print</span> <span class="p">(</span><span class="n">name</span><span class="p">)</span>
-<span class="nb">print</span> <span class="p">(</span><span class="n">age</span><span class="p">)</span>
-
-<span class="n">age</span> <span class="o">=</span> <span class="n">age</span> <span class="o">+</span> <span class="mi">1</span> <span class="c1">#Add 1 to age and update it</span>
-<span class="nb">print</span> <span class="p">(</span><span class="n">age</span><span class="p">)</span>
-
-<span class="c1"># What do you think will happend if we run the two lines below ?</span>
-<span class="c1">#age = age + 10</span>
-<span class="c1">#print (age)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="mi">20</span> <span class="c1"># Change this value and see what happens #</span>
+<span class="k">if</span> <span class="n">age</span> <span class="o">&gt;</span> <span class="mi">17</span><span class="p">:</span> <span class="c1"># as long as this age&gt;17 is True, print statement inside it will work</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;You can watch movies with these ratings (on your own)  :&#39;</span><span class="p">,</span> <span class="s1">&#39;G | PG |PG-13 | R | NC-17&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12603,215 +12292,7 @@ Think of it like a box in the computer’s memory where we can store values by g
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Super Man
-49
-50
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><a id="Output"></a></p>
-<h1 id="Output-using-print">Output using <code>print</code><a class="anchor-link" href="#Output-using-print">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Storing the data will not be sufficient enough. We need to display the values on the screen from time to time. The easiest way to display the value is to use built in function <code>print(your_value)</code>. Let's see few examples</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Hello world!&#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Hello world!
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>To print multiple values on same line, there are two approaches:</p>
-<p><b>Approach 1 - Use comma(,) inside the print to dispay multiple values</b>. Take note that the comma used to seperate the values inside the print will not get printed. Instead, it introduces a space.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;hi&#39;</span><span class="p">,</span> <span class="s1">&#39;hello&#39;</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mf">3.145</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>hi hello 100 3.145
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><b>Approach 2 - Use plus(+) inside the print to dispay multiple values</b>. Take note that the plus used to combine the values inside the print will not get printed.</p>
-<p><font style="color:red">Unlike comma (,), plus(+) doesn't work with different data types. We need to convert everything to string before using plus sign.</font></p>
-<p>How do we convert every value into string?</p>
-<ul>
-<li>Again, there's a built in function in python called <code>str()</code> which helps us convert data of any type into string data.</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;hi&#39;</span> <span class="o">+</span> <span class="s1">&#39;hello&#39;</span> <span class="o">+</span>  <span class="mi">100</span> <span class="o">+</span> <span class="mf">3.145</span><span class="p">)</span> <span class="c1"># plus(+) doesn&#39;t work with different datatypes</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">TypeError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-13-762ba75001d7&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-intense-fg ansi-bold">()</span>
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>print <span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-blue-intense-fg ansi-bold">&#39;hi&#39;</span> <span class="ansi-yellow-intense-fg ansi-bold">+</span> <span class="ansi-blue-intense-fg ansi-bold">&#39;hello&#39;</span> <span class="ansi-yellow-intense-fg ansi-bold">+</span>  <span class="ansi-cyan-intense-fg ansi-bold">100</span> <span class="ansi-yellow-intense-fg ansi-bold">+</span> <span class="ansi-cyan-intense-fg ansi-bold">3.145</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
-
-<span class="ansi-red-intense-fg ansi-bold">TypeError</span>: must be str, not int</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;hi&#39;</span> <span class="o">+</span> <span class="s1">&#39;hello&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="mf">3.145</span><span class="p">))</span> 
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>hihello1003.145
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>What if we want to include space between each value printed?</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;hi&#39;</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="s1">&#39;hello&#39;</span> <span class="o">+</span>  <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="mf">3.145</span><span class="p">))</span> 
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>hi hello 100 3.145
+<pre>You can watch movies with these ratings (on your own)  : G | PG |PG-13 | R | NC-17
 </pre>
 </div>
 </div>
@@ -12825,20 +12306,11 @@ Think of it like a box in the computer’s memory where we can store values by g
 <div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Another xample on using print() with multiple values and data types</span>
-<span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Super Man&#39;</span>
-<span class="n">age</span> <span class="o">=</span> <span class="mi">49</span>
-<span class="n">height</span> <span class="o">=</span> <span class="mf">1.85</span> 
-
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;=== Using comma (,) to print multiple values ===&#39;</span><span class="p">)</span>
-<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;My name is&#39;</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
-<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;My age is&#39;</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span>
-<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;My height is&#39;</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;=== Using plus (+) to print multiple values ===&#39;</span><span class="p">)</span>
-<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;My name is &#39;</span> <span class="o">+</span> <span class="n">name</span><span class="p">)</span>   <span class="c1"># We don&#39;t have to convert the name var into string. Why? It&#39;s already a string</span>
-<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;My age is &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">age</span><span class="p">))</span>
-<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;My height is &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">height</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="k">if</span> <span class="n">age</span><span class="o">&gt;</span><span class="mi">13</span> <span class="ow">and</span> <span class="n">age</span> <span class="o">&lt;=</span><span class="mi">17</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;You can watch movies with these ratings (on your own)  :&#39;</span><span class="p">,</span> <span class="s1">&#39;G | PG | PG-13&#39;</span><span class="p">)</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;You can watch movies with these ratings (with an adult):&#39;</span><span class="p">,</span> <span class="s1">&#39;R&#39;</span><span class="p">)</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;You cannot watch movies with these ratings             :&#39;</span><span class="p">,</span> <span class="s1">&#39;NC-17&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12853,14 +12325,44 @@ Think of it like a box in the computer’s memory where we can store values by g
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>=== Using comma (,) to print multiple values ===
-My name is Super Man
-My age is 49
-My height is 1.85
-=== Using plus (+) to print multiple values ===
-My name is Super Man
-My age is 49
-My height is 1.85
+<pre>You can watch movies with these ratings (on your own)  : G | PG | PG-13
+You can watch movies with these ratings (with an adult): R
+You cannot watch movies with these ratings             : NC-17
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="mi">13</span>
+<span class="k">if</span> <span class="n">age</span> <span class="o">&lt;=</span><span class="mi">13</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;You can watch movies with these ratings (on your own)  :&#39;</span><span class="p">,</span> <span class="s1">&#39;G | PG &#39;</span><span class="p">)</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;You can watch movies with these ratings (with an adult):&#39;</span><span class="p">,</span> <span class="s1">&#39;PG-13 | R&#39;</span><span class="p">)</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;You cannot watch movies with these ratings             :&#39;</span><span class="p">,</span> <span class="s1">&#39;NC-17&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>You can watch movies with these ratings (on your own)  : G | PG 
+You can watch movies with these ratings (with an adult): PG-13 | R
+You cannot watch movies with these ratings             : NC-17
 </pre>
 </div>
 </div>
@@ -12874,58 +12376,78 @@ My height is 1.85
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Which one of the following two <code>print</code> lines is correct?
-<br><br>
-<i>Hint 1</i>: Anything enclosed inside the quotes will be treated as a string. <br>
-<i>Hint 2</i>: Variable should be enclosed inside a quote.</p>
+<h3 id="multiple-if">multiple if<a class="anchor-link" href="#multiple-if">&#182;</a></h3><p>We can stack in multiple if conditions (one after the other). As long as the condition becomes True, the code inside (indented) will be executed.</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#print (&#39;My name is &#39; + &#39;name&#39;)</span>
-<span class="c1">#print (&#39;My name is &#39; + name)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="k">if</span> <span class="n">age</span> <span class="o">&gt;</span> <span class="mi">17</span><span class="p">:</span> <span class="c1"># as long as this age&gt;17 is True, print statement inside it will work</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;You can watch movies with these ratings (on your own)  :&#39;</span><span class="p">,</span> <span class="s1">&#39;G | PG | PG-13 | R | NC-17&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">age</span><span class="o">&gt;</span><span class="mi">13</span> <span class="ow">and</span> <span class="n">age</span> <span class="o">&lt;=</span><span class="mi">17</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;You can watch movies with these ratings (on your own)  :&#39;</span><span class="p">,</span> <span class="s1">&#39;G | PG |PG-13&#39;</span><span class="p">)</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;You can watch movies with these ratings (with an adult):&#39;</span><span class="p">,</span> <span class="s1">&#39;R&#39;</span><span class="p">)</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;You cannot watch movies with these ratings             :&#39;</span><span class="p">,</span> <span class="s1">&#39;NC-17&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">age</span> <span class="o">&lt;=</span><span class="mi">13</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;You can watch movies with these ratings (on your own)  :&#39;</span><span class="p">,</span> <span class="s1">&#39;G | PG &#39;</span><span class="p">)</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;You can watch movies with these ratings (with an adult):&#39;</span><span class="p">,</span> <span class="s1">&#39;PG-13 | R&#39;</span><span class="p">)</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;You cannot watch movies with these ratings             :&#39;</span><span class="p">,</span> <span class="s1">&#39;NC-17&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>You can watch movies with these ratings (on your own)  : G | PG | PG-13 | R | NC-17
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><a id="Input"></a></p>
-<h1 id="Input-using-input">Input using <code>input</code><a class="anchor-link" href="#Input-using-input">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Using <code>print</code> function, we can display values/output to the user. However, how do we get values from the user like username, password, etc?. <br><br>
+<p><a id="else"></a></p>
+<h2 id="else">else<a class="anchor-link" href="#else">&#182;</a></h2><p>When we have two conditions (this or that decision),<code> if-else</code> combo will be the best choice
+<ul>
+    <li>When <code>if</code> condition evalues to <code>True</code>, the block of statement indented inside <code>if</code> will get executed.</li>
+    <li>When <code>if</code> evaluates to <code>False</code>, the  block of statement indented inside <code>else</code> will get executed.</li>
+</ul>
 
-To get input from the user, we have to use <code>input()</code>function. <br><br>
-
-<font style="color:red">Note that irrespective of the data we type (e.g. numbers), input function will read it as a string data.</font>
+<span style="color:red;">Unlike <code>if</code>, the <code>else</code>statement</b> doesn't take any condition.</span>
 </p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;&gt;&gt;&gt; Enter your name: &#39;</span><span class="p">)</span>
-<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Your name is&#39;</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="k">if</span> <span class="n">age</span> <span class="o">&gt;</span> <span class="mi">17</span><span class="p">:</span> <span class="c1"># as long as this age&gt;17 is True, print statement inside it will work</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;You can watch movies with these ratings (on your own)  :&#39;</span><span class="p">,</span> <span class="s1">&#39;G | PG | PG-13 | R | NC-17&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;You can watch movies with these ratings (on your own)  :&#39;</span><span class="p">,</span> <span class="s1">&#39;G | PG |PG-13&#39;</span><span class="p">)</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;You can watch movies with these ratings (with an adult):&#39;</span><span class="p">,</span> <span class="s1">&#39;R&#39;</span><span class="p">)</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;You cannot watch movies with these ratings             :&#39;</span><span class="p">,</span> <span class="s1">&#39;NC-17&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12940,8 +12462,7 @@ To get input from the user, we have to use <code>input()</code>function. <br><br
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>&gt;&gt;&gt; Enter your name: Batman
-Your name is Batman
+<pre>You can watch movies with these ratings (on your own)  : G | PG | PG-13 | R | NC-17
 </pre>
 </div>
 </div>
@@ -12955,18 +12476,35 @@ Your name is Batman
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>[MINI TASK] Write a program that gets your name, age and height and prints it on the screen.</p>
+<p><a id="elif"></a></p>
+<h2 id="elif">elif<a class="anchor-link" href="#elif">&#182;</a></h2><p>When we have three or conditions/ criteria,<code> if-elif-else</code> combo will be the best choice.
+<ul>
+    <li>When <code>if</code> condition evalues to <code>True</code>, the block of statement indented inside <code>if</code> will get executed. After that, rest of the <code>elif</code> and <code>else</code> are skiped even if some of them evaluate to <code>True</code>.</li>
+    <li>When <code>if</code> fails, the <code>elif</code> condition will be evaluated and if turns out be <code>True</code>, the  block of statement indented inside <code>elif</code> will get executed. After that, rest of the <code>elif</code> (if exists) and <code>else</code> are skiped even if some of them evaluate to <code>True</code>.</li>
+    <li>When both <code>if</code> and <code>elif</code> evaluates to <code>False</code>, the block of statement indented inside <code>else</code> will get executed.
+</ul></p><p><span style="color:red;">Unlike <code>if</code> and <code>elif</code>, the <code>else</code>statement</b> doesn't take any condition. Also, it's optional to have <code>else</code> statement.</span><br>
+<span style="color:green;">Unlike <code>if</code>, we can have multiple <code>elif</code> conditions following a single<code>if</code> condition. 
+&lt;/p&gt;</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;&gt;&gt;&gt; Enter your name: &#39;</span><span class="p">)</span>
-
-<span class="c1">### your code goes here ###</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="k">if</span> <span class="n">age</span> <span class="o">&gt;</span> <span class="mi">17</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;You can watch movies with these ratings (on your own)  :&#39;</span><span class="p">,</span> <span class="s1">&#39;G | PG | PG-13 | R | NC-17&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">age</span> <span class="o">&gt;</span> <span class="mi">13</span><span class="p">:</span> <span class="c1"># &lt;=&gt; elif age &gt;13 and age&lt;=17</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;You can watch movies with these ratings (on your own)  :&#39;</span><span class="p">,</span> <span class="s1">&#39;G | PG |PG-13&#39;</span><span class="p">)</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;You can watch movies with these ratings (with an adult):&#39;</span><span class="p">,</span> <span class="s1">&#39;R&#39;</span><span class="p">)</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;You cannot watch movies with these ratings             :&#39;</span><span class="p">,</span> <span class="s1">&#39;NC-17&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span> <span class="c1"># &lt;=&gt; elif age &lt;=13</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;You can watch movies with these ratings (on your own)  :&#39;</span><span class="p">,</span> <span class="s1">&#39;G | PG &#39;</span><span class="p">)</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;You can watch movies with these ratings (with an adult):&#39;</span><span class="p">,</span> <span class="s1">&#39;PG-13 | R&#39;</span><span class="p">)</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;You cannot watch movies with these ratings             :&#39;</span><span class="p">,</span> <span class="s1">&#39;NC-17&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12981,7 +12519,7 @@ Your name is Batman
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>&gt;&gt;&gt; Enter your name: 
+<pre>You can watch movies with these ratings (on your own)  : G | PG | PG-13 | R | NC-17
 </pre>
 </div>
 </div>
@@ -12995,8 +12533,9 @@ Your name is Batman
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><a id="Data Type Conversion"></a></p>
-<h1 id="Type-converstion">Type converstion<a class="anchor-link" href="#Type-converstion">&#182;</a></h1>
+<p>In the above code, I haven't included the red portion in <code>elif <b><span style="color:red;">age <= 17 and </span></b>age > 13</code>. However, the code still works perfectly. How? <br><br>
+
+Since the <code>if age > 17</code> evaluates to <code>True</code> for any age more than 17, it's redundant to mention the <span style="color:red;">age <= 17</span> condition in elif statment.</p>
 </div>
 </div>
 </div>
@@ -13005,22 +12544,25 @@ Your name is Batman
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><code>str(), int(), float()</code> - These functions are used to change the data types of the values. <br></p>
-<p>As the <code>input()</code> function returns <code>str</code> data, we may have to manually change if we are handling numbers. <br></p>
-
+<p><a id="nested if"></a></p>
+<h2 id="nested-if">nested if<a class="anchor-link" href="#nested-if">&#182;</a></h2><p>We can have <code>if-else</code> inside another <code>if-else</code> and we can keep nesting them. The deeper the nest gets, the harder it will be to debug and trace.</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="s1">&#39;21&#39;</span>
-<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Before data type conversion:&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">age</span><span class="p">))</span>
-
-<span class="n">age</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">age</span><span class="p">)</span> <span class="c1"># Converts age into int data type</span>
-<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;After data type conversion:&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">age</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">user_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter user name: &#39;</span><span class="p">)</span>      <span class="c1"># james bond</span>
+<span class="n">pass_word</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter pass word: &#39;</span><span class="p">)</span>      <span class="c1"># 007</span>
+<span class="k">if</span> <span class="n">user_name</span> <span class="o">==</span> <span class="s1">&#39;james bond&#39;</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">pass_word</span> <span class="o">==</span> <span class="s1">&#39;007&#39;</span><span class="p">:</span>
+        <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Access granted&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Access denied. Wrong password&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+     <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Access denied. Wrong username&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -13035,8 +12577,9 @@ Your name is Batman
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Before data type conversion: &lt;class &#39;str&#39;&gt;
-After data type conversion: &lt;class &#39;int&#39;&gt;
+<pre>Enter user name: james bond
+Enter pass word: 007
+Access granted
 </pre>
 </div>
 </div>
@@ -13050,57 +12593,22 @@ After data type conversion: &lt;class &#39;int&#39;&gt;
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><a id="Challenge 1"></a></p>
-<h1 id="Challenge--1">Challenge  1<a class="anchor-link" href="#Challenge--1">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Now, let's take a break from learning and start testing what we have learnt.<br><br>
-<font style="color:#FF8b33">Write a code that asks for users height in centimeter and convert it into meters.</font><br><br>
-<i>Example: If the user enters his height as 181 in centimeter, it should be converted as 1.81 in meter and printed on the screen.</i></p>
+<p>The above code could be re-witten as follows using <code>boolean</code> and <code>comparison operators</code> making it easy to read and follow up.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### your code goes here ###</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>I have added one of the many possible for this challenge. Try not to look at it until you try first. I know it's hard not to look at the solution when it's right below the challenge 😀 </p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">################</span>
-<span class="c1">### SOLUTION ###</span>
-<span class="c1">################</span>
-
-<span class="n">height_in_cm</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter height in cm: &quot;</span><span class="p">)</span>
-<span class="n">height_in_cm</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">height_in_cm</span><span class="p">)</span>
-
-<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Your height in meters:&#39;</span><span class="p">,</span> <span class="n">height_in_cm</span><span class="o">/</span><span class="mi">100</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">user_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter user name: &#39;</span><span class="p">)</span>      <span class="c1"># james bond</span>
+<span class="n">pass_word</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter pass word: &#39;</span><span class="p">)</span>      <span class="c1"># 007</span>
+<span class="k">if</span> <span class="n">user_name</span> <span class="o">==</span> <span class="s1">&#39;james bond&#39;</span> <span class="ow">and</span> <span class="n">pass_word</span> <span class="o">==</span> <span class="s1">&#39;007&#39;</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Access granted&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Access denied. Wrong login details&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -13115,8 +12623,9 @@ After data type conversion: &lt;class &#39;int&#39;&gt;
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Enter height in cm: 181
-Your height in meters: 1.81
+<pre>Enter user name: james bond
+Enter pass word: 007
+Access granted
 </pre>
 </div>
 </div>
